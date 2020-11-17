@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+	<style type="text/css">
+		#dxr-container{
+			top:5%;
+			left:5%;
+			max-height: 270px;
+			max-width:605px;
+		}
+	</style>
+</head>
+<body>
+	<div id="dxr-container">
+		<object id="dxrsvg" data="static/styles/DXR.svg" type="image/svg+xml"></object>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+		  window.addEventListener("load", function() {
+		    var svgObject = document.getElementById('dxrsvg').contentDocument;
+		    var dxr = svgObject.getElementById('dxr');
+		    var type18 = svgObject.getElementsByClassName('type-18');
+		    var type17 = svgObject.getElementsByClassName('type-17');
+		    var type12 = svgObject.getElementsByClassName('type-12');
+		    var ethernet = svgObject.getElementsByClassName('eth-container');
+		    var mstp = svgObject.getElementsByClassName('mstp-container');
+		    var y1 = svgObject.getElementsByClassName('y1');
+		    var y2 = svgObject.getElementsByClassName('y2');
+		    // Sizing DXR
+		    // Setting up Ethernet Type12
+		    $(mstp).hide();
+		    $(type18).hide();
+		    $(type17).hide();
+		    $(type12).show();
+		    $(ethernet).show();
+		    // Setting up MSTP Type12
+		    // $(mstp).show();
+		    // $(type18).hide();
+		    // $(type17).hide();
+		    // $(type12).show();
+		    // $(ethernet).hide();
+		    // // Setting up Ethernet Type18
+		    // $(mstp).hide();
+		    // $(type12).hide();
+		    // $(type17).hide();
+		    // $(type18).show();
+		    // $(ethernet).show();
+		    // // Setting up MSTP Type18
+		    // $(mstp).show();
+		    // $(type12).hide();
+		    // $(type17).hide();
+		    // $(type18).show();
+		    // $(ethernet).hide();
+		    // // Setting up Ethernet Type17
+		    // $(mstp).hide();
+		    // $(type12).hide();
+		    // $(type18).hide();
+		    // $(type17).show();
+		    // $(ethernet).show();
+		    // // Setting up MSTP Type17
+		    // $(mstp).show();
+		    // $(type12).hide();
+		    // $(type18).hide();
+		    // $(type17).show();
+		    // $(ethernet).hide();
+		    $(y1).css({'fill':'orange'});
+		    $(y2).css({'fill':'none'});
+		    // $(svgObject).on('click',function(){
+		    // 	$(elements0).css({'fill':'black'});
+		    // });
+		    // $(svg).css({'display':'none'});
+		  });
+		});
+	</script>
+</body>
+</html>
