@@ -45,7 +45,6 @@ for txt in range(0,len(arr_txt)):
         dictionary = gensim.corpora.Dictionary(gen_docs)
         corpus = [dictionary.doc2bow(gen_doc) for gen_doc in gen_docs]
         tf_idf = gensim.models.TfidfModel(corpus)
-
         sims = gensim.similarities.Similarity('workdir/',tf_idf[corpus],num_features=len(dictionary))
         avg_sims = []
         for line in short_docs:
