@@ -721,7 +721,30 @@ def custom_fpt():
 def get_custom_pft():
     time.sleep(2)
     return send_file(app.config['UPLOAD_FOLDER'] + "custom_fpt.html" ,mimetype='text/html',as_attachment=True)
-    # return render_template('custom_fpt.html')
+
+@app.route('/mop',methods=['GET','POST'])
+def mop():
+    mopterminalbox = {'VAV MOP':'A','FCU MOP':'B','LAB MOP':'C'}
+    mopairsystem = {'AHU MOP':'A','EF MOP':'B','DATA CENTER MOP':'C','PHARMA MOP':'D'}
+    mopplantsystem = {'CHILLER MOP':'A','BOILER MOP':'B','CENTRAL PLANT MOP':'C','COGEN FACILITY MOP':'D'}
+    rendered = render_template('mop.html',mopterminalbox=mopterminalbox,mopairsystem=mopairsystem,mopplantsystem=mopplantsystem)
+    return rendered
+
+@app.route('/custom_mop', methods=['POST'])
+def custom_mop():
+    if request.method == "POST":
+        html = request.form['stuff']
+        with open(app.config['UPLOAD_FOLDER'] + "custom_mop.html", "w") as file:
+            file.write(html)
+    try:
+       return redirect(url_for('mop'))
+    except Exception as e:
+        return str(e)
+
+@app.route('/custom_mop', methods=['GET'])
+def get_custom_mop():
+    time.sleep(2)
+    return send_file(app.config['UPLOAD_FOLDER'] + "custom_mop.html" ,mimetype='text/html',as_attachment=True)
 
 """
 Step 8 - Run your application. debug=True makes it so you don't have to stop and restart your
