@@ -14,7 +14,7 @@ import pandas as pd
 import pdfkit
 # change below depending on storage location
 UPLOAD_FOLDER = 'uploads/'
-ALLOWED_EXTENSIONS = {'txt', 'pdf', 'dwg', 's1ct', 's1ca'}
+ALLOWED_EXTENSIONS = {'txt', 'pdf', 'dwg', 's1ct', 's1ca', 'pcl', 'rtf', 'doc'}
 
 functionality_dictionary = pd.read_excel('Functionality.xlsx')
 threepts_dictionary = pd.read_excel('three_points.xlsx')
@@ -746,10 +746,12 @@ def get_custom_mop():
     time.sleep(2)
     return send_file(app.config['UPLOAD_FOLDER'] + "custom_mop.html" ,mimetype='text/html',as_attachment=True)
 
-"""
-Step 8 - Run your application. debug=True makes it so you don't have to stop and restart your
-    webserver.
-"""
+@app.route('/code',methods=['GET','POST'])
+def code():
+    rendered = render_template('code.html')
+    return rendered
+
+
 if __name__ == '__main__':
 #    app.run(debug=True, host="192.168.1.13", port=5000)
 #    app.run(debug=True, host="192.168.1.189", port="5000")
