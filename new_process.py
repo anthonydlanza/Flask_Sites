@@ -751,6 +751,34 @@ def code():
     rendered = render_template('code.html')
     return rendered
 
+@app.route('/soo',methods=['GET','POST'])
+def soo():
+    sooterminalbox = {}
+    sootra = {}
+    sooairsystems = {
+    '24 Hour Operation':'A',
+    '24 Hour Operation w Reduced Demand':'B',
+    '24 Hour Operation w occupied/unoccupied':'C'
+    }
+    soowatersystems = {}
+    rendered = render_template('soo.html', sooterminalbox = sooterminalbox, sootra = sootra, sooairsystems = sooairsystems, soowatersystems = soowatersystems)
+    return rendered
+
+@app.route('/custom_soo', methods=['POST'])
+def custom_soo():
+    if request.method == "POST":
+        html = request.form['stuff']
+        with open(app.config['UPLOAD_FOLDER'] + "custom_soo.html", "w") as file:
+            file.write(html)
+    try:
+       return redirect(url_for('soo'))
+    except Exception as e:
+        return str(e)
+
+@app.route('/custom_soo', methods=['GET'])
+def get_custom_soo():
+    time.sleep(2)
+    return send_file(app.config['UPLOAD_FOLDER'] + "custom_soo.html" ,mimetype='text/html',as_attachment=True)
 
 if __name__ == '__main__':
 #    app.run(debug=True, host="192.168.1.13", port=5000)

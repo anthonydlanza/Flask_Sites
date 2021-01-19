@@ -1,0 +1,1172 @@
+<head>
+	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+	<script src="/static/js/soo.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<!-- <link rel= "stylesheet" type= "text/css" href= "/static/styles/new_form.css"> -->
+	<!-- Adding secondary link for fpt export -->
+	<!-- <link rel= "stylesheet" type= "text/css" href= "static/styles/new_form.css"> -->
+	<style type="text/css">
+		@font-face {
+		  font-family: 'Siemens Sans';
+		  src: url('Siemens//SiemensSans-Black.eot');
+		  src: url('Siemens//SiemensSans-Black.eot?#iefix') format('embedded-opentype'),
+		    url('Siemens//SiemensSans-Black.woff2') format('woff2'),
+		    url('Siemens//SiemensSans-Black.woff') format('woff'),
+		    url('Siemens//SiemensSans-Black.ttf') format('truetype'),
+		    url('Siemens//SiemensSans-Black.svg#SiemensSans-Black') format('svg');
+		  font-weight: 900;
+		  font-style: normal;
+		  font-display: swap;
+		}
+
+		@font-face {
+		  font-family: 'Poppins';
+		  src: url('Poppins//Poppins-Black.eot');
+		  src: url('Poppins//Poppins-Black.eot?#iefix') format('embedded-opentype'),
+		    url('Poppins//Poppins-Black.woff2') format('woff2'),
+		    url('Poppins//Poppins-Black.woff') format('woff'),
+		    url('Poppins//Poppins-Black.ttf') format('truetype'),
+		    url('Poppins//Poppins-Light.ttf') format('truetype');
+		  font-weight: 900;
+		  font-style: normal;
+		  font-display: swap;
+		}
+
+		@font-face {
+		  font-family: 'Roboto';
+		  src: url('Roboto//Roboto-Regular.eot');
+		  src: url('Roboto//Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+		    /*url('Roboto//Roboto-Regular.woff2') format('woff2'),*/
+		    /*url('Roboto//Roboto-Regular.woff') format('woff'),*/
+		    url('Roboto//Roboto-Regular.ttf') format('truetype');
+		  font-weight: normal;
+		  font-style: normal;
+		  font-display: swap;
+		}
+
+		body {
+			/*background-color: black;*/
+			/*background-color: #eec0c6;*/
+			/*background-image: linear-gradient(150deg, #eec0c6 0%, #7ee8fa 70%);*/
+		}
+
+		h6 {
+			color:white;
+			font-family: 'Roboto';
+			font-weight: bold;
+			margin-bottom:0px;
+		}
+
+		.badge{
+			color: #e7dfdd;
+			background-color: #343a40;
+			font-family: 'Roboto';
+			font-weight: bold;
+			font-size: 36px;
+		}
+
+		.badge-function{
+			font-size:24px;
+		}
+
+		.scaleable-wrapper {
+		 padding: none;
+		 resize: both;
+		 position: relative;
+		 margin-bottom:1%;
+		 height:1500px;
+		}
+
+		.type-container{
+			margin-left: 0%;
+			margin-right: 0%;
+			padding-left: 0%
+		}
+
+		#very-specific-container {
+			float:left;
+			width: 60%;
+			max-width: 865px;
+			max-height: 1200px;
+			height: 100%;
+			margin-left: none;
+			margin-right: none;
+			padding-left: none;
+			padding-right: none;
+			position: relative;
+			left: 2%;
+		 /*transform: translate(-50%, -50%);
+		 transform-origin: center center;*/
+		}
+
+		h4{
+			cursor: pointer;
+		}
+
+		.select{
+			margin-right:20px;
+		}
+
+		#first{
+			float: left;
+		}
+		#second-1{
+			float: left;
+		}
+		#second-2{
+			float: left;
+			display:none
+		}
+		#second-3{
+			float: left;
+			display:none
+		}
+		.col-xl-12 {
+			height:50px;
+		}
+		.col-s-5 {
+			background-color:red;
+		}
+
+		.rectangle {
+		 /*width: 680px;*/
+		 /*width:87.6%;*/
+		 width:80%;
+		 height: 350px;
+		 padding-top: 5px;
+		 background-color: black;
+		 border:solid 0.2em #000;
+		 margin-left: none;
+		}
+
+		#r {
+			float:right;
+			padding-right:25px;
+			font-size:12px;
+		}
+
+		.knx-form{
+			float:right;
+			padding-left: 0px;
+		}
+
+		.bottombr {
+			height:5px;
+		}
+		.col-md-4{
+			height:30px;
+			margin-bottom: 5px;
+		}
+		.col-sm-4 {
+			padding-left:0px;
+			padding-top:10px;
+		}
+		.col-lg-4{
+			padding-left: 0px;
+			padding-top: 5px;
+		}
+		.col-l-6 {
+			background-color: red;
+		}
+
+		.col-xl-5{
+			padding-left: 0px;
+			padding-right: 30px;
+		}
+
+		.col-xl-7{
+			padding-right: none;
+		}
+
+		.width-redux{
+			padding-right: 2px;
+		}
+
+		.width-redux-7{
+			padding-right: 5%;
+		}
+
+		.col-xl-9{
+			font-size: 12px;
+		}
+
+		.col-xl-12{
+			height:150px;
+		}
+
+		.col-lg-12{
+			padding-left:0px;
+			padding-right:0px;
+		}
+
+		.col-lg-1{
+			background-color:grey;
+			border:solid 1px black;
+			height:100px;
+		}
+
+		#myForm{
+			float:left;
+		}
+		.form-container{
+			float:left;
+		}
+
+		#selection-container{
+			float:left;
+			width: 40%;
+			max-width: 575px;
+			height: 100%;
+			max-height: 950px;
+			top:5%;
+			margin-right: none;
+			padding-left: none;
+			padding-right: none;
+			position:relative;
+		}
+
+		#io-container{
+			width:100%;
+			max-width: 575px;
+			height:57%;
+			max-height:550px;
+		}
+
+		#output-container{
+			width:50%;
+		}
+
+		#input-container{
+			float:right;
+			margin-left:47%;
+			position:absolute;
+			z-index: 1000;
+		}
+
+		#knx-container{
+			width:100%;
+			height:45%;
+			position:relative;
+		}
+
+		.knx-form-container{
+			width:100%;
+			height:100%;
+			top:10%;
+			position:absolute;
+			z-index: 1000;
+		}
+
+		#knx-list-1{
+			float:left;
+			width:45%;
+			position:relative;
+		}
+
+		#knx-list-2{
+			float:left;
+			position:relative;
+		}
+
+		#sequence-container{
+			float:left;
+			margin-left:3%;
+			width:40%;
+			margin-right:60%;
+			height:1500px;
+		}
+
+		.fpt-container-style{
+			/*float:left;*/
+			margin-left:1%;
+			width:100%;
+			height:1500px;
+			font-size: 15px;
+			/*color: #BBBBBB;*/
+			font-family: 'Roboto';
+		}
+
+		#fpt-container{
+			/*float:left;*/
+			margin-left:1%;
+			margin-right:1%;
+			width:97%;
+			height:1500px;
+			font-size: 15px;
+			/*color: #BBBBBB;*/
+			font-family: 'Roboto';
+		}
+
+		#appForm{
+			width:95%;
+		}
+
+		#standard-seq-1{
+			margin-right:2%;
+			margin-left:2%;
+		}
+
+		#standard-seq-2{
+			float:left;
+			margin-right:2%;
+		}
+
+		#standard-seq-3{
+			float:left;
+			margin-right:2%;
+		}
+
+		#standard-seq-4{
+			float:left;
+		}
+
+		.seq-font{
+			margin-bottom:0px;
+			font-family: 'Roboto';
+			font-size: 12px;
+			color:white;
+		}
+
+		#uoc-badge{
+			margin-top: 10px;
+		}
+
+		.X{
+			font-weight: bold;
+		}
+
+		.S{
+			font-weight: bold;
+			font-size:12px;
+			background:pink;
+		}
+
+		.select{
+			margin:1px;
+			border-top-right-radius: 5px 5px;
+			border-bottom-right-radius: 5px 5px;
+			border-top-left-radius: 5px 5px;
+			border-bottom-left-radius: 5px 5px;
+			font-family: 'Roboto';
+		}
+
+		.option-style{
+			font-family: 'Roboto';
+		}
+
+		#file-info{
+			color:white;
+			margin-left: 2%;
+		}
+
+		.passfail{
+			margin-right:5px;
+			width: 10%;
+			text-align:center;
+			background:green;
+			border-top-right-radius: 2px 2px;
+			border-bottom-right-radius: 2px 2px;
+			border-top-left-radius: 2px 2px;
+			border-bottom-left-radius: 2px 2px;
+			color:white;
+			font-weight:thick;
+		}
+
+		.fail{
+			background:#ff3333;
+		}
+
+		.na{
+			background:blue;
+		}
+
+		.row{
+			/*border:solid 2px #FF00FF;*/
+			margin-left: 0.1%;
+			margin-bottom: 0.5%;
+		}
+
+		.form-check-label{
+			font-size: 15px;
+		}
+
+		button{
+			margin-top: 1%;
+			border-top-right-radius: 5px 5px;
+			border-bottom-right-radius: 5px 5px;
+			border-top-left-radius: 5px 5px;
+			border-bottom-left-radius: 5px 5px;
+			color: white;
+			background-color: #343a40;
+			font-family: 'Roboto';
+			font-weight: bold;
+		}
+	</style>
+	<title>RSS-NA DXR Engineering Tool</title>
+</head>
+<body data-new-gr-c-s-check-loaded="14.991.0" data-gr-ext-installed="">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="display: none;">
+ <a class="navbar-brand" href="#">RSS-NA DXR Engineering Tool</a>
+ <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+ </button>
+ <div class="collapse navbar-collapse" id="--navbarNav">
+  <ol class="navbar-nav">
+   <li oncontextmenu="edit_li(this)" class="nav-item active">
+    <a class="nav-link" href="/">DXR Engineering <span class="sr-only">(current)</span></a>
+   </li>
+   <li class="nav-item active">
+    <a class="nav-link" href="/fpt">FPT Builder<span class="sr-only">(current)</span></a>
+  </li>
+   <li oncontextmenu="edit_li(this)" class="nav-item">
+    <a class="nav-link" href="https://hit.sbt.siemens.com/RWD/app.aspx?RC=US&amp;lang=en&amp;MODULE=Catalog&amp;ACTION=ShowGroup&amp;KEY=OPC_426313">DXR Information</a>
+   </li>
+   <li oncontextmenu="edit_li(this)" class="nav-item">
+    <a class="nav-link" href="https://siemensnam.sharepoint.com/:f:/t/PacificZoneZTC-ProgrammingCommunity/Ei-1ZH07BHJKrAVWQgFf-7MBiz1HPFp9ZrJ4Pv1yx3A_pw?e=6h62aM">Videos &amp; Guides</a>
+   </li>
+   <li oncontextmenu="edit_li(this)" class="nav-item">
+    <a class="nav-link disabled" href="https://siemensnam.sharepoint.com/teams/PacificZoneZTC-ProgrammingCommunity/Shared%20Documents/Forms/AllItems.aspx?viewid=7d315af4%2D1dd7%2D4399%2Da844%2Da30bb57f73b5&amp;id=%2Fteams%2FPacificZoneZTC%2DProgrammingCommunity%2FShared%20Documents%2FOrder%20Forms">License &amp; Equipment Ordering</a>
+   </li>
+  </ol>
+ </div>
+</nav>
+<br>
+<div class="job-inputs" id="--job-inputs" style="display: none;">
+	<label class="badge badge-secondary" style="font-size: 20px">System Name</label>
+	<input type="text" name="--system-name-input" id="--system-name-input" value="AHU-NO-SPACES">
+	<label class="badge badge-secondary" style="font-size: 20px">44OP-</label>
+	<input type="text" class="job-number-input" name="--job-number-input" id="--job-number-input" value="123456">
+</div>
+<div>
+	<h3 style="margin-left: 1%"><span class="badge badge-secondary" id="system-name">System Name: </span></h3>
+	<h3 style="margin-left: 1%"><span class="badge badge-secondary job-number" id="job-number">Job Number_440P-123456</span></h3>
+</div>
+<div class="app-container" id="--app-container" style="display: none;">
+	<form class="form-container" id="appForm">
+		<div class="form-container" id="--standard-seq-1">
+			<h3><span class="badge badge-secondary">Terminal Equipment</span></h3>
+			
+		</div>
+		<div class="form-container" id="--standard-seq-2">
+			<h3><span class="badge badge-secondary">TRA</span></h3>
+			
+		</div>
+		<div class="form-container" id="--standard-seq-3">
+			<h3><span class="badge badge-secondary">Air Systems</span></h3>
+			
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" value="" id="--24 Hour Operation">
+						<label class="form-check-label" for="24 Hour Operation"><span class="badge badge-secondary form-check-label">24 Hour Operation</span></label>
+				</div>
+			
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" value="" id="--24 Hour Operation w Reduced Demand">
+						<label class="form-check-label" for="24 Hour Operation w Reduced Demand"><span class="badge badge-secondary form-check-label">24 Hour Operation w Reduced Demand</span></label>
+				</div>
+			
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" value="" id="--24 Hour Operation w occupied/unoccupied">
+						<label class="form-check-label" for="24 Hour Operation w occupied/unoccupied"><span class="badge badge-secondary form-check-label">24 Hour Operation w occupied/unoccupied</span></label>
+				</div>
+			
+		</div>
+		<div class="form-container" id="--standard-seq-4">
+			<h3><span class="badge badge-secondary">air Systems</span></h3>
+			
+		</div>
+	</form>
+</div>
+<br><br><br>
+<div class="fpt-container-style" id="--fpt-container">
+	<h1 class="resources"><span class="badge badge-secondary sequence-start" style="visibility: hidden">Resources</span></h1>
+	<br>
+	<!-- <h1><span class="badge badge-secondary sequence-start">Sequence of Operation</span></h1> -->
+	<!-- air System - Process 1 -->
+	<!-- air System - Process 1 -->
+	<!-- air System - Process 1 -->
+	<!-- air System - Process 1 -->
+	<!-- air System - Process 1 -->
+	<!-- air System - Process 1 -->
+	<!-- air System - Process 1 -->
+	<!-- air System - Process 1 -->
+	<!-- air System - Process 1 -->
+	<!-- air System - Process 1 -->
+	<!-- air System - Process 1 -->
+	<div class="airsys-process1">
+		<!-- <h4 ondblclick="remove_this(this)"><span class="badge badge-secondary sequence-start">Mel's First Procedure</span></h4> -->
+		<div class="row" id="--airsys-process1-div-1000" style="">
+				<div class="col-xl-9">
+					<ol id="airsys-process1-div-1000-airsys-process1-ol-1000" style="list-style-type:none">
+						<li oncontextmenu="edit_li(this)" id="--airsys-process1-div-1000-airsys-process1-1000" ondblclick="remove_li(this)">MODES OF OPERATION</li>
+						<ol id="airsys-process1-div-1000-airsys-process1-ol-1000-sub-1" style="list-style-type:none">
+							<li oncontextmenu="edit_li(this)" id="--airsys-process1-div-1000-airsys-process1-1001-sub1" ondblclick="remove_li(this)">DISABLED MODE – SYSTEMS IS PLACED IN THIS MODE ONLY WHEN COMMANDED BY OPERATOR OVERRIDE.</li>
+							<li oncontextmenu="edit_li(this)" id="--airsys-process1-div-1000-airsys-process1-1001-sub2" ondblclick="remove_li(this)">ENABLED MODE – UNIT RUNS 24 HOURS A DAY, EVERY DAY OF THE YEAR.</li>
+							<li oncontextmenu="edit_li(this)" id="--airsys-process1-div-1000-airsys-process1-1001-sub3" ondblclick="remove_li(this)">SAFETY SHUTDOWN MODES
+								<ol id="airsys-process1-div-1000-airsys-process1-ol-1001-sub-1" style="list-style-type:none">
+									<li oncontextmenu="edit_li(this)" id="--airsys-process1-div-1000-airsys-process1-1001-sub3-sub1" ondblclick="remove_li(this)">SEE SAFETY SHUTDOWNS SECTION OF THIS SEQUENCE FOR SAFETY SHUTDOWN CONDITIONS AND MODES.</li>
+								</ol>
+							</li>
+						</ol>
+					</ol>
+			  </div>
+			  <div class="col-xl-3">
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="--airsys-process1-remove-1000" name="remove" style="display: none;">Remove</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="--airsys-process1-after-1000" name="after" style="display: none;">Add Test</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="--airsys-process1-to-1000" name="comment" style="display:none">Comment</button>
+			  </div>
+		</div>
+		<div class="row" id="--airsys-process1-div-2000" style="">
+				<div class="col-xl-9">
+					<ol id="airsys-process1-div-2000-airsys-process1-ol-2000" style="list-style-type:none">
+						<li oncontextmenu="edit_li(this)" id="--airsys-process1-div-2000-airsys-process1-2000" ondblclick="remove_li(this)">MODES OF OPERATION – 24 HOUR OPERATION</li>
+						<ol id="airsys-process1-div-2000-airsys-process1-ol-2000-sub-1" style="list-style-type:none">
+							<li oncontextmenu="edit_li(this)" id="--airsys-process1-div-2000-airsys-process1-2001-sub1" ondblclick="remove_li(this)">DISABLED MODE – SYSTEM IS PLACED IN THIS MODE ONLY WHEN COMMANDED BY OPERATOR OVERRIDE.</li>
+							<li oncontextmenu="edit_li(this)" id="--airsys-process1-div-2000-airsys-process1-2001-sub2" ondblclick="remove_li(this)">UNIT RUNS 24 HOURS A DAY, EVERY DAY OF THE YEAR.</li>
+							<li oncontextmenu="edit_li(this)" id="--airsys-process1-div-2000-airsys-process1-2001-sub3" ondblclick="remove_li(this)">OCCUPIED MODE – INITIALLY PROGRAM THE SYSTEM TO START OCCUPANCY AT 7 AM AND END OCCUPIED MODE AT 6PM.</li>
+							<li oncontextmenu="edit_li(this)" id="--airsys-process1-div-2000-airsys-process1-2001-sub4" ondblclick="remove_li(this)">UNOCCUPIED MODE – SYSTEM REMAINS RUNNING WHEN NOT IN OCCUPIED MODE AT A REDUCED AIRFLOW DEMAND.  ALL DOWNSTREAM TERMINAL CONTROLLERS SHALL BE PLACED IN NIGHT MODE.</li>
+							<li oncontextmenu="edit_li(this)" id="--airsys-process1-div-2000-airsys-process1-2001-sub5" ondblclick="remove_li(this)">SAFETY SHUTDOWN MODES
+								<ol id="airsys-process1-div-2000-airsys-process1-ol-2001-sub-1" style="list-style-type:none">
+									<li oncontextmenu="edit_li(this)" id="--airsys-process1-div-2000-airsys-process1-2001-sub5-sub1" ondblclick="remove_li(this)">SEE SAFETY SHUTDOWNS SECTION OF THIS SEQUENCE FOR SAFETY SHUTDOWN CONDITIONS AND MODES.</li>
+								</ol>
+							</li>
+						</ol>
+					</ol>
+			  </div>
+			  <div class="col-xl-3">
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="--airsys-process1-remove-2000" name="remove" style="display: none;">Remove</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="--airsys-process1-after-2000" name="after" style="display: none;">Add Test</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="--airsys-process1-to-2000" name="comment" style="display:none">Comment</button>
+			  </div>
+		</div>
+		<div class="row" id="--airsys-process1-div-3000" style="">
+				<div class="col-xl-9">
+					<ol id="airsys-process1-div-3000-airsys-process1-ol-3000" style="list-style-type:none">
+						<li oncontextmenu="edit_li(this)" id="--airsys-process1-div-3000-airsys-process1-3000" ondblclick="remove_li(this)">MODES OF OPERATION – 24 HOUR OPERATION</li>
+						<ol id="airsys-process1-div-3000-airsys-process1-ol-3000-sub-1" style="list-style-type:none">
+							<li oncontextmenu="edit_li(this)" id="--airsys-process1-div-3000-airsys-process1-3001-sub1" ondblclick="remove_li(this)">DISABLED MODE – SYSTEM IS PLACED IN THIS MODE ONLY WHEN COMMANDED BY OPERATOR OVERRIDE.</li>
+							<li oncontextmenu="edit_li(this)" id="--airsys-process1-div-3000-airsys-process1-3001-sub2" ondblclick="remove_li(this)">UNIT RUNS 24 HOURS A DAY, EVERY DAY OF THE YEAR.</li>
+							<li oncontextmenu="edit_li(this)" id="--airsys-process1-div-3000-airsys-process1-3001-sub3" ondblclick="remove_li(this)">UNOCCUPIED MODE – SYSTEM REMAINS RUNNING WHEN NOT IN OCCUPIED MODE AT A REDUCED AIRFLOW DEMAND EXCEPT WHEN OCCUPIED CONDITIONS ARE MET.</li>
+							<li oncontextmenu="edit_li(this)" id="--airsys-process1-div-3000-airsys-process1-3001-sub4" ondblclick="remove_li(this)">OCCUPIED MODE – SYSTEM RUNS IN THIS MODE BASED ON THE FOLLOWING CONDITIONS:
+								<ol id="airsys-process1-div-3000-airsys-process1-ol-3001-sub-1" style="list-style-type:none">
+									<li oncontextmenu="edit_li(this)" id="--airsys-process1-div-3000-airsys-process1-3001-sub4-sub1" ondblclick="remove_li(this)">ROOM OCCUPANCY SENSORS INDICATE AN OCCUPIED ROOM FOR 60 SECONDS.  THE OCCUPANCY PERIOD WILL END ONCE NO MOTION HAS BEEN SENSED FOR 30 MINUTES.</li>
+									<li oncontextmenu="edit_li(this)" id="--airsys-process1-div-3000-airsys-process1-3001-sub4-sub2" ondblclick="remove_li(this)">ROOM SENSOR OCCUPANCY OVERRIDE BUTTON IS PUSHED.  THE OCCUPANCY PERIOD WILL END 2 HOURS AFTER THE BUTTON WAS LAST PUSHED.</li>
+								</ol>
+							</li>
+							<li oncontextmenu="edit_li(this)" id="--airsys-process1-div-3000-airsys-process1-3001-sub5" ondblclick="remove_li(this)">SAFETY SHUTDOWN MODES
+								<ol id="airsys-process1-div-3000-airsys-process1-ol-3001-sub-1" style="list-style-type:none">
+									<li oncontextmenu="edit_li(this)" id="--airsys-process1-div-3000-airsys-process1-3001-sub5-sub1" ondblclick="remove_li(this)">SEE SAFETY SHUTDOWNS SECTION OF THIS SEQUENCE FOR SAFETY SHUTDOWN CONDITIONS AND MODES.</li>
+								</ol>
+							</li>
+						</ol>
+					</ol>
+			  </div>
+			  <div class="col-xl-3">
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="--airsys-process1-remove-3000" name="remove" style="display: none;">Remove</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="--airsys-process1-after-3000" name="after" style="display: none;">Add Test</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="--airsys-process1-to-3000" name="comment" style="display:none">Comment</button>
+			  </div>
+		</div>
+	</div>
+</div>
+<form id="download"></form>
+<a href="/custom_soo" target="blank" style="margin-left: 46%"><button class="btn btn-default cmd" id="--cmd" onclick="save()" style="display: none;">Build!</button></a>
+<br><br>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+	var count = localStorage.getItem("lastCount");
+	var app_count = 0
+	reload();
+	var button_element = ""
+	//add click functionality to radio buttons
+	Array.from(document.querySelectorAll('input[type="radio"]')).forEach(function(item, index) {
+	  item.addEventListener('click', save);
+	});
+
+	Array.from(document.querySelectorAll('button[name="comment"]')).forEach(function(item, index) {
+	  item.addEventListener('click', saveComment);
+	});
+
+	function save(){
+		let items = document.querySelectorAll('input[type="radio"]');
+		let checked = document.querySelectorAll('input[type="radio"]:checked');
+		for(var i=0;i<checked.length;i++){
+			for(var x=0;x<items.length;x++){
+				if(items[x].name == checked[i].name){
+					localStorage.setItem(checked[i].name,checked[i].value);
+				}
+			}
+		}
+	}
+
+	function saveComment(){
+		var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' , hour: 'numeric', minute: 'numeric', second: 'numeric'};
+		var today  = new Date();
+		commentdate = today.toLocaleDateString("en-US", options)
+		let saved_comments = document.querySelectorAll('li[class="comment show"]');
+		for(var i=0;i<saved_comments.length;i++){
+			localStorage.setItem(commentdate + "-" + saved_comments[i].textContent,saved_comments[i].parentNode.id);
+		}
+		for(var i=0;i<saved_comments.length;i++){
+			localStorage.setItem(saved_comments[i].id,commentdate + "-" + saved_comments[i].textContent);
+		}
+		localStorage.setItem("lastCount",count);
+	}
+
+	function reload(){
+		console.log("the last count is " + count);
+		let items = document.querySelectorAll('input[type="radio"]');
+		let stored = Object.keys({ ...localStorage });
+		let values = Object.values({...localStorage});
+		for(var i=0;i<stored.length;i++){
+			for(var x=0;x<items.length;x++){
+				if(items[x].name == stored[i] && items[x].value == 'pass' && values[i] == 'pass'){
+					items[x].checked = true;
+				}else if(items[x].name == stored[i] && items[x].value == 'fail' && values[i] == 'fail'){
+					items[x].checked = true;
+				}else if(items[x].name == stored[i] && items[x].value == 'na' && values[i] == 'na'){
+					items[x].checked = true;
+				}
+			}
+		}
+		for(var i=0;i<values.length;i++){
+			for(var x=0;x<stored.length;x++){
+				if(values[i] == stored[x]){
+					let ul = document.getElementById(values[x]);
+					// console.log("comment is " + stored[x]);
+					// console.log("comment id is " + stored[i]);
+					// console.log("parent is " + values[x]);
+					let li = document.createElement("li");
+					li.setAttribute("ondblclick","remove_li(this)");
+					li.setAttribute("id",stored[i]);
+					li.setAttribute("style","color:red");
+					// li.setAttribute("class","comment show");
+					li.appendChild(document.createTextNode(stored[x]));
+					if(ul){
+						ul.appendChild(li);
+					}
+				}
+			}
+		}
+	}
+
+	function remove_this(elem){
+		elem.remove();
+	}
+	function remove_elem(elem) {
+	 let for_removal = document.getElementById(elem.parentNode.parentNode.id);
+	 for_removal.remove();
+	}
+	function remove_li(elem) {
+		let origin = document.getElementById(elem.parentNode.id);
+		// let li_elements = origin.getElementsByTagName('li');
+		localStorage.removeItem(elem.id);
+		localStorage.removeItem(elem.textContent);
+		elem.remove();
+		// if(li_elements.length > 1){
+		// 	elem.remove();
+		// }
+	}
+
+	function edit_li(elem) {
+		let origin = document.getElementById(elem.id);
+		var input = document.createElement("input");
+		var main_bullet = document.createElement("button");
+		var sub_bullet = document.createElement("button");
+		var close_bullet = document.createElement("button");
+		var edit_bullet = document.createElement("button");
+		input.style.width = "50%";
+		// input.style.height = "30%";
+		main_bullet.style.width = "10%";
+		sub_bullet.style.width = "10%";
+		close_bullet.style.width = "10%";
+		edit_bullet.style.width = "10%";
+		// after_button.style.height = "37%";
+		main_bullet.textContent = "Add Main";
+		sub_bullet.textContent = "Add Sub";
+		close_bullet.textContent = "Close";
+		edit_bullet.textContent = "Edit Inline";
+		input.setAttribute("id", elem.id + "-appendinput-" + app_count);
+		input.setAttribute("class", "append");
+		main_bullet.setAttribute("id", elem.id + "-appendmain-" + app_count);
+		main_bullet.setAttribute("class", "append");
+		sub_bullet.setAttribute("id", elem.id + "-appendsub-" + app_count);
+		sub_bullet.setAttribute("class", "append");
+		close_bullet.setAttribute("id", elem.id + "-appendclose-" + app_count);
+		close_bullet.setAttribute("class", "append");
+		edit_bullet.setAttribute("id", elem.id + "-appendedit-" + app_count);
+		edit_bullet.setAttribute("class", "append");
+		console.log("elem id: " + elem.id);
+		elem.after(close_bullet);
+		elem.after(edit_bullet);
+		elem.after(main_bullet);
+		elem.after(sub_bullet);
+		elem.after(input);
+		var extra_buttons = elem.parentNode.getElementsByTagName('button');
+		var extra_inputs = elem.parentNode.getElementsByTagName('input');
+		if(extra_buttons.length>4){
+			while(extra_buttons.length>4){
+				extra_buttons[extra_buttons.length-1].remove();
+			}
+		}
+		if(extra_inputs.length>1){
+			extra_inputs[1].remove();
+		}
+		close_bullet_element = document.getElementById(close_bullet.id);
+		edit_bullet_element = document.getElementById(edit_bullet.id);
+		main_bullet_element = document.getElementById(main_bullet.id);
+		sub_bullet_element = document.getElementById(sub_bullet.id);
+		// let li_elements = origin.getElementsByTagName('li');
+		if(main_bullet_element){
+			main_bullet_element.addEventListener("click", function() {
+				let append_elements = origin.getElementsByTagName('li');
+				var ol = document.getElementById(elem.id);
+				var candidate = document.getElementById(input.id);
+				var li = document.createElement("li");
+				li.setAttribute("id", elem.id + "-appended-" + app_count);
+				li.setAttribute("ondblclick","remove_li(this)");
+				li.setAttribute("oncontextmenu","edit_li(this)");
+				li.setAttribute("style","word-wrap: break-word");
+				li.appendChild(document.createTextNode(candidate.value));
+				ol.after(li);
+				for(var i=1;i<append_elements.length;i++){
+					append_elements[i].setAttribute("ondblclick","remove_li(this)");
+				}
+				setTimeout(function() {
+					li.className = li.className + " show";
+				}, 10);
+				app_count+=1;
+				input.remove();
+				close_bullet.remove();
+				edit_bullet.remove();
+				main_bullet.remove();
+				sub_bullet.remove();
+			});
+		}
+		if(sub_bullet_element){
+			sub_bullet_element.addEventListener("click", function() {
+				let append_elements = origin.getElementsByTagName('li');
+				var ol = document.getElementById(elem.id);
+				var candidate = document.getElementById(input.id);
+				let new_ol = document.createElement("ol");
+				var li = document.createElement("li");
+				new_ol.setAttribute("style","list-style-type:none")
+				new_ol.setAttribute("id", elem.parentNode.id + "-appended-" + app_count);
+				li.setAttribute("id", elem.id + "-appended-" + app_count);
+				li.setAttribute("ondblclick","remove_li(this)");
+				li.setAttribute("oncontextmenu","edit_li(this)");
+				li.setAttribute("style","word-wrap: break-word");
+				li.appendChild(document.createTextNode(candidate.value));
+				new_ol.append(li);
+				input.remove();
+				close_bullet.remove();
+				edit_bullet.remove();
+				main_bullet.remove();
+				sub_bullet.remove();
+				ol.append(new_ol);
+				for(var i=1;i<append_elements.length;i++){
+					append_elements[i].setAttribute("ondblclick","remove_li(this)");
+				}
+				setTimeout(function() {
+					li.className = li.className + " show";
+				}, 10);
+				app_count+=1;
+			});
+		}
+		if(close_bullet_element){
+			close_bullet_element.addEventListener("click", function() {
+				console.log("hello...")
+				input.remove();
+				close_bullet.remove();
+				edit_bullet.remove();
+				main_bullet.remove();
+				sub_bullet.remove();
+			});
+		}
+		if(edit_bullet_element){
+			edit_bullet_element.addEventListener("click", function() {
+				elem.textContent = input.value;
+				input.remove();
+				close_bullet.remove();
+				edit_bullet.remove();
+				main_bullet.remove();
+				sub_bullet.remove();
+			});
+		}
+	}
+
+	function append_elem(elem) {
+		elem.innerHTML = "Close"
+		let origin = document.getElementById(elem.parentNode.parentNode.id);
+		append_elem_check = origin.getElementsByTagName('input');
+		console.log('append_elem_check length: ' + append_elem_check.length);
+		if(append_elem_check.length == 0){
+			var input = document.createElement("input");
+			var before_button = document.createElement("button");
+			var after_button = document.createElement("button");
+			input.style.width = "65%";
+			input.style.height = "30%";
+			before_button.style.width = "17%";
+			before_button.style.height = "37%";
+			before_button.textContent = "Append Before";
+			after_button.style.width = "15%";
+			after_button.style.height = "37%";
+			after_button.textContent = "Append After";
+			input.setAttribute("id", elem.parentNode.parentNode.id + "-appendinput-" + count);
+			input.setAttribute("class", "append");
+			before_button.setAttribute("id", elem.parentNode.parentNode.id + "-appendbefore-" + count);
+			before_button.setAttribute("class", "append");
+			after_button.setAttribute("id", elem.parentNode.parentNode.id + "-appendafter-" + count);
+			after_button.setAttribute("class", "append");
+			let li_elements = origin.getElementsByTagName('li');
+			document.getElementById(li_elements[li_elements.length-1].id).after(after_button);
+			document.getElementById(li_elements[li_elements.length-1].id).after(before_button);
+			document.getElementById(li_elements[li_elements.length-1].id).after(input); 
+			before_button_element = document.getElementById(before_button.id);
+			after_button_element = document.getElementById(after_button.id);
+			if(before_button_element){
+				before_button_element.addEventListener("click", function() {
+					let append_elements = origin.getElementsByTagName('li');
+					var ul = document.getElementById(li_elements[li_elements.length-1].id);
+				  var candidate = document.getElementById(input.id);
+				  var li = document.createElement("li");
+				  li.setAttribute("id", elem.parentNode.parentNode.id + "-appended-" + count);
+				  li.setAttribute("ondblclick","remove_li(this)");
+				  li.setAttribute("oncontextmenu","edit_li(this)");
+				  li.setAttribute("style","word-wrap: break-word");
+				  li.appendChild(document.createTextNode(candidate.value));
+				  ul.before(li);
+				  for(var i=1;i<append_elements.length;i++){
+						append_elements[i].setAttribute("ondblclick","remove_li(this)");
+					}
+					setTimeout(function() {
+						li.className = li.className + " show";
+					}, 10);
+				  count+=1;
+				});
+			}
+			if(after_button_element){
+				after_button_element.addEventListener("click", function() {
+					let append_elements = origin.getElementsByTagName('li');
+					var ul = document.getElementById(li_elements[li_elements.length-1].id);
+				  var candidate = document.getElementById(input.id);
+				  var li = document.createElement("li");
+				  li.setAttribute("id",elem.parentNode.parentNode.id + "-appended-" + count);
+				  li.setAttribute("ondblclick","remove_li(this)");
+				  li.setAttribute("oncontextmenu","edit_li(this)");
+				  li.setAttribute("style","word-wrap: break-word");
+				  li.appendChild(document.createTextNode(candidate.value));
+				  ul.after(li);
+				  for(var i=1;i<append_elements.length;i++){
+						append_elements[i].setAttribute("ondblclick","remove_li(this)");
+					}
+					setTimeout(function() {
+						li.className = li.className + " show";
+					}, 10);
+				  count+=1
+				});
+			}
+		}else{
+			append_elem_check = origin.getElementsByTagName('input');
+			append_elem_check[0].remove();
+			append_elem_check = origin.getElementsByTagName('button');
+			append_elem_check[0].remove();
+			append_elem_check[0].remove();
+			elem.innerHTML = "Add To"
+		}
+	}
+
+	function comment_elem(elem) {
+		elem.innerHTML = "Save"
+		let origin = document.getElementById(elem.parentNode.parentNode.id);
+		append_elem_check = origin.getElementsByTagName('input');
+		if(append_elem_check.length == 3){
+			var input = document.createElement("input");
+			var before_button = document.createElement("button");
+			var after_button = document.createElement("button");
+			input.style.width = "70%";
+			// input.style.height = "30%";
+			before_button.style.width = "15%";
+			// before_button.style.height = "37%";
+			before_button.textContent = "Append Before";
+			after_button.style.width = "15%";
+			// after_button.style.height = "37%";
+			after_button.textContent = "Submit";
+			input.setAttribute("id", elem.parentNode.parentNode.id + "-appendinput-" + count);
+			input.setAttribute("class", "append");
+			before_button.setAttribute("id", elem.parentNode.parentNode.id + "-appendbefore-" + count);
+			before_button.setAttribute("class", "append");
+			after_button.setAttribute("id", elem.parentNode.parentNode.id + "-appendafter-" + count);
+			after_button.setAttribute("class", "append");
+			let li_elements = origin.getElementsByTagName('li');
+			document.getElementById(li_elements[li_elements.length-1].id).after(after_button);
+			// document.getElementById(li_elements[li_elements.length-1].id).after(before_button);
+			document.getElementById(li_elements[li_elements.length-1].id).after(input); 
+			before_button_element = document.getElementById(before_button.id);
+			after_button_element = document.getElementById(after_button.id);
+			if(before_button_element){
+				before_button_element.addEventListener("click", function() {
+					let append_elements = origin.getElementsByTagName('li');
+					var ul = document.getElementById(li_elements[li_elements.length-1].id);
+				  var candidate = document.getElementById(input.id);
+				  var li = document.createElement("li");
+				  li.setAttribute("id", elem.parentNode.parentNode.id + "-appended-" + count);
+				  li.setAttribute("class", "comment");
+				  li.setAttribute("ondblclick","remove_li(this)");
+				  li.setAttribute("style","color:red");
+				  li.appendChild(document.createTextNode(candidate.value));
+				  ul.before(li);
+				  for(var i=1;i<append_elements.length;i++){
+						append_elements[i].setAttribute("ondblclick","remove_li(this)");
+					}
+					setTimeout(function() {
+						li.className = li.className + " show";
+					}, 10);
+				  count+=1;
+				});
+			}
+			if(after_button_element){
+				after_button_element.addEventListener("click", function() {
+					let append_elements = origin.getElementsByTagName('li');
+					var ul = document.getElementById(li_elements[li_elements.length-1].id);
+				  var candidate = document.getElementById(input.id);
+				  var li = document.createElement("li");
+				  li.setAttribute("id",elem.parentNode.parentNode.id + "-appended-" + count);
+				  li.setAttribute("class", "comment");
+				  li.setAttribute("ondblclick","remove_li(this)");
+				  li.setAttribute("style","color:red");
+				  li.appendChild(document.createTextNode(candidate.value));
+				  ul.after(li);
+				  for(var i=1;i<append_elements.length;i++){
+						append_elements[i].setAttribute("ondblclick","remove_li(this)");
+					}
+					setTimeout(function() {
+						li.className = li.className + " show";
+					}, 10);
+				  count+=1
+				});
+			}
+		}else{
+			append_elem_check = origin.getElementsByTagName('input');
+			append_elem_check[0].remove();
+			append_elem_check = origin.getElementsByTagName('button');
+			append_elem_check[0].remove();
+			append_elem_check[0].remove();
+			elem.innerHTML = "Comment"
+		}
+	}
+
+	function append_link(elem) {
+		elem.innerHTML = "Close"
+		let origin = document.getElementById(elem.parentNode.parentNode.id);
+		append_elem_check = origin.getElementsByTagName('input');
+		if(append_elem_check.length == 3){
+			var href = document.createElement("input");
+			var title = document.createElement("input");
+			var after_button = document.createElement("button");
+			href.style.width = "35%";
+			title.style.width = "35%";
+			href.style.height = "30%";
+			title.style.height = "30%";
+			after_button.style.width = "15%";
+			after_button.style.height = "37%";
+			after_button.textContent = "Append After";
+			href.setAttribute("id", elem.parentNode.parentNode.id + "-appendhref-" + count);
+			href.setAttribute("class", "append");
+			href.setAttribute("placeholder", "http://www.google.com");
+			title.setAttribute("id", elem.parentNode.parentNode.id + "-appendtitle-" + count);
+			title.setAttribute("class", "append");
+			title.setAttribute("placeholder", "Google");
+			after_button.setAttribute("id", elem.parentNode.parentNode.id + "-appendafter-" + count);
+			after_button.setAttribute("class", "append");
+			let li_elements = origin.getElementsByTagName('li');
+			document.getElementById(li_elements[li_elements.length-1].id).after(after_button);
+			document.getElementById(li_elements[li_elements.length-1].id).after(href);
+			document.getElementById(li_elements[li_elements.length-1].id).after(title);
+			after_button_element = document.getElementById(after_button.id);
+			if(after_button_element){
+				after_button_element.addEventListener("click", function() {
+					let append_elements = origin.getElementsByTagName('li');
+					var href_candidate = document.getElementById(href.id);
+					var title_candidate = document.getElementById(title.id);
+					var a = document.createElement("a");
+					a.setAttribute("href",href.value);
+					a.innerText = title.value;
+					console.log(a.innerHTML);
+					var ul = document.getElementById(li_elements[li_elements.length-1].id);
+				  var candidate = document.getElementById(title.id);
+				  var li = document.createElement("li");
+				  li.setAttribute("id",elem.parentNode.parentNode.id + "-appended-" + count)
+				  li.appendChild(a);
+				  ul.after(li);
+				  for(var i=1;i<append_elements.length;i++){
+						append_elements[i].setAttribute("ondblclick","remove_li(this)");
+					}
+					setTimeout(function() {
+						li.className = li.className + " show";
+					}, 10);
+				  count+=1
+				});
+			}
+		}else{
+			append_elem_check = origin.getElementsByTagName('input');
+			append_elem_check[0].remove();
+			append_elem_check[0].remove();
+			append_elem_check = origin.getElementsByTagName('button');
+			append_elem_check[0].remove();
+			elem.innerHTML = "Add To"
+		}
+	}
+
+	function before_elem(elem) {
+		let origin = document.getElementById(elem.parentNode.parentNode.id);
+		append_elem_check = origin.getElementsByTagName('input');
+		if(append_elem_check.length > 3){
+			append_elem_check[0].remove();
+		}
+		append_elem_check = origin.getElementsByTagName('button');
+		if(append_elem_check.length > 4){
+			append_elem_check[3].innerHTML = "Add To"
+			append_elem_check[0].remove();
+			append_elem_check[0].remove();
+		}
+		let newClone = origin.cloneNode(true);
+		newClone.setAttribute("id", origin.id + count);
+		let ul_elements = newClone.getElementsByTagName('ol');
+		ul_elements[0].setAttribute("id", ul_elements[0].id + count);
+		let li_elements = newClone.getElementsByTagName('li');
+		for(var i=0;i<li_elements.length;i++){
+			li_elements[i].setAttribute("id", li_elements[i].id + count);
+			li_elements[i].setAttribute("ondblclick","remove_li(this)");
+		}
+		let input_elements = newClone.getElementsByTagName('input');
+		for(var i=0;i<input_elements.length;i++){
+			input_elements[i].setAttribute("name", input_elements[i].name + count);
+		}
+		let button_elements = newClone.getElementsByTagName("button");
+		for(var i=0;i<button_elements.length;i++){
+			button_elements[i].setAttribute("id", button_elements[i].id + count);
+		}
+		origin.before(newClone);
+		count+=1;
+	}
+
+	function heading_elem(elem) {
+		let origin = document.getElementById(elem.parentNode.parentNode.id);
+		console.log("Checking this");
+		var input = document.createElement("input");
+		var subheading_button = document.createElement("button");
+		var mainheading_button = document.createElement("button");
+		input.style.width = "30%";
+		input.style.height = "30%";
+		subheading_button.style.width = "10%";
+		subheading_button.style.height = "37%";
+		subheading_button.textContent = "Add Sub-Heading";
+		mainheading_button.style.width = "10%";
+		mainheading_button.style.height = "37%";
+		mainheading_button.textContent = "Add Main-Heading";
+		input.setAttribute("id", elem.parentNode.parentNode.id + "-appendinput-" + count);
+		input.setAttribute("class", "append");
+		subheading_button.setAttribute("id", elem.parentNode.parentNode.id + "-appendsubheading-" + count);
+		subheading_button.setAttribute("class", "append");
+		mainheading_button.setAttribute("id", elem.parentNode.parentNode.id + "-appendmainheading-" + count);
+		mainheading_button.setAttribute("class", "append");
+		origin.before(input);
+		origin.before(subheading_button);
+		origin.before(mainheading_button);
+		subheading_button_element = document.getElementById(subheading_button.id);
+		mainheading_button_element = document.getElementById(mainheading_button.id);
+		if(subheading_button_element){
+			subheading_button_element.addEventListener("click", function() {
+				let append_elements = origin.getElementsByTagName('h3');
+				// var ul = document.getElementById(li_elements[li_elements.length-1].id);
+			  var candidate = document.getElementById(input.id);
+			  var subheading = document.createElement("h3");
+			  var subheading_span = document.createElement("span")
+			  subheading_span.setAttribute("class","badge badge-secondary sequence-start badge-function")
+			  subheading_span.appendChild(document.createTextNode(candidate.value))
+			  subheading.appendChild(subheading_span);
+			  subheading.setAttribute("ondblclick","remove_this(this)");
+			  origin.before(subheading);
+			 //  for(var i=1;i<append_elements.length;i++){
+				// 	append_elements[i].setAttribute("onclick","remove_li(this)");
+				// }
+				setTimeout(function() {
+					subheading.className = subheading.className + " show";
+				}, 10);
+			  count+=1;
+			  input.remove();
+			  subheading_button.remove();
+			  mainheading_button.remove();
+			});
+		}
+		if(mainheading_button_element){
+			mainheading_button_element.addEventListener("click", function() {
+				let append_elements = origin.getElementsByTagName('h4');
+				// var ul = document.getElementById(li_elements[li_elements.length-1].id);
+			  var candidate = document.getElementById(input.id);
+			  var mainheading = document.createElement("h4");
+			  var mainheading_span = document.createElement("span")
+			  mainheading_span.setAttribute("class","badge badge-secondary sequence-start")
+			  mainheading_span.appendChild(document.createTextNode(candidate.value))
+			  mainheading.appendChild(mainheading_span);
+			  mainheading.setAttribute("ondblclick","remove_this(this)");
+			  origin.before(mainheading);
+			 //  for(var i=1;i<append_elements.length;i++){
+				// 	append_elements[i].setAttribute("onclick","remove_li(this)");
+				// }
+				setTimeout(function() {
+					mainheading.className = mainheading.className + " show";
+				}, 10);
+			  count+=1;
+			  input.remove();
+			  mainheading_button.remove();
+			  subheading_button.remove();
+			});
+		}
+	}
+	function after_elem(elem){
+		let origin = document.getElementById(elem.parentNode.parentNode.id);
+		append_elem_check = origin.getElementsByTagName('input');
+		if(append_elem_check.length > 3){
+			append_elem_check[0].remove();
+		}
+		append_elem_check = origin.getElementsByTagName('button');
+		console.log(append_elem_check);
+		if(append_elem_check.length > 5){
+			append_elem_check[3].innerHTML = "Add To"
+			append_elem_check[4].innerHTML = "Add Heading"
+			append_elem_check[0].remove();
+			append_elem_check[0].remove();
+		}
+		let newClone = origin.cloneNode(true);
+		newClone.setAttribute("id", origin.id + count);
+		let ul_elements = newClone.getElementsByTagName('ol');
+		ul_elements[0].setAttribute("id", ul_elements[0].id + count);
+		let li_elements = newClone.getElementsByTagName('li');
+		for(var i=0;i<li_elements.length;i++){
+			li_elements[i].setAttribute("id", li_elements[i].id + count);
+			li_elements[i].setAttribute("ondblclick","remove_li(this)");
+		}
+		let input_elements = newClone.getElementsByTagName('input');
+		for(var i=0;i<input_elements.length;i++){
+			input_elements[i].setAttribute("name", input_elements[i].name + count);
+		}
+		let button_elements = newClone.getElementsByTagName("button");
+		for(var i=0;i<button_elements.length;i++){
+			button_elements[i].setAttribute("id", button_elements[i].id + count);
+		}
+		origin.after(newClone);
+		// append_elem_check = newClone.getElementsByTagName('input');
+		// append_elem_check = newClone.getElementsByTagName('input');
+		// append_elem_check[0].remove();
+		// append_elem_check = newClone.getElementsByTagName('button');
+		// append_elem_check[3].innerHTML = "Add To"
+		// append_elem_check[0].remove();
+		// append_elem_check[0].remove();
+		count+=1;
+	}
+</script>
+
+</body>
