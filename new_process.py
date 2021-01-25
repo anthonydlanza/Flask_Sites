@@ -686,7 +686,16 @@ def fpt():
     'Alarm Checking':'d'
     }
     fptwatersystems = {
-    'Demand Flow':'A'
+    'CHWS Enable':'A',
+    'CHWS Chiller Staging':'B',
+    'CHWS Weekly Rotation':'C',
+    'CHWS Supply Temperature Reset':'D',
+    'CHWS Pump Staging':'E',
+    'CHWS Low Load Cycling':'F',
+    'CHWS Refrigerant Shutdown':'G',
+    'CHWS Refrigerant Shutdown':'H',
+    'CHWS Disable':'I',
+    'CHWS Demand Flow':'Z'
     }
     rendered = render_template('ftp.html',fptterminalbox = fptterminalbox,fpttra = fpttra,fptairsystems = fptairsystems, fptwatersystems = fptwatersystems)
     # pdf = pdfkit.from_string(rendered, False)
@@ -758,7 +767,8 @@ def soo():
     sooairsystems = {
     '24 Hour Operation':'A',
     '24 Hour Operation w Reduced Demand':'B',
-    '24 Hour Operation w occupied/unoccupied':'C'
+    '24 Hour Operation w occupied/unoccupied':'C',
+    'Temperature Controlled Operation (Vent Fan and Unit Heater)':'D'
     }
     soowatersystems = {}
     rendered = render_template('soo.html', sooterminalbox = sooterminalbox, sootra = sootra, sooairsystems = sooairsystems, soowatersystems = soowatersystems)

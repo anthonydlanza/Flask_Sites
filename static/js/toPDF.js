@@ -199,7 +199,8 @@ $(document).ready(function(){
 		display_test_independent('input[id="Alarm Checking"]',".alarming")
 
 		// Water
-		display_test_independent('input[id="Demand Flow"]',".watersys-demandflow")
+		display_test_independent('input[id="CHWS Enable"]',".watersys-enable")
+		display_test_independent('input[id="CHWS Pump Staging"]',".watersys-pumpstg")
 
 		// Terminal Equipment
 		display_test_independent('input[id="Terminal Resources"]',".dxr-resources")
@@ -231,8 +232,16 @@ $(document).ready(function(){
 		display_test_dependent('input[id="Terminal Rapid Ventilation"]','input[id="Terminal Basic Hardware Check"]',".dxr-rapid")
 		display_test_dependent('input[id="Terminal Air Volume Tracking"]','input[id="Terminal Basic Hardware Check"]',".dxr-avt")
 		display_test_dependent('input[id="Terminal Green Leaf"]','input[id="Terminal Basic Hardware Check"]',".dxr-greenleaf")
-			
 
+		// Water Dependent
+		
+		display_test_dependent('input[id="CHWS Chiller Staging"]','input[id="CHWS Enable"]',".watersys-stg")
+		display_test_dependent('input[id="CHWS Weekly Rotation"]','input[id="CHWS Enable"]',".watersys-rotation")
+		display_test_dependent('input[id="CHWS Supply Temperature Reset"]','input[id="CHWS Enable"]',".watersys-suptemp-reset")
+		display_test_dependent('input[id="CHWS Low Load Cycling"]','input[id="CHWS Enable"]',".watersys-lowload")
+		display_test_dependent('input[id="CHWS Refrigerant Shutdown"]','input[id="CHWS Enable"]',".watersys-breakglass")
+		display_test_dependent('input[id="CHWS Disable"]','input[id="CHWS Enable"]',".watersys-disable")
+		display_test_dependent('input[id="CHWS Demand Flow"]','input[id="CHWS Enable"]',".watersys-demandflow")
 
 	});
 });

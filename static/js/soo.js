@@ -165,5 +165,6 @@ $(document).ready(function(){
 		display_test_independent('input[id="24 Hour Operation"]',"#airsys-process1-div-1000")
 		display_test_independent('input[id="24 Hour Operation w Reduced Demand"]',"#airsys-process1-div-2000")
 		display_test_independent('input[id="24 Hour Operation w occupied/unoccupied"]',"#airsys-process1-div-3000")
+		display_test_independent('input[id="Temperature Controlled Operation (Vent Fan and Unit Heater)"]',"#airsys-process1-div-4000")
 	});
 });

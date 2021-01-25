@@ -80,12 +80,11 @@ if __name__=='__main__':
 			replace_words(arr_txt[txt])
 			dict2 = process(arr_txt[txt])
 			similarity = get_Similarity(dict1,dict2) * 100
-			ic(similarity)
-			if similarity < 100:
-				similarity = f"{similarity:.2f}"
+			similarity = float(f"{similarity:.2f}")
+			ic(type(similarity))
+			if similarity < 100.00:
 				considerations.append({'Name':arr_txt[txt], 'Similarity':str(similarity) + "%"})
 			else:
-				similarity = f"{similarity:.2f}"
 				considerations.insert(0,{'Name':arr_txt[txt], 'Similarity':str(similarity) + "%"})
 considerations_sorted = sorted(considerations, key = lambda i: i['Similarity'],reverse=True)
 print('Here is a list of sequences which are somewhat similar to yours:')

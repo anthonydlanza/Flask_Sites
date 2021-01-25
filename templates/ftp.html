@@ -822,117 +822,6 @@
 	<!-- Water System - Demand Flow -->
 	<!-- Water System - Demand Flow -->
 	<!-- Water System - Demand Flow -->
-	<div class='watersys-demandflow' style="display:none">
-		<h4 ondblclick="remove_this(this)"><span class="badge badge-secondary sequence-start">Water System Demand Flow</span></h4>
-		<div class='row' id="watersys-demandflow-div-1000">
-				<div class="col-xl-7 width-redux-7">
-					<ul id="watersys-demandflow-div-1000-watersys-demandflow-ul-1000">
-						<li oncontextmenu="edit_li(this)" id="watersys-demandflow-div-1000-watersys-demandflow-1000" ondblclick="remove_li(this)">Command the "Chillers Required" to 1</li>
-						<li oncontextmenu="edit_li(this)" id="watersys-demandflow-div-1000-watersys-demandflow-1001" ondblclick="remove_li(this)">Confirm the first position chiller continues to run according to the rotation assignment and staging table</li>
-					</ul>
-			  </div>
-			  <div class="col-xl-5 width-redux">
-			   <input type="radio" class="radio-buttons" name="watersys-demandflow-1000" value="pass">
-			   <label class="passfail">Pass</label>
-			   <input type="radio" class="radio-buttons" name="watersys-demandflow-1000" value="fail">
-			   <label class="passfail fail">Fail</label>
-			   <input type="radio" class="radio-buttons" name="watersys-demandflow-1000" value="na">
-			   <label class="passfail na">NA</label>
-			   <button onclick="remove_elem(this)" class="custom-buttons" id="watersys-demandflow-remove-1000" name="remove">Remove</button>
-			   <button onclick="append_elem(this)" class="custom-buttons" id="watersys-demandflow-to-1000" name="to">Add To</button>
-			   <button onclick="heading_elem(this)" class="custom-buttons" id="watersys-demandflow-before-1000" name="before">Add Heading</button>
-			   <button onclick="after_elem(this)" class="custom-buttons" id="watersys-demandflow-after-1000" name="after">Add Test</button>
-			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="watersys-demandflow-to-1000" name="comment" style="display:none">Comment</button>
-			  </div>
-		</div>
-		<div class='row' id="watersys-demandflow-div-2000">
-				<div class="col-xl-7 width-redux-7">
-					<ul id="watersys-demandflow-div-2000-watersys-demandflow-ul-2000">
-						<li oncontextmenu="edit_li(this)" id="watersys-demandflow-div-2000-watersys-demandflow-2000" ondblclick="remove_li(this)">Command the second position chiller to "Out of Service"</li>
-						<li oncontextmenu="edit_li(this)" id="watersys-demandflow-div-2000-watersys-demandflow-2001" ondblclick="remove_li(this)">Confirm the second position chiller remains off</li>
-						<li oncontextmenu="edit_li(this)" id="watersys-demandflow-div-2000-watersys-demandflow-2002" ondblclick="remove_li(this)">Confirm the third position chiller is enabled and ramps up</li>
-					</ul>
-			  </div>
-			  <div class="col-xl-5 width-redux">
-			   <input type="radio" class="radio-buttons" name="watersys-demandflow-2000" value="pass">
-			   <label class="passfail">Pass</label>
-			   <input type="radio" class="radio-buttons" name="watersys-demandflow-2000" value="fail">
-			   <label class="passfail fail">Fail</label>
-			   <input type="radio" class="radio-buttons" name="watersys-demandflow-2000" value="na">
-			   <label class="passfail na">NA</label>
-			   <button onclick="remove_elem(this)" class="custom-buttons" id="watersys-demandflow-remove-2000" name="remove">Remove</button>
-			   <button onclick="append_elem(this)" class="custom-buttons" id="watersys-demandflow-to-2000" name="to">Add To</button>
-			   <button onclick="heading_elem(this)" class="custom-buttons" id="watersys-demandflow-before-2000" name="before">Add Heading</button>
-			   <button onclick="after_elem(this)" class="custom-buttons" id="watersys-demandflow-after-2000" name="after">Add Test</button>
-			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="watersys-demandflow-to-2000" name="comment" style="display:none">Comment</button>
-			  </div>
-		</div>
-		<div class='row' id="watersys-demandflow-div-3000">
-				<div class="col-xl-7 width-redux-7">
-					<ul id="watersys-demandflow-div-3000-watersys-demandflow-ul-3000">
-						<li oncontextmenu="edit_li(this)" id="watersys-demandflow-div-3000-watersys-demandflow-3000" ondblclick="remove_li(this)">Release the second position chiller from "Out of Service" override</li>
-						<li oncontextmenu="edit_li(this)" id="watersys-demandflow-div-3000-watersys-demandflow-3001" ondblclick="remove_li(this)">Review the chiller runtimes and confirm that the chiller with the lowest runtime is in the correct staging position</li>
-						<li oncontextmenu="edit_li(this)" id="watersys-demandflow-div-3000-watersys-demandflow-3002" ondblclick="remove_li(this)">Command the "Chiller Rotate" point</li>
-						<li oncontextmenu="edit_li(this)" id="watersys-demandflow-div-3000-watersys-demandflow-3003" ondblclick="remove_li(this)">Confirm that the two active chillers (positions 1 and 3) continue to run and that the position 2 chiller is enabled and ramps up</li>
-					</ul>
-			  </div>
-			  <div class="col-xl-5 width-redux">
-			   <input type="radio" class="radio-buttons" name="watersys-demandflow-3000" value="pass">
-			   <label class="passfail">Pass</label>
-			   <input type="radio" class="radio-buttons" name="watersys-demandflow-3000" value="fail">
-			   <label class="passfail fail">Fail</label>
-			   <input type="radio" class="radio-buttons" name="watersys-demandflow-3000" value="na">
-			   <label class="passfail na">NA</label>
-			   <button onclick="remove_elem(this)" class="custom-buttons" id="watersys-demandflow-remove-3000" name="remove">Remove</button>
-			   <button onclick="append_elem(this)" class="custom-buttons" id="watersys-demandflow-to-3000" name="to">Add To</button>
-			   <button onclick="heading_elem(this)" class="custom-buttons" id="watersys-demandflow-before-3000" name="before">Add Heading</button>
-			   <button onclick="after_elem(this)" class="custom-buttons" id="watersys-demandflow-after-3000" name="after">Add Test</button>
-			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="watersys-demandflow-to-3000" name="comment" style="display:none">Comment</button>
-			  </div>
-		</div>
-		<div class='row' id="watersys-demandflow-div-4000">
-				<div class="col-xl-7 width-redux-7">
-					<ul id="watersys-demandflow-div-4000-watersys-demandflow-ul-4000">
-						<li oncontextmenu="edit_li(this)" id="watersys-demandflow-div-4000-watersys-demandflow-4000" ondblclick="remove_li(this)">Monitor the chilled water leaving temperature of the position 2 chiller</li>
-						<li oncontextmenu="edit_li(this)" id="watersys-demandflow-div-4000-watersys-demandflow-4001" ondblclick="remove_li(this)">Confirm the position 3 chiller is disabled once the chilled water leaving temperature of the position 2 chiller is within 4 degF of setpoint.</li>
-					</ul>
-			  </div>
-			  <div class="col-xl-5 width-redux">
-			   <input type="radio" class="radio-buttons" name="watersys-demandflow-4000" value="pass">
-			   <label class="passfail">Pass</label>
-			   <input type="radio" class="radio-buttons" name="watersys-demandflow-4000" value="fail">
-			   <label class="passfail fail">Fail</label>
-			   <input type="radio" class="radio-buttons" name="watersys-demandflow-4000" value="na">
-			   <label class="passfail na">NA</label>
-			   <button onclick="remove_elem(this)" class="custom-buttons" id="watersys-demandflow-remove-4000" name="remove">Remove</button>
-			   <button onclick="append_elem(this)" class="custom-buttons" id="watersys-demandflow-to-4000" name="to">Add To</button>
-			   <button onclick="heading_elem(this)" class="custom-buttons" id="watersys-demandflow-before-4000" name="before">Add Heading</button>
-			   <button onclick="after_elem(this)" class="custom-buttons" id="watersys-demandflow-after-4000" name="after">Add Test</button>
-			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="watersys-demandflow-to-4000" name="comment" style="display:none">Comment</button>
-			  </div>
-		</div>
-		<div class='row' id="watersys-demandflow-div-5000">
-				<div class="col-xl-7 width-redux-7">
-					<ul id="watersys-demandflow-div-5000-watersys-demandflow-ul-5000">
-						<li oncontextmenu="edit_li(this)" id="watersys-demandflow-div-5000-watersys-demandflow-5000" ondblclick="remove_li(this)">Release the "Chiller Rotate" point from operator override</li>
-						<li oncontextmenu="edit_li(this)" id="watersys-demandflow-div-5000-watersys-demandflow-5001" ondblclick="remove_li(this)">Release the "Chillers Required" point from operator override</li>
-					</ul>
-			  </div>
-			  <div class="col-xl-5 width-redux">
-			   <input type="radio" class="radio-buttons" name="watersys-demandflow-5000" value="pass">
-			   <label class="passfail">Pass</label>
-			   <input type="radio" class="radio-buttons" name="watersys-demandflow-5000" value="fail">
-			   <label class="passfail fail">Fail</label>
-			   <input type="radio" class="radio-buttons" name="watersys-demandflow-5000" value="na">
-			   <label class="passfail na">NA</label>
-			   <button onclick="remove_elem(this)" class="custom-buttons" id="watersys-demandflow-remove-5000" name="remove">Remove</button>
-			   <button onclick="append_elem(this)" class="custom-buttons" id="watersys-demandflow-to-5000" name="to">Add To</button>
-			   <button onclick="heading_elem(this)" class="custom-buttons" id="watersys-demandflow-before-5000" name="before">Add Heading</button>
-			   <button onclick="after_elem(this)" class="custom-buttons" id="watersys-demandflow-after-5000" name="after">Add Test</button>
-			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="watersys-demandflow-to-5000" name="comment" style="display:none">Comment</button>
-			  </div>
-		</div>
-	</div>
 	<!-- General Functionality -->
 	<!-- General Functionality -->
 	<!-- General Functionality -->
@@ -2054,6 +1943,607 @@
 			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="dxr-comfort-comment-9000" name="comment" style="display:none">Comment</button>
 			   <button onclick="heading_elem(this)" class="custom-buttons" id="dxr-comfort-before-9000" name="before">Add Heading</button>
 			   <button onclick="after_elem(this)" class="custom-buttons" id="dxr-comfort-after-9000" name="after">Add Test</button>
+			  </div>
+		  </div>
+		</div>
+	</div>
+	<div class='watersys-enable' style="display:none">
+		<h4 ondblclick="remove_this(this)"><span class="badge badge-secondary sequence-start">Chilled Water System Enable</span></h4>
+		<div class="fpt-container">
+			<div class='row' id="watersys-enable-div-1000">
+				<div class="col-xl-7 width-redux-7">
+					<ul id="watersys-enable-div-1000-watersys-enable-ul-1000">
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-div-1000-watersys-enable-1000" ondblclick="remove_li(this)">Confirm "FLOW.SP.DP" for each chiller is set to a value other than 0</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-div-1000-watersys-enable-1001" ondblclick="remove_li(this)">Command "CHW.ENABLE" to "On"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-div-1000-watersys-enable-1002" ondblclick="remove_li(this)">Confirm "CHLR.STGUP.TIME" begins to count up. A resident timer in the program "CHLR.STG.DLY" will count up at the same rate</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-div-1000-watersys-enable-1003" ondblclick="remove_li(this)">After 30 minutes elapses (as counted by "CHLR.STG.DLY") confirm that "CHLR.REQ" changes to 1 and that the Lead Chiller Isolation Valves begin to open</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-div-1000-watersys-enable-1004" ondblclick="remove_li(this)">If testing virtually, manually override the Chilled Water and Condensor Water Isolation Valve Feedback Signals ("CH#.CHW.IV.FDBK" & "CH#.CDW.IV.FDBK") to 100% upon the Valve Commands going above 7%</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-div-1000-watersys-enable-1005" ondblclick="remove_li(this)">Once the Lead Chiller Isolation Valves are proofed open, confirm that the lead Chilled Water and Condensor Water Pumps Start</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-div-1000-watersys-enable-1006" ondblclick="remove_li(this)">If testing virtually, manually override the Chilled Water and Condensor Water Pump Statuses ("CHWP#.STATUS" & "CDWP#.STATUS") to "On" upon the Pumps turning "On"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-div-1000-watersys-enable-1007" ondblclick="remove_li(this)">If testing the Chilled Water System seperately from the Condensor Water System, Command "CHLR.CTR" to "On". This point is the "Clear To Run" signal from the Condensor Water System whenever 1 or more Cooling Tower Fans have been running for more than 30 seconds</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-div-1000-watersys-enable-1008" ondblclick="remove_li(this)">Confirm the Lead Chiller ("CHLR.ENA") turns "On"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-div-1000-watersys-enable-1009" ondblclick="remove_li(this)">If testing virtually, command ("CH#.STATUS") "On"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-div-1000-watersys-enable-1010" ondblclick="remove_li(this)">Confirm "CHLR.COUNT" goes to 1</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-div-1000-watersys-enable-1011" ondblclick="remove_li(this)">Confirm "CHLR.STG.DLY" Restarts and begins counting up again</li>
+					</ul>
+			  </div>
+			  <div class="col-xl-5 width-redux">
+			   <input type="radio" class="radio-buttons" name="watersys-enable-1000" value="pass">
+			   <label class="passfail">Pass</label>
+			   <input type="radio" class="radio-buttons" name="watersys-enable-1000" value="fail">
+			   <label class="passfail fail">Fail</label>
+			   <input type="radio" class="radio-buttons" name="watersys-enable-1000" value="na">
+			   <label class="passfail na">NA</label>
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="watersys-enable-remove-1000" name="remove">Remove</button>
+			   <button onclick="append_elem(this)" class="custom-buttons" id="watersys-enable-to-1000" name="to">Add To</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="watersys-enable-comment-1000" name="comment" style="display:none">Comment</button>
+			   <button onclick="heading_elem(this)" class="custom-buttons" id="watersys-enable-before-1000" name="before">Add Heading</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="watersys-enable-after-1000" name="after">Add Test</button>
+			  </div>
+		  </div>
+		  <div class='row' id="watersys-enable-div-2000">
+				<div class="col-xl-7 width-redux-7">
+					<ul id="watersys-enable-div-2000-watersys-enable-ul-2000">
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-div-2000-watersys-enable-2000" ondblclick="remove_li(this)">Command the Chilled Water Differential Pressure Setpoint ("MAIN.DP.SP") to 15 psi</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-div-2000-watersys-enable-2001" ondblclick="remove_li(this)">Confirm that Central Plant Main Bypass Valve ("CHW.BPV") begins to close</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-div-2000-watersys-enable-2002" ondblclick="remove_li(this)">Command the Chilled Water Differential Pressure Setpoint ("MAIN.DP.SP") to 5 psi</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-div-2000-watersys-enable-2003" ondblclick="remove_li(this)">Confirm that Central Plant Main Bypass Valve ("CHW.BPV") begins to open</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-div-2000-watersys-enable-2004" ondblclick="remove_li(this)">Release the Chilled Water Differential Pressure Setpoint ("MAIN.DP.SP") from Operator priority</li>
+					</ul>
+			  </div>
+			  <div class="col-xl-5 width-redux">
+			   <input type="radio" class="radio-buttons" name="watersys-enable-2000" value="pass">
+			   <label class="passfail">Pass</label>
+			   <input type="radio" class="radio-buttons" name="watersys-enable-2000" value="fail">
+			   <label class="passfail fail">Fail</label>
+			   <input type="radio" class="radio-buttons" name="watersys-enable-2000" value="na">
+			   <label class="passfail na">NA</label>
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="watersys-enable-remove-2000" name="remove">Remove</button>
+			   <button onclick="append_elem(this)" class="custom-buttons" id="watersys-enable-to-2000" name="to">Add To</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="watersys-enable-comment-2000" name="comment" style="display:none">Comment</button>
+			   <button onclick="heading_elem(this)" class="custom-buttons" id="watersys-enable-before-2000" name="before">Add Heading</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="watersys-enable-after-2000" name="after">Add Test</button>
+			  </div>
+		  </div>
+		</div>
+	</div>
+	<div class='watersys-stg' style="display:none">
+		<h4 ondblclick="remove_this(this)"><span class="badge badge-secondary sequence-start">Chilled Water System Chiller Staging</span></h4>
+		<div class="fpt-container">
+			<div class='row' id="watersys-stg-div-1000">
+				<div class="col-xl-7 width-redux-7">
+					<ul id="watersys-stg-div-1000-watersys-stg-ul-1000">
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-div-1000-watersys-stg-1000" ondblclick="remove_li(this)">Ensure one of the following three conditions is true to allow "CHLR.STGUP.TIME" to count up:</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-div-1000-watersys-stg-1001" ondblclick="remove_li(this)">1. Lead Chiller Full Load Amps (FLA) > 90</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-div-1000-watersys-stg-1002" ondblclick="remove_li(this)">2. "CHW.MAIN.DP" < "CHW.MAIN.DP.SP" - 2</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-div-1000-watersys-stg-1003" ondblclick="remove_li(this)">3. "CHW.ST" > "CHW.MAIN.TS.SP" + 2</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-div-1000-watersys-stg-1004" ondblclick="remove_li(this)">After 30 minutes elapses (as counted by "CHLR.STG.DLY") since the start of the first chiller as well as the stage up conditions are met (as indicated by "CHLR.STGUP.TIME") confirm "CHLR.REQ" changes to 2 and that the Lag Chilled Water and Condensor Water Pumps start</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-div-1000-watersys-stg-1005" ondblclick="remove_li(this)">If testing virtually, manually override the Chilled Water and Condensor Water Pump Statuses ("CHWP#.STATUS" & "CDWP#.STATUS") to "On" upon the Pumps turning "On"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-div-1000-watersys-stg-1006" ondblclick="remove_li(this)">In order for the isolation valves on the Lag Chiller to open, the Pump Speeds ("CHWP.SPD" & "CWP.SPD") must not be greater than the Minimum Pump Speeds ("CHWP.MINSPD" & "CWP.MINSPD") - 5%. Confirm the Pump Speeds are within this tolerance</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-div-1000-watersys-stg-1007" ondblclick="remove_li(this)">Once the Pump Speeds are close to their designated minimums, confirm the Lag Chiller Chilled Water and Condensor Water Isolation Valves begin to open</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-div-1000-watersys-stg-1008" ondblclick="remove_li(this)">If testing virtually, manually override the Chilled Water and Condensor Water Isolation Valve Feedback Signals ("CH#.CHW.IV.FDBK" & "CH#.CDW.IV.FDBK") to 100% upon the Valve Commands going above 7%</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-div-1000-watersys-stg-1009" ondblclick="remove_li(this)">Upon the valves proofing open, Confirm the Lag Chiller ("CHLR.ENA") turns "On" and that "CHLR.COUNT" goes to 2</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-div-1000-watersys-stg-1010" ondblclick="remove_li(this)">If testing virtually, manually override "CH#.STATUS" to "On" once ("CHLR.ENA") turns "On"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-div-1000-watersys-stg-1011" ondblclick="remove_li(this)">Confirm "CHLR.COUNT" goes to 2</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-div-1000-watersys-stg-1012" ondblclick="remove_li(this)">Confirm "CHLR.STG.DLY" Restarts and begins counting up again</li>
+					</ul>
+			  </div>
+			  <div class="col-xl-5 width-redux">
+			   <input type="radio" class="radio-buttons" name="watersys-stg-1000" value="pass">
+			   <label class="passfail">Pass</label>
+			   <input type="radio" class="radio-buttons" name="watersys-stg-1000" value="fail">
+			   <label class="passfail fail">Fail</label>
+			   <input type="radio" class="radio-buttons" name="watersys-stg-1000" value="na">
+			   <label class="passfail na">NA</label>
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="watersys-stg-remove-1000" name="remove">Remove</button>
+			   <button onclick="append_elem(this)" class="custom-buttons" id="watersys-stg-to-1000" name="to">Add To</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="watersys-stg-comment-1000" name="comment" style="display:none">Comment</button>
+			   <button onclick="heading_elem(this)" class="custom-buttons" id="watersys-stg-before-1000" name="before">Add Heading</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="watersys-stg-after-1000" name="after">Add Test</button>
+			  </div>
+		  </div>
+		  <div class='row' id="watersys-stg-div-2000">
+				<div class="col-xl-7 width-redux-7">
+					<ul id="watersys-stg-div-2000-watersys-stg-ul-2000">
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-div-2000-watersys-stg-2000" ondblclick="remove_li(this)">If testing virtually, command the statuses of one Chilled Water Pump and one Condensor Water Pump that are running ("CHWP#.STATUS"/"CDWP#.STATUS") to "Off"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-div-2000-watersys-stg-2001" ondblclick="remove_li(this)">If testing in person, turn off the VFD/Mag Starters for one Chilled Water Pump and one Condensor Water Pump that are running</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-div-2000-watersys-stg-2002" ondblclick="remove_li(this)">Confirm the Backup Pump (Lag Pump 2) turns "On"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-div-2000-watersys-stg-2003" ondblclick="remove_li(this)">If testing virtually, command the Backup Pump Status ("CHWP#.STATUS" / "CDWP#.STATUS") to "On"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-div-2000-watersys-stg-2004" ondblclick="remove_li(this)">Confirm the Backup Pump Speed Ramps up to match the speed of the Lead Pump</li>
+					</ul>
+			  </div>
+			  <div class="col-xl-5 width-redux">
+			   <input type="radio" class="radio-buttons" name="watersys-stg-2000" value="pass">
+			   <label class="passfail">Pass</label>
+			   <input type="radio" class="radio-buttons" name="watersys-stg-2000" value="fail">
+			   <label class="passfail fail">Fail</label>
+			   <input type="radio" class="radio-buttons" name="watersys-stg-2000" value="na">
+			   <label class="passfail na">NA</label>
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="watersys-stg-remove-2000" name="remove">Remove</button>
+			   <button onclick="append_elem(this)" class="custom-buttons" id="watersys-stg-to-2000" name="to">Add To</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="watersys-stg-comment-2000" name="comment" style="display:none">Comment</button>
+			   <button onclick="heading_elem(this)" class="custom-buttons" id="watersys-stg-before-2000" name="before">Add Heading</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="watersys-stg-after-2000" name="after">Add Test</button>
+			  </div>
+		  </div>
+		  <div class='row' id="watersys-stg-div-3000">
+				<div class="col-xl-7 width-redux-7">
+					<ul id="watersys-stg-div-3000-watersys-stg-ul-3000">
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-div-3000-watersys-stg-3000" ondblclick="remove_li(this)">In order to stage down Chillers, you must simulate low-load conditions by dropping the Full Load Amps (FLA) of each chiller...</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-div-3000-watersys-stg-3001" ondblclick="remove_li(this)">Ensure one of the following three conditions is true to allow "CHLR.STGUP.TIME" to zero out and allow "CHLR.STGDN.TIME" to count up:</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-div-3000-watersys-stg-3002" ondblclick="remove_li(this)">1. All Chiller Full Load Amps (FLA) <= 25</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-div-3000-watersys-stg-3003" ondblclick="remove_li(this)">2. "CHW.MAIN.DP" > "CHW.MAIN.DP.SP"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-div-3000-watersys-stg-3004" ondblclick="remove_li(this)">3. "CHW.ST" < "CHW.MAIN.TS.SP"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-div-3000-watersys-stg-3005" ondblclick="remove_li(this)">Confirm "CHLR.STGUP.TIME" zeros out and that "CHLR.STGDN.TIME" begins to count up. A resident timer in the program "CHLR.STG.DLY" will count up at the same rate</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-div-3000-watersys-stg-3006" ondblclick="remove_li(this)">After 30 minutes elapses (as counted by "CHLR.STG.DLY") since the start of the second chiller as well as the stage down conditions are met (as indicated by "CHLR.STGDN.TIME") confirm "CHLR.REQ" changes to 1 and that the Lag Chiller ("CHLR.ENA") turns "Off". The Lag Chiller will be the chiller with the highest runtime</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-div-3000-watersys-stg-3007" ondblclick="remove_li(this)">If testing virtually, manually override "CH#.STATUS" to "Off" once ("CHLR.ENA") turns "Off"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-div-3000-watersys-stg-3008" ondblclick="remove_li(this)">Confirm "CHLR.STG.DLY" Restarts and begins counting up again</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-div-3000-watersys-stg-3009" ondblclick="remove_li(this)">Confirm the Lag Chiller Chilled Water and Condensor Water Isolation valves close after the Lag Chiller has been off for 3 minutes</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-div-3000-watersys-stg-3010" ondblclick="remove_li(this)">If testing virtually, manually override the Chilled Water and Condensor Water Isolation Valve Feedback Signals ("CH#.CHW.IV.FDBK" & "CH#.CDW.IV.FDBK") to 0% upon the Valve Commands going to 0%</li>
+					</ul>
+			  </div>
+			  <div class="col-xl-5 width-redux">
+			   <input type="radio" class="radio-buttons" name="watersys-stg-3000" value="pass">
+			   <label class="passfail">Pass</label>
+			   <input type="radio" class="radio-buttons" name="watersys-stg-3000" value="fail">
+			   <label class="passfail fail">Fail</label>
+			   <input type="radio" class="radio-buttons" name="watersys-stg-3000" value="na">
+			   <label class="passfail na">NA</label>
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="watersys-stg-remove-3000" name="remove">Remove</button>
+			   <button onclick="append_elem(this)" class="custom-buttons" id="watersys-stg-to-3000" name="to">Add To</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="watersys-stg-comment-3000" name="comment" style="display:none">Comment</button>
+			   <button onclick="heading_elem(this)" class="custom-buttons" id="watersys-stg-before-3000" name="before">Add Heading</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="watersys-stg-after-3000" name="after">Add Test</button>
+			  </div>
+		  </div>
+		  <div class='row' id="watersys-stg-div-4000">
+				<div class="col-xl-7 width-redux-7">
+					<ul id="watersys-stg-div-4000-watersys-stg-ul-4000">
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-div-4000-watersys-stg-4000" ondblclick="remove_li(this)">If testing virtually, command the statuses of the "failed" pumps from Chiller Staging Test #2 ("CHWP#.STATUS"/"CDWP#.STATUS") to "On"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-div-4000-watersys-stg-4001" ondblclick="remove_li(this)">If testing in person, turn on the VFD/Mag Starter for the pumps you turned off in Weekly Rotation Test #2</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-div-4000-watersys-stg-4002" ondblclick="remove_li(this)">Confirm the Backup Pumps (Chilled Water & Condensor Water Lag Pump 2) turn "Off"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-div-4000-watersys-stg-4003" ondblclick="remove_li(this)">If testing virtually, command the Backup Pump Statuses ("CHWP#.STATUS" / "CDWP#.STATUS") to "Off"</li>
+					</ul>
+			  </div>
+			  <div class="col-xl-5 width-redux">
+			   <input type="radio" class="radio-buttons" name="watersys-stg-4000" value="pass">
+			   <label class="passfail">Pass</label>
+			   <input type="radio" class="radio-buttons" name="watersys-stg-4000" value="fail">
+			   <label class="passfail fail">Fail</label>
+			   <input type="radio" class="radio-buttons" name="watersys-stg-4000" value="na">
+			   <label class="passfail na">NA</label>
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="watersys-stg-remove-4000" name="remove">Remove</button>
+			   <button onclick="append_elem(this)" class="custom-buttons" id="watersys-stg-to-4000" name="to">Add To</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="watersys-stg-comment-4000" name="comment" style="display:none">Comment</button>
+			   <button onclick="heading_elem(this)" class="custom-buttons" id="watersys-stg-before-4000" name="before">Add Heading</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="watersys-stg-after-4000" name="after">Add Test</button>
+			  </div>
+		  </div>
+		</div>
+	</div>
+	<div class='watersys-rotation' style="display:none">
+		<h4 ondblclick="remove_this(this)"><span class="badge badge-secondary sequence-start">Chilled Water System Weekly Rotation</span></h4>
+		<div class="fpt-container">
+			<div class='row' id="watersys-rotation-div-1000">
+				<div class="col-xl-7 width-redux-7">
+					<ul id="watersys-rotation-div-1000-watersys-rotation-ul-1000">
+						<li oncontextmenu="edit_li(this)" id="watersys-rotation-div-1000-watersys-rotation-1000" ondblclick="remove_li(this)">If testing virtually, go to the section of the code with the Date and Time for the changeover to occur. Replace the Date and Time arguments with a Test Point you can use for testing</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-rotation-div-1000-watersys-rotation-1001" ondblclick="remove_li(this)">If testing virtually, Command your Test Point "On"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-rotation-div-1000-watersys-rotation-1002" ondblclick="remove_li(this)">Confirm "CHLR.ROT" turns on and that "CHLR.REQ" changes to 2</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-rotation-div-1000-watersys-rotation-1003" ondblclick="remove_li(this)">Command your Test Point "Off"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-rotation-div-1000-watersys-rotation-1004" ondblclick="remove_li(this)">If testing in person, go to the section of the code with the Date and Time for changeover to occur. Change the Day to today and the time to 2 minutes from now</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-rotation-div-1000-watersys-rotation-1005" ondblclick="remove_li(this)">Confirm "CHLR.ROT" turns on and that "CHLR.REQ" changes to 2 after 2 minutes elapses</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-rotation-div-1000-watersys-rotation-1006" ondblclick="remove_li(this)">Confirm the Lag Chilled Water and Condensor Water Pumps turn "On"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-rotation-div-1000-watersys-rotation-1007" ondblclick="remove_li(this)">If testing virtually, manually override the Chilled Water and Condensor Water Pump Statuses ("CHWP#.STATUS" & "CDWP#.STATUS") to "On" upon the Pumps turning "On"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-rotation-div-1000-watersys-rotation-1008" ondblclick="remove_li(this)">In order for the isolation valves on the Lag Chiller to open, the Pump Speeds ("CHWP.SPD" & "CWP.SPD") must not be greater than the Minimum Pump Speeds ("CHWP.MINSPD" & "CWP.MINSPD") - 5%. Confirm the Pump Speeds are within this tolerance</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-rotation-div-1000-watersys-rotation-1009" ondblclick="remove_li(this)">Once the Pump Speeds are close to their designated minimums, confirm the Lag Chiller Chilled Water and Condensor Water Isolation Valves begin to open</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-rotation-div-1000-watersys-rotation-1010" ondblclick="remove_li(this)">Upon proof of the Lag Chilled Water and Condensor Water Pumps, Confirm the Lag Chiller (New Lead) Chilled Water and Condensor Water Isolation valves begin to open</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-rotation-div-1000-watersys-rotation-1011" ondblclick="remove_li(this)">If testing virtually, manually override the Chilled Water and Condensor Water Isolation Valve Feedback Signals ("CH#.CHW.IV.FDBK" & "CH#.CDW.IV.FDBK") to 100% upon the Valve Commands going above 7%</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-rotation-div-1000-watersys-rotation-1012" ondblclick="remove_li(this)">Confirm the new Lead Chiller  ("CHLR.ENA") turns "On"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-rotation-div-1000-watersys-rotation-1013" ondblclick="remove_li(this)">If testing virtually, command ("CH#.STATUS") "On"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-rotation-div-1000-watersys-rotation-1014" ondblclick="remove_li(this)">Confirm "CHLR.COUNT" goes to 2</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-rotation-div-1000-watersys-rotation-1015" ondblclick="remove_li(this)">Confirm "CHLR.STG.DLY" Restarts and begins counting up again</li>
+					</ul>
+			  </div>
+			  <div class="col-xl-5 width-redux">
+			   <input type="radio" class="radio-buttons" name="watersys-rotation-1000" value="pass">
+			   <label class="passfail">Pass</label>
+			   <input type="radio" class="radio-buttons" name="watersys-rotation-1000" value="fail">
+			   <label class="passfail fail">Fail</label>
+			   <input type="radio" class="radio-buttons" name="watersys-rotation-1000" value="na">
+			   <label class="passfail na">NA</label>
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="watersys-rotation-remove-1000" name="remove">Remove</button>
+			   <button onclick="append_elem(this)" class="custom-buttons" id="watersys-rotation-to-1000" name="to">Add To</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="watersys-rotation-comment-1000" name="comment" style="display:none">Comment</button>
+			   <button onclick="heading_elem(this)" class="custom-buttons" id="watersys-rotation-before-1000" name="before">Add Heading</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="watersys-rotation-after-1000" name="after">Add Test</button>
+			  </div>
+		  </div>
+		  <div class='row' id="watersys-rotation-div-3000">
+				<div class="col-xl-7 width-redux-7">
+					<ul id="watersys-rotation-div-3000-watersys-rotation-ul-3000">
+						<li oncontextmenu="edit_li(this)" id="watersys-rotation-div-3000-watersys-rotation-3000" ondblclick="remove_li(this)">In order to stage down Chillers, you must simulate low-load conditions by dropping the Full Load Amps (FLA) of each chiller...</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-rotation-div-3000-watersys-rotation-3001" ondblclick="remove_li(this)">Ensure one of the following three conditions is true to allow "CHLR.STGUP.TIME" to zero out and allow "CHLR.STGDN.TIME" to count up:</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-rotation-div-3000-watersys-rotation-3002" ondblclick="remove_li(this)">1. All Chiller Full Load Amps (FLA) <= 25</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-rotation-div-3000-watersys-rotation-3003" ondblclick="remove_li(this)">2. "CHW.MAIN.DP" > "CHW.MAIN.DP.SP"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-rotation-div-3000-watersys-rotation-3004" ondblclick="remove_li(this)">3. "CHW.ST" < "CHW.MAIN.TS.SP"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-rotation-div-3000-watersys-rotation-3005" ondblclick="remove_li(this)">Confirm "CHLR.STGUP.TIME" zeros out and that "CHLR.STGDN.TIME" begins to count up. A resident timer in the program "CHLR.rotation.DLY" will count up at the same rate</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-rotation-div-3000-watersys-rotation-3006" ondblclick="remove_li(this)">After 30 minutes elapses (as counted by "CHLR.STG.DLY") since the start of the second chiller as well as the stage down conditions are met (as indicated by "CHLR.STGDN.TIME") confirm "CHLR.REQ" changes to 1 and that the Chiller that was running at the beginnging of the test ("CHLR.ENA") turns of the "Off". The Chiller that came on most recently will be the new Lead Chiller</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-rotation-div-3000-watersys-rotation-3007" ondblclick="remove_li(this)">If testing virtually, manually override "CH#.STATUS" to "Off" once ("CHLR.ENA") turns "Off"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-rotation-div-3000-watersys-rotation-3008" ondblclick="remove_li(this)">Confirm "CHLR.STG.DLY" Restarts and begins counting up again</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-rotation-div-3000-watersys-rotation-3009" ondblclick="remove_li(this)">Confirm the Lag Chiller Chilled Water and Condensor Water Isolation valves close after the Lag Chiller has been off for 3 minutes</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-rotation-div-3000-watersys-rotation-3010" ondblclick="remove_li(this)">If testing virtually, manually override the Chilled Water and Condensor Water Isolation Valve Feedback Signals ("CH#.CHW.IV.FDBK" & "CH#.CDW.IV.FDBK") to 0% upon the Valve Commands going to 0%</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-rotation-div-3000-watersys-rotation-3011" ondblclick="remove_li(this)">Confirm the Chilled Water and Condensor Water Pumps with the highest runtimes turn "Off"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-rotation-div-3000-watersys-rotation-3012" ondblclick="remove_li(this)">If testing virtually, command the status ("CHWP#.STATUS"
+						 & "CDWP#.STATUS") points "Off"</li>
+					</ul>
+			  </div>
+			  <div class="col-xl-5 width-redux">
+			   <input type="radio" class="radio-buttons" name="watersys-rotation-3000" value="pass">
+			   <label class="passfail">Pass</label>
+			   <input type="radio" class="radio-buttons" name="watersys-rotation-3000" value="fail">
+			   <label class="passfail fail">Fail</label>
+			   <input type="radio" class="radio-buttons" name="watersys-rotation-3000" value="na">
+			   <label class="passfail na">NA</label>
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="watersys-rotation-remove-3000" name="remove">Remove</button>
+			   <button onclick="append_elem(this)" class="custom-buttons" id="watersys-rotation-to-3000" name="to">Add To</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="watersys-rotation-comment-3000" name="comment" style="display:none">Comment</button>
+			   <button onclick="heading_elem(this)" class="custom-buttons" id="watersys-rotation-before-3000" name="before">Add Heading</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="watersys-rotation-after-3000" name="after">Add Test</button>
+			  </div>
+		  </div>
+		</div>
+	</div>
+	<div class='watersys-demandflow' style="display:none">
+		<h4 ondblclick="remove_this(this)"><span class="badge badge-secondary sequence-start">Chilled Water System Demand Flow</span></h4>
+		<div class='row' id="watersys-demandflow-div-1000">
+				<div class="col-xl-7 width-redux-7">
+					<ul id="watersys-demandflow-div-1000-watersys-demandflow-ul-1000">
+						<li oncontextmenu="edit_li(this)" id="watersys-demandflow-div-1000-watersys-demandflow-1000" ondblclick="remove_li(this)">Command the "Chillers Required" to 1</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-demandflow-div-1000-watersys-demandflow-1001" ondblclick="remove_li(this)">Confirm the first position chiller continues to run according to the rotation assignment and staging table</li>
+					</ul>
+			  </div>
+			  <div class="col-xl-5 width-redux">
+			   <input type="radio" class="radio-buttons" name="watersys-demandflow-1000" value="pass">
+			   <label class="passfail">Pass</label>
+			   <input type="radio" class="radio-buttons" name="watersys-demandflow-1000" value="fail">
+			   <label class="passfail fail">Fail</label>
+			   <input type="radio" class="radio-buttons" name="watersys-demandflow-1000" value="na">
+			   <label class="passfail na">NA</label>
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="watersys-demandflow-remove-1000" name="remove">Remove</button>
+			   <button onclick="append_elem(this)" class="custom-buttons" id="watersys-demandflow-to-1000" name="to">Add To</button>
+			   <button onclick="heading_elem(this)" class="custom-buttons" id="watersys-demandflow-before-1000" name="before">Add Heading</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="watersys-demandflow-after-1000" name="after">Add Test</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="watersys-demandflow-to-1000" name="comment" style="display:none">Comment</button>
+			  </div>
+		</div>
+		<div class='row' id="watersys-demandflow-div-2000">
+				<div class="col-xl-7 width-redux-7">
+					<ul id="watersys-demandflow-div-2000-watersys-demandflow-ul-2000">
+						<li oncontextmenu="edit_li(this)" id="watersys-demandflow-div-2000-watersys-demandflow-2000" ondblclick="remove_li(this)">Command the second position chiller to "Out of Service"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-demandflow-div-2000-watersys-demandflow-2001" ondblclick="remove_li(this)">Confirm the second position chiller remains off</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-demandflow-div-2000-watersys-demandflow-2002" ondblclick="remove_li(this)">Confirm the third position chiller is enabled and ramps up</li>
+					</ul>
+			  </div>
+			  <div class="col-xl-5 width-redux">
+			   <input type="radio" class="radio-buttons" name="watersys-demandflow-2000" value="pass">
+			   <label class="passfail">Pass</label>
+			   <input type="radio" class="radio-buttons" name="watersys-demandflow-2000" value="fail">
+			   <label class="passfail fail">Fail</label>
+			   <input type="radio" class="radio-buttons" name="watersys-demandflow-2000" value="na">
+			   <label class="passfail na">NA</label>
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="watersys-demandflow-remove-2000" name="remove">Remove</button>
+			   <button onclick="append_elem(this)" class="custom-buttons" id="watersys-demandflow-to-2000" name="to">Add To</button>
+			   <button onclick="heading_elem(this)" class="custom-buttons" id="watersys-demandflow-before-2000" name="before">Add Heading</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="watersys-demandflow-after-2000" name="after">Add Test</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="watersys-demandflow-to-2000" name="comment" style="display:none">Comment</button>
+			  </div>
+		</div>
+		<div class='row' id="watersys-demandflow-div-3000">
+				<div class="col-xl-7 width-redux-7">
+					<ul id="watersys-demandflow-div-3000-watersys-demandflow-ul-3000">
+						<li oncontextmenu="edit_li(this)" id="watersys-demandflow-div-3000-watersys-demandflow-3000" ondblclick="remove_li(this)">Release the second position chiller from "Out of Service" override</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-demandflow-div-3000-watersys-demandflow-3001" ondblclick="remove_li(this)">Review the chiller runtimes and confirm that the chiller with the lowest runtime is in the correct staging position</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-demandflow-div-3000-watersys-demandflow-3002" ondblclick="remove_li(this)">Command the "Chiller Rotate" point</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-demandflow-div-3000-watersys-demandflow-3003" ondblclick="remove_li(this)">Confirm that the two active chillers (positions 1 and 3) continue to run and that the position 2 chiller is enabled and ramps up</li>
+					</ul>
+			  </div>
+			  <div class="col-xl-5 width-redux">
+			   <input type="radio" class="radio-buttons" name="watersys-demandflow-3000" value="pass">
+			   <label class="passfail">Pass</label>
+			   <input type="radio" class="radio-buttons" name="watersys-demandflow-3000" value="fail">
+			   <label class="passfail fail">Fail</label>
+			   <input type="radio" class="radio-buttons" name="watersys-demandflow-3000" value="na">
+			   <label class="passfail na">NA</label>
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="watersys-demandflow-remove-3000" name="remove">Remove</button>
+			   <button onclick="append_elem(this)" class="custom-buttons" id="watersys-demandflow-to-3000" name="to">Add To</button>
+			   <button onclick="heading_elem(this)" class="custom-buttons" id="watersys-demandflow-before-3000" name="before">Add Heading</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="watersys-demandflow-after-3000" name="after">Add Test</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="watersys-demandflow-to-3000" name="comment" style="display:none">Comment</button>
+			  </div>
+		</div>
+		<div class='row' id="watersys-demandflow-div-4000">
+				<div class="col-xl-7 width-redux-7">
+					<ul id="watersys-demandflow-div-4000-watersys-demandflow-ul-4000">
+						<li oncontextmenu="edit_li(this)" id="watersys-demandflow-div-4000-watersys-demandflow-4000" ondblclick="remove_li(this)">Monitor the chilled water leaving temperature of the position 2 chiller</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-demandflow-div-4000-watersys-demandflow-4001" ondblclick="remove_li(this)">Confirm the position 3 chiller is disabled once the chilled water leaving temperature of the position 2 chiller is within 4 degF of setpoint.</li>
+					</ul>
+			  </div>
+			  <div class="col-xl-5 width-redux">
+			   <input type="radio" class="radio-buttons" name="watersys-demandflow-4000" value="pass">
+			   <label class="passfail">Pass</label>
+			   <input type="radio" class="radio-buttons" name="watersys-demandflow-4000" value="fail">
+			   <label class="passfail fail">Fail</label>
+			   <input type="radio" class="radio-buttons" name="watersys-demandflow-4000" value="na">
+			   <label class="passfail na">NA</label>
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="watersys-demandflow-remove-4000" name="remove">Remove</button>
+			   <button onclick="append_elem(this)" class="custom-buttons" id="watersys-demandflow-to-4000" name="to">Add To</button>
+			   <button onclick="heading_elem(this)" class="custom-buttons" id="watersys-demandflow-before-4000" name="before">Add Heading</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="watersys-demandflow-after-4000" name="after">Add Test</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="watersys-demandflow-to-4000" name="comment" style="display:none">Comment</button>
+			  </div>
+		</div>
+		<div class='row' id="watersys-demandflow-div-5000">
+				<div class="col-xl-7 width-redux-7">
+					<ul id="watersys-demandflow-div-5000-watersys-demandflow-ul-5000">
+						<li oncontextmenu="edit_li(this)" id="watersys-demandflow-div-5000-watersys-demandflow-5000" ondblclick="remove_li(this)">Release the "Chiller Rotate" point from operator override</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-demandflow-div-5000-watersys-demandflow-5001" ondblclick="remove_li(this)">Release the "Chillers Required" point from operator override</li>
+					</ul>
+			  </div>
+			  <div class="col-xl-5 width-redux">
+			   <input type="radio" class="radio-buttons" name="watersys-demandflow-5000" value="pass">
+			   <label class="passfail">Pass</label>
+			   <input type="radio" class="radio-buttons" name="watersys-demandflow-5000" value="fail">
+			   <label class="passfail fail">Fail</label>
+			   <input type="radio" class="radio-buttons" name="watersys-demandflow-5000" value="na">
+			   <label class="passfail na">NA</label>
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="watersys-demandflow-remove-5000" name="remove">Remove</button>
+			   <button onclick="append_elem(this)" class="custom-buttons" id="watersys-demandflow-to-5000" name="to">Add To</button>
+			   <button onclick="heading_elem(this)" class="custom-buttons" id="watersys-demandflow-before-5000" name="before">Add Heading</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="watersys-demandflow-after-5000" name="after">Add Test</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="watersys-demandflow-to-5000" name="comment" style="display:none">Comment</button>
+			  </div>
+		</div>
+	</div>
+	<div class='watersys-suptemp-reset' style="display:none">
+		<h4 ondblclick="remove_this(this)"><span class="badge badge-secondary sequence-start">Chilled Water System Supply Temperature Reset</span></h4>
+		<div class="fpt-container">
+			<div class='row' id="watersys-suptemp-reset-div-1000">
+				<div class="col-xl-7 width-redux-7">
+					<ul id="watersys-suptemp-reset-div-1000-watersys-suptemp-reset-ul-1000">
+						<li oncontextmenu="edit_li(this)" id="watersys-suptemp-reset-div-1000-watersys-suptemp-reset-1000" ondblclick="remove_li(this)">Command the Chilled Water Return Temperature Setpoint ("CHW.MAIN.TR.SP") to the value of the Chilled Water Return Temp ("CHW.RT") - 5 DegF</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-suptemp-reset-div-1000-watersys-suptemp-reset-1001" ondblclick="remove_li(this)">Confirm the Chilled Water Supply Temperature Setpoint ("CHW.MAIN.TS.SP") resets down by 0.25 DegF every 4-5 minutes, going no lower than 42 DegF</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-suptemp-reset-div-1000-watersys-suptemp-reset-1002" ondblclick="remove_li(this)">Command the Chilled Water Return Temperature Setpoint ("CHW.MAIN.TR.SP") to the value of the Chilled Water Return Temp ("CHW.RT") + 5 DegF</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-suptemp-reset-div-1000-watersys-suptemp-reset-1003" ondblclick="remove_li(this)">Confirm the Chilled Water Supply Temperature Setpoint ("CHW.MAIN.TS.SP") resets up 0.25 DegF every 4-5 minutes going no higher than 48 DegF</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-suptemp-reset-div-1000-watersys-suptemp-reset-1004" ondblclick="remove_li(this)">Release the Chilled Water Return Temperature Setpoint ("CHW.MAIN.TR.SP") from Operator priority</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-suptemp-reset-div-1000-watersys-suptemp-reset-1005" ondblclick="remove_li(this)">Confirm the Chilled Water System returns to normal operation</li>
+					</ul>
+			  </div>
+			  <div class="col-xl-5 width-redux">
+			   <input type="radio" class="radio-buttons" name="watersys-suptemp-reset-1000" value="pass">
+			   <label class="passfail">Pass</label>
+			   <input type="radio" class="radio-buttons" name="watersys-suptemp-reset-1000" value="fail">
+			   <label class="passfail fail">Fail</label>
+			   <input type="radio" class="radio-buttons" name="watersys-suptemp-reset-1000" value="na">
+			   <label class="passfail na">NA</label>
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="watersys-suptemp-reset-remove-1000" name="remove">Remove</button>
+			   <button onclick="append_elem(this)" class="custom-buttons" id="watersys-suptemp-reset-to-1000" name="to">Add To</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="watersys-suptemp-reset-comment-1000" name="comment" style="display:none">Comment</button>
+			   <button onclick="heading_elem(this)" class="custom-buttons" id="watersys-suptemp-reset-before-1000" name="before">Add Heading</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="watersys-suptemp-reset-after-1000" name="after">Add Test</button>
+			  </div>
+		  </div>
+		</div>
+	</div>
+	<div class='watersys-pumpstg' style="display:none">
+		<h4 ondblclick="remove_this(this)"><span class="badge badge-secondary sequence-start">Chilled Water System Pump Staging</span></h4>
+		<div class="fpt-container">
+			<div class='row' id="watersys-pumpstg-div-1000">
+				<div class="col-xl-7 width-redux-7">
+					<ul id="watersys-pumpstg-div-1000-watersys-pumpstg-ul-1000">
+						<li oncontextmenu="edit_li(this)" id="watersys-pumpstg-div-1000-watersys-pumpstg-1000" ondblclick="remove_li(this)">Command the Lead Chiller Chilled Water Differential Pressure Setpoint  ("CH#.CHW.FLOW.SP.DP") to 25 psi</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-pumpstg-div-1000-watersys-pumpstg-1001" ondblclick="remove_li(this)">Command the Lead Chiller Condensor Water Differential Pressure Setpoint  ("CH#.CW.FLOW.SP.DP") to 25 psi</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-pumpstg-div-1000-watersys-pumpstg-1002" ondblclick="remove_li(this)">Confirm the Chilled Water and Condensor Water Stage-Up Timers ("CHWP.STGUP.TIME" & "CWP.STGUP.TIME") begin to count up</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-pumpstg-div-1000-watersys-pumpstg-1003" ondblclick="remove_li(this)">After 5 minutes has elapsed as indicated by ("CHWP.STGUP.TIME" & "CWP.STGUP.TIME") Confirm that the lag Chilled Water and Condensor Water Pumps turn "On"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-pumpstg-div-1000-watersys-pumpstg-1004" ondblclick="remove_li(this)">If testing virtually, command the Chilled Water and Condensor Water Pump Statuses ("CHWP#.STATUS" & "CDWP#.STATUS") "On"</li>
+					</ul>
+			  </div>
+			  <div class="col-xl-5 width-redux">
+			   <input type="radio" class="radio-buttons" name="watersys-pumpstg-1000" value="pass">
+			   <label class="passfail">Pass</label>
+			   <input type="radio" class="radio-buttons" name="watersys-pumpstg-1000" value="fail">
+			   <label class="passfail fail">Fail</label>
+			   <input type="radio" class="radio-buttons" name="watersys-pumpstg-1000" value="na">
+			   <label class="passfail na">NA</label>
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="watersys-pumpstg-remove-1000" name="remove">Remove</button>
+			   <button onclick="append_elem(this)" class="custom-buttons" id="watersys-pumpstg-to-1000" name="to">Add To</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="watersys-pumpstg-comment-1000" name="comment" style="display:none">Comment</button>
+			   <button onclick="heading_elem(this)" class="custom-buttons" id="watersys-pumpstg-before-1000" name="before">Add Heading</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="watersys-pumpstg-after-1000" name="after">Add Test</button>
+			  </div>
+		  </div>
+		  <div class='row' id="watersys-pumpstg-div-2000">
+				<div class="col-xl-7 width-redux-7">
+					<ul id="watersys-pumpstg-div-2000-watersys-pumpstg-ul-2000">
+						<li oncontextmenu="edit_li(this)" id="watersys-pumpstg-div-2000-watersys-pumpstg-2000" ondblclick="remove_li(this)">Command the Lead Chiller Chilled Water Differential Pressure Setpoint  ("CH#.CHW.FLOW.SP.DP") to 5 psi</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-pumpstg-div-2000-watersys-pumpstg-2001" ondblclick="remove_li(this)">Command the Lead Chiller Condensor Water Differential Pressure Setpoint  ("CH#.CW.FLOW.SP.DP") to 5 psi</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-pumpstg-div-2000-watersys-pumpstg-2002" ondblclick="remove_li(this)">Confirm the Chilled Water and Condensor Water Stage-Down Timers ("CHWP.STGDN.TIME" & "CWP.STGDN.TIME") begin to count up</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-pumpstg-div-2000-watersys-pumpstg-2003" ondblclick="remove_li(this)">After 5 minutes has elapsed as indicated by ("CHWP.STGDN.TIME" & "CWP.STGDN.TIME") Confirm that the lag Chilled Water and Condensor Water Pumps turn "Off"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-pumpstg-div-2000-watersys-pumpstg-2004" ondblclick="remove_li(this)">If testing virtually, command the Lag Chilled Water and Condensor Water Pump Statuses ("CHWP#.STATUS" & "CDWP#.STATUS") "Off"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-pumpstg-div-2000-watersys-pumpstg-2005" ondblclick="remove_li(this)">Release the Lead Chiller Chilled Water Differential Pressure Setpoint  ("CH#.CHW.FLOW.SP.DP") from Operator priority</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-pumpstg-div-2000-watersys-pumpstg-2006" ondblclick="remove_li(this)">Release the Lead Chiller Condensor Water Differential Pressure Setpoint  ("CH#.CW.FLOW.SP.DP") from Operator priority</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-pumpstg-div-2000-watersys-pumpstg-2007" ondblclick="remove_li(this)">Confirm the Chilled Water System returns to normal operation</li>
+					</ul>
+			  </div>
+			  <div class="col-xl-5 width-redux">
+			   <input type="radio" class="radio-buttons" name="watersys-pumpstg-2000" value="pass">
+			   <label class="passfail">Pass</label>
+			   <input type="radio" class="radio-buttons" name="watersys-pumpstg-2000" value="fail">
+			   <label class="passfail fail">Fail</label>
+			   <input type="radio" class="radio-buttons" name="watersys-pumpstg-2000" value="na">
+			   <label class="passfail na">NA</label>
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="watersys-pumpstg-remove-2000" name="remove">Remove</button>
+			   <button onclick="append_elem(this)" class="custom-buttons" id="watersys-pumpstg-to-2000" name="to">Add To</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="watersys-pumpstg-comment-2000" name="comment" style="display:none">Comment</button>
+			   <button onclick="heading_elem(this)" class="custom-buttons" id="watersys-pumpstg-before-2000" name="before">Add Heading</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="watersys-pumpstg-after-2000" name="after">Add Test</button>
+			  </div>
+		  </div>
+		</div>
+	</div>
+	<div class='watersys-lowload' style="display:none">
+		<h4 ondblclick="remove_this(this)"><span class="badge badge-secondary sequence-start">Chilled Water System Low Load Cycling</span></h4>
+		<div class="fpt-container">
+			<div class='row' id="watersys-lowload-div-1000">
+				<div class="col-xl-7 width-redux-7">
+					<ul id="watersys-lowload-div-1000-watersys-lowload-ul-1000">
+						<li oncontextmenu="edit_li(this)" id="watersys-lowload-div-1000-watersys-lowload-1000" ondblclick="remove_li(this)">Simulate a low-load condition by ensuring the following 3 conditions are met with only one chiller running:</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-lowload-div-1000-watersys-lowload-1001" ondblclick="remove_li(this)">1. Command the Main Chilled Water Differential Setpoint ("MAIN.DP.SP") to -5 psi</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-lowload-div-1000-watersys-lowload-1002" ondblclick="remove_li(this)">2. Command the Chilled Water Temperature Setpoint ("MAIN.TS.SP") to 54 degF</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-lowload-div-1000-watersys-lowload-1003" ondblclick="remove_li(this)">3. Command the Chilled Water Return Temperature Setpoint ("MAIN.TR.SP") to 80 degF</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-lowload-div-1000-watersys-lowload-1004" ondblclick="remove_li(this)">Confirm "CHLR.REQ" goes to 0</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-lowload-div-1000-watersys-lowload-1005" ondblclick="remove_li(this)">Confirm Chiller System Free Cooling Mode "CHLR.FREE.COOL" turns on</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-lowload-div-1000-watersys-lowload-1005" ondblclick="remove_li(this)">Confirm the Lead Chiller Chilled Water and Condensor Water Isolation Valves remain open and Chilled Water and Condensor Water Pumps remain running</li>
+					</ul>
+			  </div>
+			  <div class="col-xl-5 width-redux">
+			   <input type="radio" class="radio-buttons" name="watersys-lowload-1000" value="pass">
+			   <label class="passfail">Pass</label>
+			   <input type="radio" class="radio-buttons" name="watersys-lowload-1000" value="fail">
+			   <label class="passfail fail">Fail</label>
+			   <input type="radio" class="radio-buttons" name="watersys-lowload-1000" value="na">
+			   <label class="passfail na">NA</label>
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="watersys-lowload-remove-1000" name="remove">Remove</button>
+			   <button onclick="append_elem(this)" class="custom-buttons" id="watersys-lowload-to-1000" name="to">Add To</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="watersys-lowload-comment-1000" name="comment" style="display:none">Comment</button>
+			   <button onclick="heading_elem(this)" class="custom-buttons" id="watersys-lowload-before-1000" name="before">Add Heading</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="watersys-lowload-after-1000" name="after">Add Test</button>
+			  </div>
+		  </div>
+		  <div class='row' id="watersys-lowload-div-2000">
+				<div class="col-xl-7 width-redux-7">
+					<ul id="watersys-lowload-div-2000-watersys-lowload-ul-2000">
+						<li oncontextmenu="edit_li(this)" id="watersys-lowload-div-2000-watersys-lowload-2000" ondblclick="remove_li(this)">Confirm the Main Chilled Water Plant Bypass Valve closes</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-lowload-div-2000-watersys-lowload-2000" ondblclick="remove_li(this)">Command the Chilled Water Differential Pressure Setpoint ("MAIN.DP.SP") to 15 psi</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-lowload-div-2000-watersys-lowload-2001" ondblclick="remove_li(this)">Confirm that Remote Bypass Valve #1 ("CHW.RBPV1") begins to close followed by Remote Bypass Valve #2 ("CHW.RBPV2")</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-lowload-div-2000-watersys-lowload-2002" ondblclick="remove_li(this)">Command the Chilled Water Differential Pressure Setpoint ("MAIN.DP.SP") to 5 psi</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-lowload-div-2000-watersys-lowload-2003" ondblclick="remove_li(this)">Confirm that Remote Bypass Valve #2 ("CHW.RBPV2") begins to open followed by Remote Bypass Valve #1 ("CHW.RBPV1")</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-lowload-div-2000-watersys-lowload-2004" ondblclick="remove_li(this)">Release the Chilled Water Differential Pressure Setpoint ("MAIN.DP.SP") from Operator priority</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-lowload-div-2000-watersys-lowload-2005" ondblclick="remove_li(this)">Release the Main Chilled Water Temperature Setpoint ("MAIN.TS.SP") from Operator priority</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-lowload-div-2000-watersys-lowload-2005" ondblclick="remove_li(this)">Release the Main Chilled Return Temperature Setpoint ("MAIN.TR.SP") from Operator priority</li>
+					</ul>
+			  </div>
+			  <div class="col-xl-5 width-redux">
+			   <input type="radio" class="radio-buttons" name="watersys-lowload-2000" value="pass">
+			   <label class="passfail">Pass</label>
+			   <input type="radio" class="radio-buttons" name="watersys-lowload-2000" value="fail">
+			   <label class="passfail fail">Fail</label>
+			   <input type="radio" class="radio-buttons" name="watersys-lowload-2000" value="na">
+			   <label class="passfail na">NA</label>
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="watersys-lowload-remove-2000" name="remove">Remove</button>
+			   <button onclick="append_elem(this)" class="custom-buttons" id="watersys-lowload-to-2000" name="to">Add To</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="watersys-lowload-comment-2000" name="comment" style="display:none">Comment</button>
+			   <button onclick="heading_elem(this)" class="custom-buttons" id="watersys-lowload-before-2000" name="before">Add Heading</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="watersys-lowload-after-2000" name="after">Add Test</button>
+			  </div>
+		  </div>
+		  <div class='row' id="watersys-lowload-div-3000">
+				<div class="col-xl-7 width-redux-7">
+					<ul id="watersys-lowload-div-3000-watersys-lowload-ul-3000">
+						<li oncontextmenu="edit_li(this)" id="watersys-lowload-div-3000-watersys-lowload-3000" ondblclick="remove_li(this)">Confirm "CHLR.STGUP.TIME" begins to count up. A resident timer in the program "CHLR.STG.DLY" will count up at the same rate</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-lowload-div-3000-watersys-lowload-3001" ondblclick="remove_li(this)">After 30 minutes elapses (as counted by "CHLR.STG.DLY") confirm that "CHLR.REQ" changes to 1 and that the Lead Chiller Isolation Valves begin to open</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-lowload-div-3000-watersys-lowload-3002" ondblclick="remove_li(this)">If testing virtually, manually override the Chilled Water and Condensor Water Isolation Valve Feedback Signals ("CH#.CHW.IV.FDBK" & "CH#.CDW.IV.FDBK") to 300% upon the Valve Commands going above 7%</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-lowload-div-3000-watersys-lowload-3003" ondblclick="remove_li(this)">Once the Lead Chiller Isolation Valves are proofed open, confirm that the lead Chilled Water and Condensor Water Pumps Start</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-lowload-div-3000-watersys-lowload-3004" ondblclick="remove_li(this)">If testing virtually, manually override the Chilled Water and Condensor Water Pump Statuses ("CHWP#.STATUS" & "CDWP#.STATUS") to "On" upon the Pumps turning "On"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-lowload-div-3000-watersys-lowload-3005" ondblclick="remove_li(this)">If testing the Chilled Water System seperately from the Condensor Water System, Command "CHLR.CTR" to "On". This point is the "Clear To Run" signal from the Condensor Water System whenever 1 or more Cooling Tower Fans have been running for more than 30 seconds</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-lowload-div-3000-watersys-lowload-3006" ondblclick="remove_li(this)">Confirm the Lead Chiller ("CHLR.ENA") turns "On"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-lowload-div-3000-watersys-lowload-3007" ondblclick="remove_li(this)">If testing virtually, command ("CH#.STATUS") "On"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-lowload-div-3000-watersys-lowload-3008" ondblclick="remove_li(this)">Confirm "CHLR.COUNT" goes to 1</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-lowload-div-3000-watersys-lowload-3009" ondblclick="remove_li(this)">Confirm "CHLR.STG.DLY" Restarts and begins counting up again</li>
+					</ul>
+			  </div>
+			  <div class="col-xl-5 width-redux">
+			   <input type="radio" class="radio-buttons" name="watersys-lowload-3000" value="pass">
+			   <label class="passfail">Pass</label>
+			   <input type="radio" class="radio-buttons" name="watersys-lowload-3000" value="fail">
+			   <label class="passfail fail">Fail</label>
+			   <input type="radio" class="radio-buttons" name="watersys-lowload-3000" value="na">
+			   <label class="passfail na">NA</label>
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="watersys-lowload-remove-3000" name="remove">Remove</button>
+			   <button onclick="append_elem(this)" class="custom-buttons" id="watersys-lowload-to-3000" name="to">Add To</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="watersys-lowload-comment-3000" name="comment" style="display:none">Comment</button>
+			   <button onclick="heading_elem(this)" class="custom-buttons" id="watersys-lowload-before-3000" name="before">Add Heading</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="watersys-lowload-after-3000" name="after">Add Test</button>
+			  </div>
+		  </div>
+		</div>
+	</div>
+	<div class='watersys-breakglass' style="display:none">
+		<h4 ondblclick="remove_this(this)"><span class="badge badge-secondary sequence-start">Chilled Water System Refrigerant Shutdown</span></h4>
+		<div class="fpt-container">
+			<div class='row' id="watersys-breakglass-div-1000">
+				<div class="col-xl-7 width-redux-7">
+					<ul id="watersys-breakglass-div-1000-watersys-breakglass-ul-1000">
+						<li oncontextmenu="edit_li(this)" id="watersys-breakglass-div-1000-watersys-breakglass-1000" ondblclick="remove_li(this)">Simulate a Refrigerant Breakglass Alarm</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-breakglass-div-1000-watersys-breakglass-1001" ondblclick="remove_li(this)">Confirm "CHLR.REQ" changes to 0</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-breakglass-div-1000-watersys-breakglass-1002" ondblclick="remove_li(this)">Confirm the Chiller Enable ("CH#.ENA") turns off</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-breakglass-div-1000-watersys-breakglass-1003" ondblclick="remove_li(this)">If testing virtually, command the Chiller Status ("CH#.STATUS") to "Off"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-breakglass-div-1000-watersys-breakglass-1004" ondblclick="remove_li(this)">After 3 minutes elapses, confirm all Chilled Water and Condensor Water Pumps turn off</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-breakglass-div-1000-watersys-breakglass-1005" ondblclick="remove_li(this)">Confirm all Chilled Water and Condensor Water Pump Statuses ("CHWP#.STATUS" & "CDWP#.STATUS") are turned "Off"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-breakglass-div-1000-watersys-breakglass-1006" ondblclick="remove_li(this)">Confirm all Chilled Water and Condensor Water Isolation Valves ("CH#.CHW.IV" & "CH#.CW.IV") close</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-breakglass-div-1000-watersys-breakglass-1007" ondblclick="remove_li(this)">Clear the Simulated Refrigerant Breakglass Alarm</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-breakglass-div-1000-watersys-breakglass-1008" ondblclick="remove_li(this)">Confirm the Chilled Water System returns to normal operation</li>
+					</ul>
+			  </div>
+			  <div class="col-xl-5 width-redux">
+			   <input type="radio" class="radio-buttons" name="watersys-breakglass-1000" value="pass">
+			   <label class="passfail">Pass</label>
+			   <input type="radio" class="radio-buttons" name="watersys-breakglass-1000" value="fail">
+			   <label class="passfail fail">Fail</label>
+			   <input type="radio" class="radio-buttons" name="watersys-breakglass-1000" value="na">
+			   <label class="passfail na">NA</label>
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="watersys-breakglass-remove-1000" name="remove">Remove</button>
+			   <button onclick="append_elem(this)" class="custom-buttons" id="watersys-breakglass-to-1000" name="to">Add To</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="watersys-breakglass-comment-1000" name="comment" style="display:none">Comment</button>
+			   <button onclick="heading_elem(this)" class="custom-buttons" id="watersys-breakglass-before-1000" name="before">Add Heading</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="watersys-breakglass-after-1000" name="after">Add Test</button>
+			  </div>
+		  </div>
+		</div>
+	</div>
+	<div class='watersys-disable' style="display:none">
+		<h4 ondblclick="remove_this(this)"><span class="badge badge-secondary sequence-start">Chilled Water System Disable</span></h4>
+		<div class="fpt-container">
+			<div class='row' id="watersys-disable-div-1000">
+				<div class="col-xl-7 width-redux-7">
+					<ul id="watersys-disable-div-1000-watersys-disable-ul-1000">
+						<li oncontextmenu="edit_li(this)" id="watersys-disable-div-1000-watersys-disable-1000" ondblclick="remove_li(this)">Command "CHW.ENABLE" to "Off"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-disable-div-1000-watersys-disable-1001" ondblclick="remove_li(this)">Confirm "CHLR.REQ" changes to 0</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-disable-div-1000-watersys-disable-1002" ondblclick="remove_li(this)">Confirm the Chiller Enable ("CH#.ENA") turns off</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-disable-div-1000-watersys-disable-1003" ondblclick="remove_li(this)">If testing virtually, command the Chiller Status ("CH#.STATUS") to "Off"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-disable-div-1000-watersys-disable-1004" ondblclick="remove_li(this)">After 3 minutes elapses, confirm all Chilled Water and Condensor Water Pumps turn off</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-disable-div-1000-watersys-disable-1005" ondblclick="remove_li(this)">Confirm all Chilled Water and Condensor Water Pump Statuses ("CHWP#.STATUS" & "CDWP#.STATUS") are turned "Off"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-disable-div-1000-watersys-disable-1006" ondblclick="remove_li(this)">Confirm all Chilled Water and Condensor Water Isolation Valves ("CH#.CHW.IV" & "CH#.CW.IV") close</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-disable-div-1000-watersys-disable-1007" ondblclick="remove_li(this)">Release each Chiller Full Load Amps ("CH#.FLA") from Operator priority</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-disable-div-1000-watersys-disable-1008" ondblclick="remove_li(this)">Release each Chiller Flow Setpoint ("CH#.FLOW.DP.SP") from Operator priority</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-disable-div-1000-watersys-disable-1009" ondblclick="remove_li(this)">Release "CHW.MAIN.DP.SP" from Operator priority</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-disable-div-1000-watersys-disable-1010" ondblclick="remove_li(this)">Release "CHW.MAIN.TS.SP" from Operator priority</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-disable-div-1000-watersys-disable-1011" ondblclick="remove_li(this)">In the program, set the Day and Time for weekly turnover back to what is called in the specification</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-disable-div-1000-watersys-disable-1012" ondblclick="remove_li(this)">Confirm Chilled Water System Returns to normal operation</li>
+					</ul>
+			  </div>
+			  <div class="col-xl-5 width-redux">
+			   <input type="radio" class="radio-buttons" name="watersys-disable-1000" value="pass">
+			   <label class="passfail">Pass</label>
+			   <input type="radio" class="radio-buttons" name="watersys-disable-1000" value="fail">
+			   <label class="passfail fail">Fail</label>
+			   <input type="radio" class="radio-buttons" name="watersys-disable-1000" value="na">
+			   <label class="passfail na">NA</label>
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="watersys-disable-remove-1000" name="remove">Remove</button>
+			   <button onclick="append_elem(this)" class="custom-buttons" id="watersys-disable-to-1000" name="to">Add To</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="watersys-disable-comment-1000" name="comment" style="display:none">Comment</button>
+			   <button onclick="heading_elem(this)" class="custom-buttons" id="watersys-disable-before-1000" name="before">Add Heading</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="watersys-disable-after-1000" name="after">Add Test</button>
 			  </div>
 		  </div>
 		</div>
