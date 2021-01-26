@@ -731,6 +731,7 @@ def get_custom_pft():
     time.sleep(2)
     return send_file(app.config['UPLOAD_FOLDER'] + "custom_fpt.html" ,mimetype='text/html',as_attachment=True)
 
+<<<<<<< Updated upstream
 @app.route('/mop',methods=['GET','POST'])
 def mop():
     mopterminalbox = {'VAV MOP':'A','FCU MOP':'B','LAB MOP':'C'}
@@ -790,6 +791,24 @@ def get_custom_soo():
     time.sleep(2)
     return send_file(app.config['UPLOAD_FOLDER'] + "custom_soo.html" ,mimetype='text/html',as_attachment=True)
 
+=======
+
+@app.route('/simsoo', methods=['GET'])
+def get_compare_soo():
+    return render_template('test_SOO_compare.html', title='Find similar SOO')
+
+
+@app.route('/compareSOO', methods=['POST'])
+def find_similar_sequence():
+    # requires file and filename
+    results = services.findSimilarSequences(**request.json)
+    return {'results': results}
+
+"""
+Step 8 - Run your application. debug=True makes it so you don't have to stop and restart your
+    webserver.
+"""
+>>>>>>> Stashed changes
 if __name__ == '__main__':
 #    app.run(debug=True, host="192.168.1.13", port=5000)
 #    app.run(debug=True, host="192.168.1.189", port="5000")

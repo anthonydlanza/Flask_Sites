@@ -1,11 +1,14 @@
 from models.dataobjects import DXR
 from mongoengine import *
-from flask import jsonify
-import sys
 import os
 from werkzeug.utils import secure_filename
 from flask import current_app as app
 import base64
+# file compare  specific libs
+import nltk
+import gensim
+import numpy as np
+from nltk.tokenize import word_tokenize, sent_tokenize
 
 
 class Services(object):
@@ -58,14 +61,18 @@ class Services(object):
         return '.' in filename and filename.rsplit('.', 1)[1].lower() \
             in app.config['ALLOWED_EXTENSIONS']
 
-    def saveFile(file=None, filename=None):
+    def saveFile(file=None, filename=None, folder=None):
+        print(folder)
         if file is None:
             raise ValueError("No file provided")
         if filename == '':
             raise ValueError("No filename provided")
         if file and Services.allowed_file(filename+'.txt'):
             filename = secure_filename(filename)
-            filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+            if folder is None:
+                filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+            else:
+                filepath = os.path.join(folder, filename)
             try:
                 with open(filepath, 'wb') as saveFile:
                     saveFile.write(file)
@@ -122,9 +129,86 @@ class Services(object):
             search_dict['pres_encoded__icontains'] = template_name_chunks[5]
         if len(set(template_name_chunks[6])) != 1:
             search_dict['knx_encoded__icontains'] = template_name_chunks[6]
-        print(len(search_dict))
         results = DXR.objects(**search_dict)
         result_list = []
         for result in results:
             result_list.append(result.to_json())
         return result_list
+
+    def similarFileCheck(self, **kwargs):
+        # import files, tokenize sentences into array
+        file_to_compare = kwargs.get('filename', None)
+        if file_to_compare is None:
+            raise ValueError('Must supply a file to compare')
+        file_docs = []
+        file2_docs = []
+        avg_sims = []
+        long_docs = []
+        short_docs = []
+        considerations = []
+        arr_txt = [x for x in os.listdir('soo') if x.endswith(".txt")]
+        for txt in range(0, len(arr_txt)):
+            file_docs = []
+            file2_docs = []
+            with open('soo/file_to_compare/' + file_to_compare) as f:
+                testlen = f.read()
+                tokens = sent_tokenize(testlen)
+                for line in tokens:
+                    file_docs.append(line)
+            with open('soo/' + arr_txt[txt]) as f:
+                liblen = f.read()
+                tokens2 = sent_tokenize(liblen)
+                for line in tokens2:
+                    file2_docs.append(line)
+            if(len(testlen) >= len(liblen)):
+                long_docs = file_docs
+                short_docs = file2_docs
+            else:
+                long_docs = file2_docs
+                short_docs = file_docs
+            gen_docs = [[w.lower() for w in word_tokenize(text)]for text in long_docs]
+            dictionary = gensim.corpora.Dictionary(gen_docs)
+            corpus = [dictionary.doc2bow(gen_doc) for gen_doc in gen_docs]
+            tf_idf = gensim.models.TfidfModel(corpus)
+            sims = gensim.similarities.Similarity('soo/workdir/', tf_idf[corpus], num_features=len(dictionary))
+            avg_sims = []
+            for line in short_docs:
+                query_doc = [w.lower() for w in word_tokenize(line)]
+                query_doc_bow = dictionary.doc2bow(query_doc)
+                query_doc_tf_idf = tf_idf[query_doc_bow]
+                sum_of_sims =(np.sum(sims[query_doc_tf_idf], dtype=np.float32))
+                avg = sum_of_sims / len(long_docs)
+                # print(f'avg: {sum_of_sims / len(long_docs)}')
+                avg_sims.append(avg)
+            total_avg = np.sum(avg_sims, dtype=np.float)
+            # print(total_avg)
+            percentage_of_similarity = float(total_avg) * 100
+            percentage_of_similarity = f"{percentage_of_similarity:.2f}"
+            percentage_of_similarity = float(percentage_of_similarity)
+            if percentage_of_similarity >= 100:
+                percentage_of_similarity = 100
+            # print("Similarity: " + str(percentage_of_similarity) + "%")
+            considerations.append({'Name': arr_txt[txt], 'Similarity': str(percentage_of_similarity) + "%"})
+        considerations_sorted = sorted(considerations, key = lambda i: i['Similarity'],reverse=True)
+        return considerations_sorted
+
+    def findSimilarSequences(self, **kwargs):
+        # file is a base64 string
+        file = kwargs.get('file', None)
+        folder = 'soo/file_to_compare/'
+        file_name = kwargs.get('file_name', None)
+        file_name = file_name.split('\\')[2]
+        print(folder)
+        if file is not None:
+            try:
+                file = file.split(',')[1]  # remove up to comma
+                convertedFile = Services.convertBase64(file)  # convert back
+                Services.saveFile(convertedFile, file_name, folder)  # save
+            except Exception as e:
+                raise ValueError(str(e))
+        else:
+            raise ValueError('No file data supplied')
+        results = self.similarFileCheck(filename=file_name)
+        for result in results:
+            print(result)
+        return results
