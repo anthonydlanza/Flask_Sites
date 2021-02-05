@@ -756,11 +756,6 @@ def get_custom_mop():
     time.sleep(2)
     return send_file(app.config['UPLOAD_FOLDER'] + "custom_mop.html" ,mimetype='text/html',as_attachment=True)
 
-@app.route('/code',methods=['GET','POST'])
-def code():
-    rendered = render_template('code.html')
-    return rendered
-
 @app.route('/soo',methods=['GET','POST'])
 def soo():
     sooterminalbox = {}
@@ -793,13 +788,18 @@ def get_custom_soo():
 
 @app.route('/simsoo', methods=['GET'])
 def get_compare_soo():
-    return render_template('test_SOO_compare.html', title='Find similar SOO')
+    return render_template('code.html', title='Find similar SOO')
 
 @app.route('/compareSOO', methods=['POST'])
 def find_similar_sequence():
     # requires file and filename
     results = services.findSimilarSequences(**request.json)
     return {'results': results}
+
+@app.route('/code',methods=['GET','POST'])
+def code():
+    rendered = render_template('code.html')
+    return rendered
 
 """
 Step 8 - Run your application. debug=True makes it so you don't have to stop and restart your

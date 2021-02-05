@@ -1961,13 +1961,14 @@
 						<li oncontextmenu="edit_li(this)" id="watersys-enable-div-1000-watersys-enable-1002" ondblclick="remove_li(this)">Confirm "CHLR.STGUP.TIME" begins to count up. A resident timer in the program "CHLR.STG.DLY" will count up at the same rate</li>
 						<li oncontextmenu="edit_li(this)" id="watersys-enable-div-1000-watersys-enable-1003" ondblclick="remove_li(this)">After 30 minutes elapses (as counted by "CHLR.STG.DLY") confirm that "CHLR.REQ" changes to 1 and that the Lead Chiller Isolation Valves begin to open</li>
 						<li oncontextmenu="edit_li(this)" id="watersys-enable-div-1000-watersys-enable-1004" ondblclick="remove_li(this)">If testing virtually, manually override the Chilled Water and Condensor Water Isolation Valve Feedback Signals ("CH#.CHW.IV.FDBK" & "CH#.CDW.IV.FDBK") to 100% upon the Valve Commands going above 7%</li>
-						<li oncontextmenu="edit_li(this)" id="watersys-enable-div-1000-watersys-enable-1005" ondblclick="remove_li(this)">Once the Lead Chiller Isolation Valves are proofed open, confirm that the lead Chilled Water and Condensor Water Pumps Start</li>
-						<li oncontextmenu="edit_li(this)" id="watersys-enable-div-1000-watersys-enable-1006" ondblclick="remove_li(this)">If testing virtually, manually override the Chilled Water and Condensor Water Pump Statuses ("CHWP#.STATUS" & "CDWP#.STATUS") to "On" upon the Pumps turning "On"</li>
-						<li oncontextmenu="edit_li(this)" id="watersys-enable-div-1000-watersys-enable-1007" ondblclick="remove_li(this)">If testing the Chilled Water System seperately from the Condensor Water System, Command "CHLR.CTR" to "On". This point is the "Clear To Run" signal from the Condensor Water System whenever 1 or more Cooling Tower Fans have been running for more than 30 seconds</li>
-						<li oncontextmenu="edit_li(this)" id="watersys-enable-div-1000-watersys-enable-1008" ondblclick="remove_li(this)">Confirm the Lead Chiller ("CHLR.ENA") turns "On"</li>
-						<li oncontextmenu="edit_li(this)" id="watersys-enable-div-1000-watersys-enable-1009" ondblclick="remove_li(this)">If testing virtually, command ("CH#.STATUS") "On"</li>
-						<li oncontextmenu="edit_li(this)" id="watersys-enable-div-1000-watersys-enable-1010" ondblclick="remove_li(this)">Confirm "CHLR.COUNT" goes to 1</li>
-						<li oncontextmenu="edit_li(this)" id="watersys-enable-div-1000-watersys-enable-1011" ondblclick="remove_li(this)">Confirm "CHLR.STG.DLY" Restarts and begins counting up again</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-div-1000-watersys-enable-1005" ondblclick="remove_li(this)">If testing virtually, manually override the Condenser Water System Cells Open Count "CT.CELL.OPN" to 1. This point is the sent from the Condenser Water System upon proof open of a cooling towers Supply and Return Isolation Valves</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-div-1000-watersys-enable-1006" ondblclick="remove_li(this)">Once the Lead Chiller Isolation Valves are proofed open, confirm that the lead Chilled Water and Condensor Water Pumps Start</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-div-1000-watersys-enable-1007" ondblclick="remove_li(this)">If testing virtually, manually override the Chilled Water and Condensor Water Pump Statuses ("CHWP#.STATUS" & "CDWP#.STATUS") to "On" upon the Pumps turning "On"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-div-1000-watersys-enable-1008" ondblclick="remove_li(this)">If testing the Chilled Water System seperately from the Condensor Water System, Command "CHLR.CTR" to "On". This point is the "Clear To Run" signal from the Condensor Water System whenever 1 or more Cooling Tower Fans have been running for more than 30 seconds</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-div-1000-watersys-enable-1009" ondblclick="remove_li(this)">Confirm the Lead Chiller ("CHLR.ENA") turns "On"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-div-1000-watersys-enable-1010" ondblclick="remove_li(this)">If testing virtually, command ("CH#.STATUS") "On"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-div-1000-watersys-enable-1011" ondblclick="remove_li(this)">Confirm "CHLR.COUNT" goes to 1</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-div-1000-watersys-enable-1012" ondblclick="remove_li(this)">Confirm "CHLR.STG.DLY" Restarts and begins counting up again</li>
 					</ul>
 			  </div>
 			  <div class="col-xl-5 width-redux">
@@ -2547,6 +2548,43 @@
 			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="watersys-disable-comment-1000" name="comment" style="display:none">Comment</button>
 			   <button onclick="heading_elem(this)" class="custom-buttons" id="watersys-disable-before-1000" name="before">Add Heading</button>
 			   <button onclick="after_elem(this)" class="custom-buttons" id="watersys-disable-after-1000" name="after">Add Test</button>
+			  </div>
+		  </div>
+		</div>
+	</div>
+	<div class='condsys-enable' style="display:show">
+		<h4 ondblclick="remove_this(this)"><span class="badge badge-secondary sequence-start">Condenser Water System Enable</span></h4>
+		<div class="fpt-container">
+			<div class='row' id="condsys-enable-div-1000">
+				<div class="col-xl-7 width-redux-7">
+					<ul id="condsys-enable-div-1000-condsys-enable-ul-1000">
+						<li oncontextmenu="edit_li(this)" id="condsys-enable-div-1000-condsys-enable-1000" ondblclick="remove_li(this)">Confirm all Cooling Tower Supply and Return Isolation Valves ("CT#.CDWS.IV" & "CT#.CDWR.IV") are closed and that their status points ("CT#.CDWS.IV.CLOSE" & "CT#.CDWR.IV.CLOSE") are "On"</li>
+						<li oncontextmenu="edit_li(this)" id="condsys-enable-div-1000-condsys-enable-1001" ondblclick="remove_li(this)">If testing virtually, Command all Cooling Tower Supply and Return Isolation Valve Closed Status Points ("CT#.CDWS.IV.CLOSE" & "CT#.CDWR.IV.CLOSE") to "On" and Open Status Points to ("CT#.CDWS.IV.OPEN" & "CT#.CDWR.IV.OPEN") "Off"</li>
+						<li oncontextmenu="edit_li(this)" id="condsys-enable-div-1000-condsys-enable-1002" ondblclick="remove_li(this)">Command "CHW.ENABLE" to "On"</li>
+						<li oncontextmenu="edit_li(this)" id="condsys-enable-div-1000-condsys-enable-1003" ondblclick="remove_li(this)">Confirm the Lead Chiller Isolation Valves Open and that the Condenser Water Valve Count increases from 0 to 1</li>
+						<li oncontextmenu="edit_li(this)" id="condsys-enable-div-1000-condsys-enable-1004" ondblclick="remove_li(this)">If testing virtually, Command "CW.VLVTOT" to 1</li>
+						<li oncontextmenu="edit_li(this)" id="condsys-enable-div-1000-condsys-enable-1005" ondblclick="remove_li(this)">Confirm the one Cooling Tower is requested to come online by observing ("CT.CELL.REQ") change from 0 to 1</li>
+						<li oncontextmenu="edit_li(this)" id="condsys-enable-div-1000-condsys-enable-1006" ondblclick="remove_li(this)">Confirm the Lead Cooling Tower Supply and Return Isolation Valves ("CT#.CDWS.IV" & "CT#.CDWR.IV") open and that their status points ("CT#.CDWS.IV.OPEN" & "CT#.CDWR.IV.OPEN") are "On"</li>
+						<li oncontextmenu="edit_li(this)" id="condsys-enable-div-1000-condsys-enable-1007" ondblclick="remove_li(this)">If testing virtually, Command the Lead Cooling Tower Supply and Return Isolation Valve Status Points ("CT#.CDWS.IV.OPEN" & "CT#.CDWR.IV.OPEN") to "On" and ("CT#.CDWS.IV.CLOSE" & "CT#.CDWR.IV.CLOSE") to "Off"</li>
+						<li oncontextmenu="edit_li(this)" id="condsys-enable-div-1000-condsys-enable-1008" ondblclick="remove_li(this)">Confirm the Cell Count point ("CT.CELL.OPN") increases from 0 to 1</li>
+						<li oncontextmenu="edit_li(this)" id="condsys-enable-div-1000-condsys-enable-1009" ondblclick="remove_li(this)">Confirm the Lead Cooling Tower Fan ("CT#") turns "On" and that it's status point ("CT#.STATUS") turns "On"</li>
+						<li oncontextmenu="edit_li(this)" id="condsys-enable-div-1000-condsys-enable-1010" ondblclick="remove_li(this)">If testing virtually, Command the Lead Cooling Tower Fan Status ("CT#.STATUS") to "On"</li>
+						<li oncontextmenu="edit_li(this)" id="condsys-enable-div-1000-condsys-enable-1011" ondblclick="remove_li(this)">Confirm the Cooling Tower Fan Count point ("CT.TOT.FAN") changes from 0 to 1</li>
+						<li oncontextmenu="edit_li(this)" id="condsys-enable-div-1000-condsys-enable-1012" ondblclick="remove_li(this)">Confirm the Condenser Water Flow is below 560 GPM</li>
+					</ul>
+			  </div>
+			  <div class="col-xl-5 width-redux">
+			   <input type="radio" class="radio-buttons" name="condsys-enable-1000" value="pass">
+			   <label class="passfail">Pass</label>
+			   <input type="radio" class="radio-buttons" name="condsys-enable-1000" value="fail">
+			   <label class="passfail fail">Fail</label>
+			   <input type="radio" class="radio-buttons" name="condsys-enable-1000" value="na">
+			   <label class="passfail na">NA</label>
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="condsys-enable-remove-1000" name="remove">Remove</button>
+			   <button onclick="append_elem(this)" class="custom-buttons" id="condsys-enable-to-1000" name="to">Add To</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="condsys-enable-comment-1000" name="comment" style="display:none">Comment</button>
+			   <button onclick="heading_elem(this)" class="custom-buttons" id="condsys-enable-before-1000" name="before">Add Heading</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="condsys-enable-after-1000" name="after">Add Test</button>
 			  </div>
 		  </div>
 		</div>
@@ -4051,12 +4089,14 @@
 	 for_removal.remove();
 	}
 	function remove_li(elem) {
-		let origin = document.getElementById(elem.parentNode.id);
-		let li_elements = origin.getElementsByTagName('li');
-		localStorage.removeItem(elem.id);
-		localStorage.removeItem(elem.textContent);
-		if(li_elements.length > 1){
-			elem.remove();
+		if (event.shiftKey) {
+			let origin = document.getElementById(elem.parentNode.id);
+			let li_elements = origin.getElementsByTagName('li');
+			localStorage.removeItem(elem.id);
+			localStorage.removeItem(elem.textContent);
+			if(li_elements.length > 1){
+				elem.remove();
+			}
 		}
 	}
 
@@ -4070,9 +4110,10 @@
 		// after_button.style.height = "37%";
 		after_button.textContent = "Submit";
 		input.setAttribute("id", elem.parentNode.parentNode.id + "-appendinput-" + count);
-		input.setAttribute("class", "append");
+		input.setAttribute("class", "modify-li");
 		after_button.setAttribute("id", elem.parentNode.parentNode.id + "-appendafter-" + count);
-		after_button.setAttribute("class", "append");
+		after_button.setAttribute("class", "modify-li");
+		input.value = elem.textContent;
 		elem.after(after_button);
 		elem.after(input);
 		after_button_element = document.getElementById(after_button.id);
@@ -4089,6 +4130,12 @@
 		elem.innerHTML = "Close"
 		let origin = document.getElementById(elem.parentNode.parentNode.id);
 		append_elem_check = origin.getElementsByTagName('input');
+		mods = origin.getElementsByClassName('modify-li');
+		for(var i=0;i<mods.length;i++){
+			mods[i].remove();
+			mods[i].remove();
+		}
+		console.log(mods.length);
 		if(append_elem_check.length == 3){
 			var input = document.createElement("input");
 			var before_button = document.createElement("button");
