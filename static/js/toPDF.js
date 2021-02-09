@@ -200,6 +200,7 @@ $(document).ready(function(){
 
 		// Water
 		display_test_independent('input[id="CHWS Enable"]',".watersys-enable")
+		display_test_independent('input[id="CHWS Pony Enable"]',".watersys-enable-pony")
 		display_test_independent('input[id="CHWS Pump Staging"]',".watersys-pumpstg")
 		display_test_independent('input[id="CDWS Enable"]',".condsys-enable")
 
@@ -237,6 +238,7 @@ $(document).ready(function(){
 		// Water Dependent
 		
 		display_test_dependent('input[id="CHWS Chiller Staging"]','input[id="CHWS Enable"]',".watersys-stg")
+		display_test_dependent('input[id="CHWS Pony Chiller Staging"]','input[id="CHWS Pony Enable"]',".watersys-stg-pony")
 		display_test_dependent('input[id="CHWS Weekly Rotation"]','input[id="CHWS Enable"]',".watersys-rotation")
 		display_test_dependent('input[id="CHWS Supply Temperature Reset"]','input[id="CHWS Enable"]',".watersys-suptemp-reset")
 		display_test_dependent('input[id="CHWS Low Load Cycling"]','input[id="CHWS Enable"]',".watersys-lowload")

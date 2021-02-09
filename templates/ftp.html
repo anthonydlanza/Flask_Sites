@@ -2011,6 +2011,66 @@
 		  </div>
 		</div>
 	</div>
+	<div class='watersys-enable-pony' style="display:none">
+		<h4 ondblclick="remove_this(this)"><span class="badge badge-secondary sequence-start">Chilled Water System Enable</span></h4>
+		<div class="fpt-container">
+			<div class='row' id="watersys-enable-pony-div-1000">
+				<div class="col-xl-7 width-redux-7">
+					<ul id="watersys-enable-pony-div-1000-watersys-enable-pony-ul-1000">
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-pony-div-1000-watersys-enable-pony-1001" ondblclick="remove_li(this)">Command "CHW.ENABLE" to "On"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-pony-div-1000-watersys-enable-pony-1002" ondblclick="remove_li(this)">Confirm "CHLR.STGUP.TIME" begins to count up. A resident timer in the program "CHLR.STG.DLY" will count up at the same rate</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-pony-div-1000-watersys-enable-pony-1003" ondblclick="remove_li(this)">After 30 minutes elapses (as counted by "CHLR.STG.DLY") confirm that "CHLR.REQ" changes to 1 and that the Pony Chiller Isolation Valves begin to open</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-pony-div-1000-watersys-enable-pony-1004" ondblclick="remove_li(this)">If testing virtually, manually override the Chilled Water and Condensor Water Isolation Valve Feedback Signals ("CH#.CHW.IV.FDBK" & "CH#.CDW.IV.FDBK") to 100% upon the Valve Commands going above 7%</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-pony-div-1000-watersys-enable-pony-1005" ondblclick="remove_li(this)">If testing virtually, manually override the Condenser Water System Cells Open Count "CT.CELL.OPN" to 1. This point is the sent from the Condenser Water System upon proof open of a cooling towers Supply and Return Isolation Valves</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-pony-div-1000-watersys-enable-pony-1006" ondblclick="remove_li(this)">Once the Pony Chiller Isolation Valves are proofed open, confirm that the Pony Chilled Water and Condensor Water Pumps Start</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-pony-div-1000-watersys-enable-pony-1007" ondblclick="remove_li(this)">If testing virtually, manually override the Chilled Water and Condensor Water Pump Statuses ("CHWP#.STATUS" & "CDWP#.STATUS") to "On" upon the Pumps turning "On"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-pony-div-1000-watersys-enable-pony-1008" ondblclick="remove_li(this)">If testing the Chilled Water System seperately from the Condensor Water System, Command "CHLR.CTR" to "On". This point is the "Clear To Run" signal from the Condensor Water System whenever 1 or more Cooling Tower Fans have been running for more than 30 seconds</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-pony-div-1000-watersys-enable-pony-1009" ondblclick="remove_li(this)">Confirm the Pony Chiller ("CHLR.ENA") turns "On"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-pony-div-1000-watersys-enable-pony-1010" ondblclick="remove_li(this)">If testing virtually, command ("CH#.STATUS") "On"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-pony-div-1000-watersys-enable-pony-1011" ondblclick="remove_li(this)">Confirm "CHLR.COUNT" goes to 1</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-pony-div-1000-watersys-enable-pony-1012" ondblclick="remove_li(this)">Confirm "CHLR.STG.DLY" Restarts and begins counting up again</li>
+					</ul>
+			  </div>
+			  <div class="col-xl-5 width-redux">
+			   <input type="radio" class="radio-buttons" name="watersys-enable-pony-1000" value="pass">
+			   <label class="passfail">Pass</label>
+			   <input type="radio" class="radio-buttons" name="watersys-enable-pony-1000" value="fail">
+			   <label class="passfail fail">Fail</label>
+			   <input type="radio" class="radio-buttons" name="watersys-enable-pony-1000" value="na">
+			   <label class="passfail na">NA</label>
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="watersys-enable-pony-remove-1000" name="remove">Remove</button>
+			   <button onclick="append_elem(this)" class="custom-buttons" id="watersys-enable-pony-to-1000" name="to">Add To</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="watersys-enable-pony-comment-1000" name="comment" style="display:none">Comment</button>
+			   <button onclick="heading_elem(this)" class="custom-buttons" id="watersys-enable-pony-before-1000" name="before">Add Heading</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="watersys-enable-pony-after-1000" name="after">Add Test</button>
+			  </div>
+		  </div>
+		  <div class='row' id="watersys-enable-pony-div-2000">
+				<div class="col-xl-7 width-redux-7">
+					<ul id="watersys-enable-pony-div-2000-watersys-enable-pony-ul-2000">
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-pony-div-2000-watersys-enable-pony-2000" ondblclick="remove_li(this)">Command the Chilled Water Differential Pressure Setpoint ("MAIN.DP.SP") to 15 psi</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-pony-div-2000-watersys-enable-pony-2001" ondblclick="remove_li(this)">Confirm that Central Plant Main Bypass Valve ("CHW.BPV") begins to close</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-pony-div-2000-watersys-enable-pony-2002" ondblclick="remove_li(this)">Command the Chilled Water Differential Pressure Setpoint ("MAIN.DP.SP") to 5 psi</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-pony-div-2000-watersys-enable-pony-2003" ondblclick="remove_li(this)">Confirm that Central Plant Main Bypass Valve ("CHW.BPV") begins to open</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-enable-pony-div-2000-watersys-enable-pony-2004" ondblclick="remove_li(this)">Release the Chilled Water Differential Pressure Setpoint ("MAIN.DP.SP") from Operator priority</li>
+					</ul>
+			  </div>
+			  <div class="col-xl-5 width-redux">
+			   <input type="radio" class="radio-buttons" name="watersys-enable-pony-2000" value="pass">
+			   <label class="passfail">Pass</label>
+			   <input type="radio" class="radio-buttons" name="watersys-enable-pony-2000" value="fail">
+			   <label class="passfail fail">Fail</label>
+			   <input type="radio" class="radio-buttons" name="watersys-enable-pony-2000" value="na">
+			   <label class="passfail na">NA</label>
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="watersys-enable-pony-remove-2000" name="remove">Remove</button>
+			   <button onclick="append_elem(this)" class="custom-buttons" id="watersys-enable-pony-to-2000" name="to">Add To</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="watersys-enable-pony-comment-2000" name="comment" style="display:none">Comment</button>
+			   <button onclick="heading_elem(this)" class="custom-buttons" id="watersys-enable-pony-before-2000" name="before">Add Heading</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="watersys-enable-pony-after-2000" name="after">Add Test</button>
+			  </div>
+		  </div>
+		</div>
+	</div>
 	<div class='watersys-stg' style="display:none">
 		<h4 ondblclick="remove_this(this)"><span class="badge badge-secondary sequence-start">Chilled Water System Chiller Staging</span></h4>
 		<div class="fpt-container">
@@ -2121,6 +2181,207 @@
 			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="watersys-stg-comment-4000" name="comment" style="display:none">Comment</button>
 			   <button onclick="heading_elem(this)" class="custom-buttons" id="watersys-stg-before-4000" name="before">Add Heading</button>
 			   <button onclick="after_elem(this)" class="custom-buttons" id="watersys-stg-after-4000" name="after">Add Test</button>
+			  </div>
+		  </div>
+		</div>
+	</div>
+	<div class='watersys-stg-pony' style="display:none">
+		<h4 ondblclick="remove_this(this)"><span class="badge badge-secondary sequence-start">Chilled Water System Chiller Staging</span></h4>
+		<div class="fpt-container">
+			<div class='row' id="watersys-stg-pony-div-1000">
+				<div class="col-xl-7 width-redux-7">
+					<ul id="watersys-stg-pony-div-1000-watersys-stg-pony-ul-1000">
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-1000-watersys-stg-pony-1000" ondblclick="remove_li(this)">Ensure the Pony Chiller Full Load Amps (FLA) > 90 to allow "CHLR.STGUP.TIME" to count up</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-1000-watersys-stg-pony-1001" ondblclick="remove_li(this)">After 30 minutes elapses (as counted by "CHLR.STG.DLY") since the start of the first chiller as well as the stage up conditions are met (as indicated by "CHLR.STGUP.TIME") confirm "CHLR.REQ" changes to 2 and that the first Big Chiller Chilled Water and Condensor Water Pumps start</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-1000-watersys-stg-pony-1002" ondblclick="remove_li(this)">If testing virtually, manually override the Chilled Water and Condensor Water Pump Statuses ("CHWP#.STATUS" & "CDWP#.STATUS") to "On" upon the Pumps turning "On"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-1000-watersys-stg-pony-1003" ondblclick="remove_li(this)">In order for the isolation valves on the first Big Chiller to open, the Pump Speeds ("CHWP.SPD" & "CWP.SPD") must not be greater than the Minimum Pump Speeds ("CHWP.MINSPD" & "CWP.MINSPD") - 5%. Confirm the Pump Speeds are within this tolerance</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-1000-watersys-stg-pony-1004" ondblclick="remove_li(this)">Once the Pump Speeds are close to their designated minimums, confirm the first Big Chiller Chilled Water and Condensor Water Isolation Valves begin to open</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-1000-watersys-stg-pony-1005" ondblclick="remove_li(this)">If testing virtually, manually override the Chilled Water and Condensor Water Isolation Valve Feedback Signals ("CH#.CHW.IV.FDBK" & "CH#.CDW.IV.FDBK") to 100% upon the Valve Commands going above 7%</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-1000-watersys-stg-pony-1006" ondblclick="remove_li(this)">Upon the valves proofing open, Confirm the first Big Chiller ("CHLR.ENA") turns "On" and that "CHLR.COUNT" goes to 3</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-1000-watersys-stg-pony-1007" ondblclick="remove_li(this)">If testing virtually, manually override "CH#.STATUS" to "On" once ("CHLR.ENA") turns "On"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-1000-watersys-stg-pony-1008" ondblclick="remove_li(this)">Confirm "CHLR.COUNT" goes to 3</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-1000-watersys-stg-pony-1009" ondblclick="remove_li(this)">Confirm "CHLR.STG.DLY" Restarts and begins counting up again</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-1000-watersys-stg-pony-1010" ondblclick="remove_li(this)">Confirm the Pony Chiller Stages off after 30 minutes and that "CHLR.COUNT" goes to 2</li>
+					</ul>
+			  </div>
+			  <div class="col-xl-5 width-redux">
+			   <input type="radio" class="radio-buttons" name="watersys-stg-pony-1000" value="pass">
+			   <label class="passfail">Pass</label>
+			   <input type="radio" class="radio-buttons" name="watersys-stg-pony-1000" value="fail">
+			   <label class="passfail fail">Fail</label>
+			   <input type="radio" class="radio-buttons" name="watersys-stg-pony-1000" value="na">
+			   <label class="passfail na">NA</label>
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="watersys-stg-pony-remove-1000" name="remove">Remove</button>
+			   <button onclick="append_elem(this)" class="custom-buttons" id="watersys-stg-pony-to-1000" name="to">Add To</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="watersys-stg-pony-comment-1000" name="comment" style="display:none">Comment</button>
+			   <button onclick="heading_elem(this)" class="custom-buttons" id="watersys-stg-pony-before-1000" name="before">Add Heading</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="watersys-stg-pony-after-1000" name="after">Add Test</button>
+			  </div>
+		  </div>
+		  <div class='row' id="watersys-stg-pony-div-2000">
+				<div class="col-xl-7 width-redux-7">
+					<ul id="watersys-stg-pony-div-2000-watersys-stg-pony-ul-2000">
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-2000-watersys-stg-pony-2000" ondblclick="remove_li(this)">Ensure the first Big Chiller Full Load Amps (FLA) > 90 to allow "CHLR.STGUP.TIME" to count up</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-2000-watersys-stg-pony-2001" ondblclick="remove_li(this)">After 30 minutes elapses (as counted by "CHLR.STG.DLY") since the start of the first Big Chiller as well as the stage up conditions are met (as indicated by "CHLR.STGUP.TIME") confirm "CHLR.REQ" changes to 3 and that the second Big Chiller Chilled Water and Condensor Water Pumps start</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-2000-watersys-stg-pony-2002" ondblclick="remove_li(this)">If testing virtually, manually override the Chilled Water and Condensor Water Pump Statuses ("CHWP#.STATUS" & "CDWP#.STATUS") to "On" upon the Pumps turning "On"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-2000-watersys-stg-pony-2003" ondblclick="remove_li(this)">In order for the isolation valves on the second Big Chiller to open, the Pump Speeds ("CHWP.SPD" & "CWP.SPD") must not be greater than the Minimum Pump Speeds ("CHWP.MINSPD" & "CWP.MINSPD") - 5%. Confirm the Pump Speeds are within this tolerance</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-2000-watersys-stg-pony-2004" ondblclick="remove_li(this)">Once the Pump Speeds are close to their designated minimums, confirm the second Big Chiller Chilled Water and Condensor Water Isolation Valves begin to open</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-2000-watersys-stg-pony-2005" ondblclick="remove_li(this)">If testing virtually, manually override the Chilled Water and Condensor Water Isolation Valve Feedback Signals ("CH#.CHW.IV.FDBK" & "CH#.CDW.IV.FDBK") to 100% upon the Valve Commands going above 7%</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-2000-watersys-stg-pony-2006" ondblclick="remove_li(this)">Upon the valves proofing open, Confirm the second Big Chiller ("CHLR.ENA") turns "On" and that "CHLR.COUNT" goes to 3</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-2000-watersys-stg-pony-2007" ondblclick="remove_li(this)">If testing virtually, manually override "CH#.STATUS" to "On" once ("CHLR.ENA") turns "On"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-2000-watersys-stg-pony-2008" ondblclick="remove_li(this)">Confirm "CHLR.COUNT" goes to 3</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-2000-watersys-stg-pony-2009" ondblclick="remove_li(this)">Confirm "CHLR.STG.DLY" Restarts and begins counting up again</li>
+					</ul>
+			  </div>
+			  <div class="col-xl-5 width-redux">
+			   <input type="radio" class="radio-buttons" name="watersys-stg-pony-2000" value="pass">
+			   <label class="passfail">Pass</label>
+			   <input type="radio" class="radio-buttons" name="watersys-stg-pony-2000" value="fail">
+			   <label class="passfail fail">Fail</label>
+			   <input type="radio" class="radio-buttons" name="watersys-stg-pony-2000" value="na">
+			   <label class="passfail na">NA</label>
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="watersys-stg-pony-remove-2000" name="remove">Remove</button>
+			   <button onclick="append_elem(this)" class="custom-buttons" id="watersys-stg-pony-to-2000" name="to">Add To</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="watersys-stg-pony-comment-2000" name="comment" style="display:none">Comment</button>
+			   <button onclick="heading_elem(this)" class="custom-buttons" id="watersys-stg-pony-before-2000" name="before">Add Heading</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="watersys-stg-pony-after-2000" name="after">Add Test</button>
+			  </div>
+		  </div>
+		  <div class='row' id="watersys-stg-pony-div-3000">
+				<div class="col-xl-7 width-redux-7">
+					<ul id="watersys-stg-pony-div-3000-watersys-stg-pony-ul-3000">
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-3000-watersys-stg-pony-3000" ondblclick="remove_li(this)">Ensure the first Big Chiller Full Load Amps (FLA) > 90 to allow "CHLR.STGUP.TIME" to count up</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-3000-watersys-stg-pony-3001" ondblclick="remove_li(this)">After 30 minutes elapses (as counted by "CHLR.STG.DLY") since the start of the second Big Chiller as well as the stage up conditions are met (as indicated by "CHLR.STGUP.TIME") confirm "CHLR.REQ" changes to 4 and that the Pony Chiller Chilled Water and Condensor Water Pumps start</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-3000-watersys-stg-pony-3002" ondblclick="remove_li(this)">If testing virtually, manually override the Chilled Water and Condensor Water Pump Statuses ("CHWP#.STATUS" & "CDWP#.STATUS") to "On" upon the Pumps turning "On"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-3000-watersys-stg-pony-3003" ondblclick="remove_li(this)">In order for the isolation valves on the Pony Chiller to open, the Pump Speeds ("CHWP.SPD" & "CWP.SPD") must not be greater than the Minimum Pump Speeds ("CHWP.MINSPD" & "CWP.MINSPD") - 5%. Confirm the Pump Speeds are within this tolerance</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-3000-watersys-stg-pony-3004" ondblclick="remove_li(this)">Once the Pump Speeds are close to their designated minimums, confirm the Pony Chiller Chilled Water and Condensor Water Isolation Valves begin to open</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-3000-watersys-stg-pony-3005" ondblclick="remove_li(this)">If testing virtually, manually override the Chilled Water and Condensor Water Isolation Valve Feedback Signals ("CH#.CHW.IV.FDBK" & "CH#.CDW.IV.FDBK") to 100% upon the Valve Commands going above 7%</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-3000-watersys-stg-pony-3006" ondblclick="remove_li(this)">Upon the valves proofing open, Confirm the Pony Chiller ("CHLR.ENA") turns "On" and that "CHLR.COUNT" goes to 4</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-3000-watersys-stg-pony-3007" ondblclick="remove_li(this)">If testing virtually, manually override "CH#.STATUS" to "On" once ("CHLR.ENA") turns "On"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-3000-watersys-stg-pony-3008" ondblclick="remove_li(this)">Confirm "CHLR.COUNT" goes to 4</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-3000-watersys-stg-pony-3009" ondblclick="remove_li(this)">Confirm "CHLR.STG.DLY" Restarts and begins counting up again</li>
+					</ul>
+			  </div>
+			  <div class="col-xl-5 width-redux">
+			   <input type="radio" class="radio-buttons" name="watersys-stg-pony-3000" value="pass">
+			   <label class="passfail">Pass</label>
+			   <input type="radio" class="radio-buttons" name="watersys-stg-pony-3000" value="fail">
+			   <label class="passfail fail">Fail</label>
+			   <input type="radio" class="radio-buttons" name="watersys-stg-pony-3000" value="na">
+			   <label class="passfail na">NA</label>
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="watersys-stg-pony-remove-3000" name="remove">Remove</button>
+			   <button onclick="append_elem(this)" class="custom-buttons" id="watersys-stg-pony-to-3000" name="to">Add To</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="watersys-stg-pony-comment-3000" name="comment" style="display:none">Comment</button>
+			   <button onclick="heading_elem(this)" class="custom-buttons" id="watersys-stg-pony-before-3000" name="before">Add Heading</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="watersys-stg-pony-after-3000" name="after">Add Test</button>
+			  </div>
+		  </div>
+		  <div class='row' id="watersys-stg-pony-div-4000">
+				<div class="col-xl-7 width-redux-7">
+					<ul id="watersys-stg-pony-div-4000-watersys-stg-pony-ul-4000">
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-4000-watersys-stg-pony-4000" ondblclick="remove_li(this)">If testing virtually, command the statuses of one Chilled Water Pump and one Condensor Water Pump that are running ("CHWP#.STATUS"/"CDWP#.STATUS") to "Off"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-4000-watersys-stg-pony-4001" ondblclick="remove_li(this)">If testing in person, turn off the VFD/Mag Starters for one Chilled Water Pump and one Condensor Water Pump that are running</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-4000-watersys-stg-pony-4002" ondblclick="remove_li(this)">Confirm the Backup Pump (Lag Pump 2) turns "On"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-4000-watersys-stg-pony-4003" ondblclick="remove_li(this)">If testing virtually, command the Backup Pump Status ("CHWP#.STATUS" / "CDWP#.STATUS") to "On"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-4000-watersys-stg-pony-4004" ondblclick="remove_li(this)">Confirm the Backup Pump Speed Ramps up to match the speed of the Lead Pump</li>
+					</ul>
+			  </div>
+			  <div class="col-xl-5 width-redux">
+			   <input type="radio" class="radio-buttons" name="watersys-stg-pony-4000" value="pass">
+			   <label class="passfail">Pass</label>
+			   <input type="radio" class="radio-buttons" name="watersys-stg-pony-4000" value="fail">
+			   <label class="passfail fail">Fail</label>
+			   <input type="radio" class="radio-buttons" name="watersys-stg-pony-4000" value="na">
+			   <label class="passfail na">NA</label>
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="watersys-stg-pony-remove-4000" name="remove">Remove</button>
+			   <button onclick="append_elem(this)" class="custom-buttons" id="watersys-stg-pony-to-4000" name="to">Add To</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="watersys-stg-pony-comment-4000" name="comment" style="display:none">Comment</button>
+			   <button onclick="heading_elem(this)" class="custom-buttons" id="watersys-stg-pony-before-4000" name="before">Add Heading</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="watersys-stg-pony-after-4000" name="after">Add Test</button>
+			  </div>
+		  </div>
+		  <div class='row' id="watersys-stg-pony-div-5000">
+				<div class="col-xl-7 width-redux-7">
+					<ul id="watersys-stg-pony-div-5000-watersys-stg-pony-ul-5000">
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-5000-watersys-stg-pony-5000" ondblclick="remove_li(this)">In order to stage down Chillers, you must simulate low-load conditions by dropping the Full Load Amps (FLA) of each chiller...</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-5000-watersys-stg-pony-5001" ondblclick="remove_li(this)">Ensure all Chiller Full Load Amps (FLA) <= 25 to allow "CHLR.STGUP.TIME" to zero out and allow "CHLR.STGDN.TIME" to count up</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-5000-watersys-stg-pony-5002" ondblclick="remove_li(this)">Confirm "CHLR.STGUP.TIME" zeros out and that "CHLR.STGDN.TIME" begins to count up. A resident timer in the program "CHLR.STG.DLY" will count up at the same rate</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-5000-watersys-stg-pony-5003" ondblclick="remove_li(this)">After 30 minutes elapses (as counted by "CHLR.STG.DLY") since the start of the Pony Chiller as well as the stage down conditions are met (as indicated by "CHLR.STGDN.TIME") confirm "CHLR.REQ" changes to 3 and that the Pony Chiller ("CHLR.ENA") turns "Off"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-5000-watersys-stg-pony-5004" ondblclick="remove_li(this)">If testing virtually, manually override "CH#.STATUS" to "Off" once ("CHLR.ENA") turns "Off"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-5000-watersys-stg-pony-5005" ondblclick="remove_li(this)">Confirm "CHLR.STG.DLY" Restarts and begins counting up again</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-5000-watersys-stg-pony-5006" ondblclick="remove_li(this)">Confirm the Pony Chiller Chilled Water and Condensor Water Isolation valves close after the Lag Chiller has been off for 3 minutes</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-5000-watersys-stg-pony-5007" ondblclick="remove_li(this)">If testing virtually, manually override the Chilled Water and Condensor Water Isolation Valve Feedback Signals ("CH#.CHW.IV.FDBK" & "CH#.CDW.IV.FDBK") to 0% upon the Valve Commands going to 0%</li>
+					</ul>
+			  </div>
+			  <div class="col-xl-5 width-redux">
+			   <input type="radio" class="radio-buttons" name="watersys-stg-pony-5000" value="pass">
+			   <label class="passfail">Pass</label>
+			   <input type="radio" class="radio-buttons" name="watersys-stg-pony-5000" value="fail">
+			   <label class="passfail fail">Fail</label>
+			   <input type="radio" class="radio-buttons" name="watersys-stg-pony-5000" value="na">
+			   <label class="passfail na">NA</label>
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="watersys-stg-pony-remove-5000" name="remove">Remove</button>
+			   <button onclick="append_elem(this)" class="custom-buttons" id="watersys-stg-pony-to-5000" name="to">Add To</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="watersys-stg-pony-comment-5000" name="comment" style="display:none">Comment</button>
+			   <button onclick="heading_elem(this)" class="custom-buttons" id="watersys-stg-pony-before-5000" name="before">Add Heading</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="watersys-stg-pony-after-5000" name="after">Add Test</button>
+			  </div>
+		  </div>
+		  <div class='row' id="watersys-stg-pony-div-6000">
+				<div class="col-xl-7 width-redux-7">
+					<ul id="watersys-stg-pony-div-6000-watersys-stg-pony-ul-6000">
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-6000-watersys-stg-pony-6000" ondblclick="remove_li(this)">In order to stage down Chillers, you must simulate low-load conditions by dropping the Full Load Amps (FLA) of each chiller...</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-6000-watersys-stg-pony-6001" ondblclick="remove_li(this)">Ensure all Chiller Full Load Amps (FLA) <= 25 to allow "CHLR.STGUP.TIME" to zero out and allow "CHLR.STGDN.TIME" to count up</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-6000-watersys-stg-pony-6002" ondblclick="remove_li(this)">Confirm "CHLR.STGUP.TIME" zeros out and that "CHLR.STGDN.TIME" begins to count up. A resident timer in the program "CHLR.STG.DLY" will count up at the same rate</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-6000-watersys-stg-pony-6003" ondblclick="remove_li(this)">After 30 minutes elapses (as counted by "CHLR.STG.DLY") since the stop of the Pony Chiller as well as the stage down conditions are met (as indicated by "CHLR.STGDN.TIME") confirm "CHLR.REQ" changes to 2 and that the second Big Chiller ("CHLR.ENA") turns "Off"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-6000-watersys-stg-pony-6004" ondblclick="remove_li(this)">If testing virtually, manually override "CH#.STATUS" to "Off" once ("CHLR.ENA") turns "Off"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-6000-watersys-stg-pony-6005" ondblclick="remove_li(this)">Confirm "CHLR.STG.DLY" Restarts and begins counting up again</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-6000-watersys-stg-pony-6006" ondblclick="remove_li(this)">Confirm the second Big Chiller Chilled Water and Condensor Water Isolation valves close after the Lag Chiller has been off for 3 minutes</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-6000-watersys-stg-pony-6007" ondblclick="remove_li(this)">If testing virtually, manually override the Chilled Water and Condensor Water Isolation Valve Feedback Signals ("CH#.CHW.IV.FDBK" & "CH#.CDW.IV.FDBK") to 0% upon the Valve Commands going to 0%</li>
+					</ul>
+			  </div>
+			  <div class="col-xl-5 width-redux">
+			   <input type="radio" class="radio-buttons" name="watersys-stg-pony-6000" value="pass">
+			   <label class="passfail">Pass</label>
+			   <input type="radio" class="radio-buttons" name="watersys-stg-pony-6000" value="fail">
+			   <label class="passfail fail">Fail</label>
+			   <input type="radio" class="radio-buttons" name="watersys-stg-pony-6000" value="na">
+			   <label class="passfail na">NA</label>
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="watersys-stg-pony-remove-6000" name="remove">Remove</button>
+			   <button onclick="append_elem(this)" class="custom-buttons" id="watersys-stg-pony-to-6000" name="to">Add To</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="watersys-stg-pony-comment-6000" name="comment" style="display:none">Comment</button>
+			   <button onclick="heading_elem(this)" class="custom-buttons" id="watersys-stg-pony-before-6000" name="before">Add Heading</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="watersys-stg-pony-after-6000" name="after">Add Test</button>
+			  </div>
+		  </div>
+		  <div class='row' id="watersys-stg-pony-div-7000">
+				<div class="col-xl-7 width-redux-7">
+					<ul id="watersys-stg-pony-div-7000-watersys-stg-pony-ul-7000">
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-7000-watersys-stg-pony-7000" ondblclick="remove_li(this)">In order to stage down Chillers, you must simulate low-load conditions by dropping the Full Load Amps (FLA) of the first Big Chiller...</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-7000-watersys-stg-pony-7001" ondblclick="remove_li(this)">Ensure the first Big Chiller Full Load Amps (FLA) <= 25 to allow "CHLR.STGUP.TIME" to zero out and allow "CHLR.STGDN.TIME" to count up</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-7000-watersys-stg-pony-7002" ondblclick="remove_li(this)">Confirm "CHLR.STGUP.TIME" zeros out and that "CHLR.STGDN.TIME" begins to count up. A resident timer in the program "CHLR.STG.DLY" will count up at the same rate</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-7000-watersys-stg-pony-7003" ondblclick="remove_li(this)">After 30 minutes elapses (as counted by "CHLR.STG.DLY") since the stop of the second Big Chiller as well as the stage down conditions are met (as indicated by "CHLR.STGDN.TIME") confirm "CHLR.REQ" changes to 3 and that the Pony Chiller Isolation Valves begin to open</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-7000-watersys-stg-pony-7004" ondblclick="remove_li(this)">If testing virtually, manually override the Chilled Water and Condensor Water Isolation Valve Feedback Signals ("CH#.CHW.IV.FDBK" & "CH#.CDW.IV.FDBK") to 100%</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-7000-watersys-stg-pony-7005" ondblclick="remove_li(this)">If testing virtually, manually override the Chilled Water and Condensor Water Pump Status Points to "On"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-7000-watersys-stg-pony-7006" ondblclick="remove_li(this)">If testing virtually, manually override "CH#.STATUS" to "On" once ("CHLR.ENA") turns "On"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-7000-watersys-stg-pony-7007" ondblclick="remove_li(this)">Confirm "CHLR.STG.DLY" Restarts and begins counting up again</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-7000-watersys-stg-pony-7008" ondblclick="remove_li(this)">Confirm after "CHLR.STG.DLY" surpasses 3 minutes that "CHLR.REQ" changes to 1 and that the first Big Chiller ("CHLR.ENA") turns "Off"</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-7000-watersys-stg-pony-7009" ondblclick="remove_li(this)">Confirm the first Big Chiller Chilled Water and Condensor Water Isolation valves close after the first Big Chiller has been off for 3 minutes</li>
+						<li oncontextmenu="edit_li(this)" id="watersys-stg-pony-div-7000-watersys-stg-pony-7010" ondblclick="remove_li(this)">If testing virtually, manually override the Chilled Water and Condensor Water Isolation Valve Feedback Signals ("CH#.CHW.IV.FDBK" & "CH#.CDW.IV.FDBK") to 0% upon the Valve Commands going to 0%</li>
+					</ul>
+			  </div>
+			  <div class="col-xl-5 width-redux">
+			   <input type="radio" class="radio-buttons" name="watersys-stg-pony-7000" value="pass">
+			   <label class="passfail">Pass</label>
+			   <input type="radio" class="radio-buttons" name="watersys-stg-pony-7000" value="fail">
+			   <label class="passfail fail">Fail</label>
+			   <input type="radio" class="radio-buttons" name="watersys-stg-pony-7000" value="na">
+			   <label class="passfail na">NA</label>
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="watersys-stg-pony-remove-7000" name="remove">Remove</button>
+			   <button onclick="append_elem(this)" class="custom-buttons" id="watersys-stg-pony-to-7000" name="to">Add To</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="watersys-stg-pony-comment-7000" name="comment" style="display:none">Comment</button>
+			   <button onclick="heading_elem(this)" class="custom-buttons" id="watersys-stg-pony-before-7000" name="before">Add Heading</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="watersys-stg-pony-after-7000" name="after">Add Test</button>
 			  </div>
 		  </div>
 		</div>

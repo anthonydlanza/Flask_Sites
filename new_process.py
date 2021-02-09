@@ -687,7 +687,9 @@ def fpt():
     }
     fptwatersystems = {
     'CHWS Enable':'A',
+    'CHWS Pony Enable':'P',
     'CHWS Chiller Staging':'B',
+    'CHWS Pony Chiller Staging':'O',
     'CHWS Weekly Rotation':'C',
     'CHWS Supply Temperature Reset':'D',
     'CHWS Pump Staging':'E',
