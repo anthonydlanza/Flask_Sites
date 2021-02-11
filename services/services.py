@@ -145,7 +145,7 @@ class Services(object):
 
     # Create a function to open documents, and tokenize the words    
     def process(self, file, *args, **kwargs):
-        raw = open(file).read()
+        raw = open('SooNLP/' + file).read()
         tokens = word_tokenize(raw)
         words = [w.lower() for w in tokens]
 
@@ -190,31 +190,33 @@ class Services(object):
             v1[i] = dict1.get(key,0)
             v2[i] = dict2.get(key,0)
             i = i + 1
-        return cos_sim(v1, v2)
+        return self.cosSim(v1, v2)
 
-    def replaceWords(self, file, *args, **kwargs):
-        path = Path('new_sequence.txt')
+    def replaceWords(self, filename, *args, **kwargs):
+        path = Path('SooNLP/' + filename)
         text = path.read_text()
+        ic(text)
         for i in hvac_abbreviations:
             for key, val in i.items():
                 text = text.replace(key,val)
                 path.write_text(text)
 
-    def compareSoo(self,*args,**kwargs):
-        file_to_compare = kwargs.get('filename', None)
+    def compareSoo(self,filename,*args,**kwargs):
+        print("filename is: " + str(filename))
+        file_to_compare = filename
         if file_to_compare is None:
             raise ValueError('Must supply a file to compare')
-        print("The file to compare is: " + file_to_compare)
-        replace_words(file_to_compare)
-        dict1 = process(file_to_compare)
-        arr_txt = [x for x in os.listdir() if x.endswith(".txt")]
+        ic(file_to_compare)
+        self.replaceWords(filename=file_to_compare)
+        dict1 = self.process(file_to_compare)
+        arr_txt = [x for x in os.listdir('SooNLP') if x.endswith(".txt")]
+        ic(file_to_compare)
         for txt in range(0,len(arr_txt)):
             if arr_txt[txt] != file_to_compare:
-                replace_words(arr_txt[txt])
-                dict2 = process(arr_txt[txt])
-                similarity = get_Similarity(dict1,dict2) * 100
+                self.replaceWords(arr_txt[txt])
+                dict2 = self.process(arr_txt[txt])
+                similarity = self.getSimilarity(dict1,dict2) * 100
                 similarity = float(f"{similarity:.2f}")
-                ic(type(similarity))
                 if similarity < 100.00:
                     considerations.append({'Name':arr_txt[txt], 'Similarity':str(similarity) + "%"})
                 else:
@@ -281,23 +283,23 @@ class Services(object):
     #     return considerations_sorted
 
     def findSimilarSequences(self, **kwargs):
-        print("Is this working...")
         # file is a base64 string
         file = kwargs.get('file', None)
-        folder = 'soo/file_to_compare/'
+        # folder = 'soo/file_to_compare/'
+        folder = 'SooNLP/'
         file_name = kwargs.get('file_name', None)
         file_name = file_name.split('\\')[2]
-        print(folder)
         if file is not None:
             try:
-                file = file.split(',')[1]  # remove up to comma
-                convertedFile = Services.convertBase64(file)  # convert back
-                Services.saveFile(convertedFile, file_name, folder)  # save
+                pass
+                # file = file.split(',')[1]  # remove up to comma Commenting out on 02/11/2021
+                convertedFile = Services.convertBase64(file)  # convert back Commenting out on 02/11/2021
+                Services.saveFile(convertedFile, file_name, folder)  # save Commenting out on 02/11/2021
             except Exception as e:
                 raise ValueError(str(e))
         else:
             raise ValueError('No file data supplied')
         results = self.compareSoo(filename=file_name)
         for result in results:
-            print(result)
+            ic(result)
         return results
