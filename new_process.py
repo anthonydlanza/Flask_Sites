@@ -814,8 +814,8 @@ def get_compare_soo():
 def find_similar_sequence():
     # requires file and filename
     results = services.findSimilarSequences(**request.json)
-    # print(request.json)
-    # print(results)
+    results = [dict(t) for t in {tuple(d.items()) for d in results}]
+    print(results)
     return {'results': results}
 
 
