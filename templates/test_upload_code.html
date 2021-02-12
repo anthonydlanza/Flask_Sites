@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form  id="postData">
+    <div>
+        Upload an SOO to find similar existing examples:
+    </div>
+    <br>
+    <div>
+        Program File:  <input type="file" name="" id="program_file">
+    </div>
+    <br>
+    <div>
+        SOO File:  <input type="file" name="" id="soo_file">
+    </div>
+    <div>
+        Job Number: <input type="text" name="" id="job_number">
+    </div>
+    <br>
+        <input type="submit" value="SAVE">
+</form>
+<ul id="results_list">
+</ul>
+<script type="text/javascript">
+  document.getElementById('postData').addEventListener('submit', postData);
+  // changes file to base64 for sending to back end.
+  function getBase64(file) {
+      var result = new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = error => reject(error);
+    });
+    return result;
+  }
+  // have to make this an async in order to get return from getBase64 function
+  async function postData(event){
+     event.preventDefault(); //prevents page refresh
+     var postJSON = {}; //create json object
+     var allElements = document.getElementsByTagName("*"); //get all form elements
+     var program_file_name = document.getElementById('program_file').value // get name so we can get extenstion on back end
+     var soo_file_name = document.getElementById('soo_file').value // get name so we can get extenstion on back end
+     // get the file data
+     const program_file = document.querySelector('#program_file').files[0]
+     const soo_file = document.querySelector('#soo_file').files[0]
+     // convert the file to base64
+     const b64File_program = await getBase64(program_file);
+     const b64File_soo = await getBase64(soo_file);
+     for(var i=0; i < allElements.length; i++){  //build out json object
+       if(allElements[i].id == 'program_file'){
+         postJSON[allElements[i].id] = b64File_program;
+         postJSON['program_file_name'] = program_file_name;
+       }
+       else if(allElements[i].id == 'soo_file'){
+         postJSON[allElements[i].id] = b64File_soo;
+         postJSON['soo_file_name'] = soo_file_name;
+       }
+       else {
+         postJSON[allElements[i].id] = allElements[i].value; //creates member of json object
+       }
+     }
+     fetch('/save_code', {  //post object to backend for saving to db
+         method: 'POST',
+         headers : {'content-type': 'application/json'},
+         body:JSON.stringify(postJSON)
+     }).catch((err)=>console.log(err))
+    }
+</script>
+{% endblock %}

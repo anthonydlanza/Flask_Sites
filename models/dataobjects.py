@@ -29,3 +29,20 @@ class DXR(Document):  # DXR table schema one-seven are chunks of template_name
     #                      'inputs_encoded': 6, 'pres_encoded': 5,
     #                      'knx_encoded': 4}}
     #  ]}
+
+
+class Code(Document):  # Existing program SOO linking
+    program_file_name = StringField(required=False, max_lenght=200)
+    soo_file_name = StringField(required=True, max_length=200)
+    job_number = StringField(required=True, max_length=200)
+
+    # meta = {'indexes': [
+    #      {'fields': ['$hardware_encoded', '$threept_encoded', '$zten_encoded',
+    #                  '$bo_encoded', '$inputs_encoded', '$pres_encoded',
+    #                  '$knx_encoded'],
+    #          'default_language': 'english',
+    #          'weights': {'hardware_encoded': 10, 'threept_encoded': 9,
+    #                      'zten_encoded': 8, 'bo_encoded': 7,
+    #                      'inputs_encoded': 6, 'pres_encoded': 5,
+    #                      'knx_encoded': 4}}
+    #  ]}

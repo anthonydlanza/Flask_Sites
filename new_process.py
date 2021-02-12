@@ -13,7 +13,9 @@ import os
 import pandas as pd
 import pdfkit
 # change below depending on storage location
+# uploads folder is for dxr drawings
 UPLOAD_FOLDER = 'uploads/'
+CODE_SOO_UPLOAD_FOLDER = 'SooNLP/'
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'dwg', 's1ct', 's1ca', 'pcl', 'rtf', 'doc'}
 
 functionality_dictionary = pd.read_excel('Functionality.xlsx')
@@ -30,6 +32,7 @@ knx_dictionary = pd.read_excel('KNX.xlsx')
 # Step 2: Create an Instance of Flask. This will be your application
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['CODE_SOO_UPLOAD_FOLDER'] = CODE_SOO_UPLOAD_FOLDER
 app.config['ALLOWED_EXTENSIONS'] = ALLOWED_EXTENSIONS
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 services = Services()
@@ -792,15 +795,40 @@ def get_custom_soo():
     time.sleep(2)
     return send_file(app.config['UPLOAD_FOLDER'] + "custom_soo.html" ,mimetype='text/html',as_attachment=True)
 
+
+@app.route('/get_code/<string:file_name>', methods=['GET'])
+def download_code(file_name=None):
+    try:
+        return send_file(
+            app.config['CODE_SOO_UPLOAD_FOLDER'] + file_name, as_attachment=True)
+    except Exception as e:
+        raise ValueError(str(e))
+
+
 @app.route('/simsoo', methods=['GET'])
 def get_compare_soo():
-    return render_template('code.html', title='Find similar SOO')
+    return render_template('test_SOO_compare.html', title='Find similar SOO')
+
 
 @app.route('/compareSOO', methods=['POST'])
 def find_similar_sequence():
     # requires file and filename
     results = services.findSimilarSequences(**request.json)
+    # print(request.json)
+    # print(results)
     return {'results': results}
+
+
+@app.route('/contribute_code', methods=['GET'])
+def get_contribute():
+    return render_template('test_upload_code.html', title='Contribute code')
+
+
+@app.route('/save_code', methods=['POST'])
+def upload_code():
+    results = services.saveCode(**request.json)
+    return {'results': results}
+
 
 @app.route('/code',methods=['GET','POST'])
 def code():
