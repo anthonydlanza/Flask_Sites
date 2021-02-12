@@ -1,4 +1,4 @@
-from models.dataobjects import DXR
+from models.dataobjects import DXR, Code
 from mongoengine import *
 import os
 from werkzeug.utils import secure_filename
@@ -24,6 +24,36 @@ class Services(object):
     def __init__(self):  # setup db connection
         client = connect(db='pztcetool', host='localhost', port=27017)
         self.db = client['pztcetool']
+
+    def saveCode(self, **kwargs):  # save code to db
+        code = Code()
+        code.job_number = kwargs.get('job_number', None)
+        code.program_file_name = kwargs.get('program_file_name', None)
+        code.program_file_name = code.job_number + code.program_file_name.split('\\')[2]
+        code.soo_file_name = kwargs.get('soo_file_name', None)
+        code.soo_file_name = code.job_number + code.soo_file_name.split('\\')[2]
+        # files are base64 string
+        program_file = kwargs.get('program_file', None)
+        soo_file = kwargs.get('soo_file', None)
+        if program_file:
+            try:
+                program_file = program_file.split(',')[1]  # remove up to comma
+                convertedFile = Services.convertBase64(program_file)  # convert back
+                Services.saveFile(convertedFile, code.program_file_name, app.config['CODE_SOO_UPLOAD_FOLDER'])  # save
+            except Exception as e:
+                raise ValueError(str(e))
+        if soo_file:
+            try:
+                soo_file = soo_file.split(',')[1]  # remove up to comma
+                convertedFile = Services.convertBase64(soo_file)  # convert back
+                Services.saveFile(convertedFile, code.soo_file_name, app.config['CODE_SOO_UPLOAD_FOLDER'])  # save
+            except Exception as e:
+                raise ValueError(str(e))
+        try:
+            code.save()
+        except Exception as e:
+            raise ValueError(str(e))
+        return str(code['id'])
 
     def saveTemplate(self, **kwargs):  # save dxr to db
         dxr = DXR()
@@ -70,7 +100,6 @@ class Services(object):
             in app.config['ALLOWED_EXTENSIONS']
 
     def saveFile(file=None, filename=None, folder=None):
-        print(folder)
         if file is None:
             raise ValueError("No file provided")
         if filename == '':
@@ -143,9 +172,9 @@ class Services(object):
             result_list.append(result.to_json())
         return result_list
 
-    # Create a function to open documents, and tokenize the words    
+    # Create a function to open documents, and tokenize the words
     def process(self, file, *args, **kwargs):
-        raw = open('SooNLP/' + file).read()
+        raw = open(app.config['CODE_SOO_UPLOAD_FOLDER'] + file).read()
         tokens = word_tokenize(raw)
         words = [w.lower() for w in tokens]
 
@@ -193,24 +222,28 @@ class Services(object):
         return self.cosSim(v1, v2)
 
     def replaceWords(self, filename, *args, **kwargs):
-        path = Path('SooNLP/' + filename)
-        text = path.read_text()
-        ic(text)
+        path = Path(app.config['CODE_SOO_UPLOAD_FOLDER'] + filename)
+        try:
+            text = path.read_text(encoding='cp1252')
+        except Exception as e:
+            raise ValueError(str(e))
+        ic(app.config['CODE_SOO_UPLOAD_FOLDER'] + filename)
         for i in hvac_abbreviations:
             for key, val in i.items():
                 text = text.replace(key,val)
                 path.write_text(text)
 
     def compareSoo(self,filename,*args,**kwargs):
-        print("filename is: " + str(filename))
+        # print("filename is: " + str(filename))
         file_to_compare = filename
         if file_to_compare is None:
             raise ValueError('Must supply a file to compare')
-        ic(file_to_compare)
+        # ic(file_to_compare)
         self.replaceWords(filename=file_to_compare)
         dict1 = self.process(file_to_compare)
-        arr_txt = [x for x in os.listdir('SooNLP') if x.endswith(".txt")]
-        ic(file_to_compare)
+        arr_txt = [x for x in os.listdir(app.config['CODE_SOO_UPLOAD_FOLDER']) if x.endswith(".txt")]
+        # ic(file_to_compare)
+        # print(len(arr_txt))
         for txt in range(0,len(arr_txt)):
             if arr_txt[txt] != file_to_compare:
                 self.replaceWords(arr_txt[txt])
@@ -224,69 +257,11 @@ class Services(object):
         considerations_sorted = sorted(considerations, key = lambda i: i['Similarity'],reverse=True)
         return considerations_sorted
 
-
-    # def similarFileCheck(self, **kwargs):
-    #     # import files, tokenize sentences into array
-    #     file_to_compare = kwargs.get('filename', None)
-    #     if file_to_compare is None:
-    #         raise ValueError('Must supply a file to compare')
-    #     file_docs = []
-    #     file2_docs = []
-    #     avg_sims = []
-    #     long_docs = []
-    #     short_docs = []
-    #     considerations = []
-    #     arr_txt = [x for x in os.listdir('soo') if x.endswith(".txt")]
-    #     for txt in range(0, len(arr_txt)):
-    #         file_docs = []
-    #         file2_docs = []
-    #         with open('soo/file_to_compare/' + file_to_compare) as f:
-    #             testlen = f.read()
-    #             tokens = sent_tokenize(testlen)
-    #             for line in tokens:
-    #                 file_docs.append(line)
-    #         with open('soo/' + arr_txt[txt]) as f:
-    #             liblen = f.read()
-    #             tokens2 = sent_tokenize(liblen)
-    #             for line in tokens2:
-    #                 file2_docs.append(line)
-    #         if(len(testlen) >= len(liblen)):
-    #             long_docs = file_docs
-    #             short_docs = file2_docs
-    #         else:
-    #             long_docs = file2_docs
-    #             short_docs = file_docs
-    #         gen_docs = [[w.lower() for w in word_tokenize(text)]for text in long_docs]
-    #         dictionary = gensim.corpora.Dictionary(gen_docs)
-    #         corpus = [dictionary.doc2bow(gen_doc) for gen_doc in gen_docs]
-    #         tf_idf = gensim.models.TfidfModel(corpus)
-    #         sims = gensim.similarities.Similarity('soo/workdir/', tf_idf[corpus], num_features=len(dictionary))
-    #         avg_sims = []
-    #         for line in short_docs:
-    #             query_doc = [w.lower() for w in word_tokenize(line)]
-    #             query_doc_bow = dictionary.doc2bow(query_doc)
-    #             query_doc_tf_idf = tf_idf[query_doc_bow]
-    #             sum_of_sims =(np.sum(sims[query_doc_tf_idf], dtype=np.float32))
-    #             avg = sum_of_sims / len(long_docs)
-    #             # print(f'avg: {sum_of_sims / len(long_docs)}')
-    #             avg_sims.append(avg)
-    #         total_avg = np.sum(avg_sims, dtype=np.float)
-    #         # print(total_avg)
-    #         percentage_of_similarity = float(total_avg) * 100
-    #         percentage_of_similarity = f"{percentage_of_similarity:.2f}"
-    #         percentage_of_similarity = float(percentage_of_similarity)
-    #         if percentage_of_similarity >= 100:
-    #             percentage_of_similarity = 100
-    #         # print("Similarity: " + str(percentage_of_similarity) + "%")
-    #         considerations.append({'Name': arr_txt[txt], 'Similarity': str(percentage_of_similarity) + "%"})
-    #     considerations_sorted = sorted(considerations, key = lambda i: i['Similarity'],reverse=True)
-    #     return considerations_sorted
-
     def findSimilarSequences(self, **kwargs):
         # file is a base64 string
         file = kwargs.get('file', None)
         # folder = 'soo/file_to_compare/'
-        folder = 'SooNLP/'
+        folder = app.config['CODE_SOO_UPLOAD_FOLDER']
         file_name = kwargs.get('file_name', None)
         file_name = file_name.split('\\')[2]
         if file is not None:
@@ -300,6 +275,6 @@ class Services(object):
         else:
             raise ValueError('No file data supplied')
         results = self.compareSoo(filename=file_name)
-        for result in results:
-            ic(result)
+        # for result in results:
+            # ic(result)
         return results
