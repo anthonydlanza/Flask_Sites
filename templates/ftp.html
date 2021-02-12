@@ -3049,6 +3049,186 @@
 		  </div>
 		</div>
 	</div>
+	<div class='hhwsys-enable' style="display:show">
+		<h4 ondblclick="remove_this(this)"><span class="badge badge-secondary sequence-start">Heating Hot Water System Enable</span></h4>
+		<h4 ondblclick="remove_this(this)"><span class="badge badge-secondary sequence-start">Integrated Boiler or Chiller System Enable</span></h4>
+		<div class="fpt-container">
+			<div class='row' id="hhwsys-enable-div-1000">
+				<div class="col-xl-7 width-redux-7">
+					<ul id="hhwsys-enable-div-1000-hhwsys-enable-ul-1000">
+						<li oncontextmenu="edit_li(this)" id="hhwsys-enable-div-1000-hhwsys-enable-1000" ondblclick="remove_li(this)">Command the Heating Hot Water System Enable Point("HHW.ENABLE") "On"</li>
+						<li oncontextmenu="edit_li(this)" id="hhwsys-enable-div-1000-hhwsys-enable-1001" ondblclick="remove_li(this)">Confirm the Boiler System Enable Point ("BLR.SYS") turns "On"</li>
+						<li oncontextmenu="edit_li(this)" id="hhwsys-enable-div-1000-hhwsys-enable-1002" ondblclick="remove_li(this)">Confirm the Lead Boiler Isolation Valves Open</li>
+						<li oncontextmenu="edit_li(this)" id="hhwsys-enable-div-1000-hhwsys-enable-1003" ondblclick="remove_li(this)">If testing virtually, Command the Lead Boiler Isolation Valve Status Point ("BLR#.HHWR.IV.OPEN") "On"</li>
+						<li oncontextmenu="edit_li(this)" id="hhwsys-enable-div-1000-hhwsys-enable-1004" ondblclick="remove_li(this)">Confirm the system calls for 1 HHW Pump by confirming ("HHWP.REQ") changes from 0 to 1</li>
+						<li oncontextmenu="edit_li(this)" id="hhwsys-enable-div-1000-hhwsys-enable-1005" ondblclick="remove_li(this)">Confirm the Lead HHW Pump ("HHWP#") starts</li>
+						<li oncontextmenu="edit_li(this)" id="hhwsys-enable-div-1000-hhwsys-enable-1006" ondblclick="remove_li(this)">If testing virtually, command the Leading HHW Pump Status ("HHWP#.STATUS") to "On"</li>
+						<li oncontextmenu="edit_li(this)" id="hhwsys-enable-div-1000-hhwsys-enable-1007" ondblclick="remove_li(this)">Confirm the Lead Boiler turns "On" and that it's Status Point ("BLR#.STATUS") turns "On"</li>
+						<li oncontextmenu="edit_li(this)" id="hhwsys-enable-div-1000-hhwsys-enable-1008" ondblclick="remove_li(this)">If testing virtually, Command the Lead Boiler Status Point ("BLR#.STATUS") "On"</li>
+					</ul>
+			  </div>
+			  <div class="col-xl-5 width-redux">
+			   <input type="radio" class="radio-buttons" name="hhwsys-enable-1000" value="pass">
+			   <label class="passfail">Pass</label>
+			   <input type="radio" class="radio-buttons" name="hhwsys-enable-1000" value="fail">
+			   <label class="passfail fail">Fail</label>
+			   <input type="radio" class="radio-buttons" name="hhwsys-enable-1000" value="na">
+			   <label class="passfail na">NA</label>
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="hhwsys-enable-remove-1000" name="remove">Remove</button>
+			   <button onclick="append_elem(this)" class="custom-buttons" id="hhwsys-enable-to-1000" name="to">Add To</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="hhwsys-enable-comment-1000" name="comment" style="display:none">Comment</button>
+			   <button onclick="heading_elem(this)" class="custom-buttons" id="hhwsys-enable-before-1000" name="before">Add Heading</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="hhwsys-enable-after-1000" name="after">Add Test</button>
+			  </div>
+		  </div>
+		</div>
+	</div>
+	<div class='hhwsys-pumpstg' style="display:show">
+		<h4 ondblclick="remove_this(this)"><span class="badge badge-secondary sequence-start">Hot Water System Pump Staging</span></h4>
+		<h4 ondblclick="remove_this(this)"><span class="badge badge-secondary sequence-start">Integrated Boiler or Chiller System Pump Staging</span></h4>
+		<div class="fpt-container">
+			<div class='row' id="hhwsys-pumpstg-div-1000">
+				<div class="col-xl-7 width-redux-7">
+					<ul id="hhwsys-pumpstg-div-1000-hhwsys-pumpstg-ul-1000">
+						<li oncontextmenu="edit_li(this)" id="hhwsys-pumpstg-div-1000-hhwsys-pumpstg-1000" ondblclick="remove_li(this)">Command the Heating Hot Water Differential Pressure Setpoint ("HHW.SP.DP") to 25 psi</li>
+						<li oncontextmenu="edit_li(this)" id="hhwsys-pumpstg-div-1000-hhwsys-pumpstg-1001" ondblclick="remove_li(this)">Confirm the Heating Hot Water Pump Stage-Up Timer ("HHWP.STGUP.TIME") begins to count up</li>
+						<li oncontextmenu="edit_li(this)" id="hhwsys-pumpstg-div-1000-hhwsys-pumpstg-1002" ondblclick="remove_li(this)">After 5 minutes has elapsed as indicated by the Heating Hot Water Pump Stage-Up Timer ("HHWP.STGUP.TIME"), Confirm that the next Heating Hot Water Pump turns "On"</li>
+						<li oncontextmenu="edit_li(this)" id="hhwsys-pumpstg-div-1000-hhwsys-pumpstg-1003" ondblclick="remove_li(this)">If testing virtually, command the Heating Hot Water Pump Statuses ("HHWP#.STATUS") "On"</li>
+					</ul>
+			  </div>
+			  <div class="col-xl-5 width-redux">
+			   <input type="radio" class="radio-buttons" name="hhwsys-pumpstg-1000" value="pass">
+			   <label class="passfail">Pass</label>
+			   <input type="radio" class="radio-buttons" name="hhwsys-pumpstg-1000" value="fail">
+			   <label class="passfail fail">Fail</label>
+			   <input type="radio" class="radio-buttons" name="hhwsys-pumpstg-1000" value="na">
+			   <label class="passfail na">NA</label>
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="hhwsys-pumpstg-remove-1000" name="remove">Remove</button>
+			   <button onclick="append_elem(this)" class="custom-buttons" id="hhwsys-pumpstg-to-1000" name="to">Add To</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="hhwsys-pumpstg-comment-1000" name="comment" style="display:none">Comment</button>
+			   <button onclick="heading_elem(this)" class="custom-buttons" id="hhwsys-pumpstg-before-1000" name="before">Add Heading</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="hhwsys-pumpstg-after-1000" name="after">Add Test</button>
+			  </div>
+		  </div>
+		  <div class='row' id="hhwsys-pumpstg-div-2000">
+				<div class="col-xl-7 width-redux-7">
+					<ul id="hhwsys-pumpstg-div-2000-hhwsys-pumpstg-ul-2000">
+						<li oncontextmenu="edit_li(this)" id="hhwsys-pumpstg-div-2000-hhwsys-pumpstg-2000" ondblclick="remove_li(this)">Command the Heating Hot Water Differential Pressure Setpoint  ("HHW.SP.DP") to 5 psi</li>
+						<li oncontextmenu="edit_li(this)" id="hhwsys-pumpstg-div-2000-hhwsys-pumpstg-2001" ondblclick="remove_li(this)">Confirm the Heating Hot Water Pump Stage-Down Timer ("HHWP.STGDN.TIME") begins to count up</li>
+						<li oncontextmenu="edit_li(this)" id="hhwsys-pumpstg-div-2000-hhwsys-pumpstg-2002" ondblclick="remove_li(this)">After 5 minutes has elapsed as indicated by ("HHWP.STGDN.TIME") Confirm that the Lag Pump turns "Off"</li>
+						<li oncontextmenu="edit_li(this)" id="hhwsys-pumpstg-div-2000-hhwsys-pumpstg-2003" ondblclick="remove_li(this)">If testing virtually, command the Lag Heating Hot Water Pump Status ("HHWP#.STATUS") "Off"</li>
+						<li oncontextmenu="edit_li(this)" id="hhwsys-pumpstg-div-2000-hhwsys-pumpstg-2004" ondblclick="remove_li(this)">Release the Lead Chiller Chilled hhw Differential Pressure Setpoint ("HHW.SP.DP") from Operator priority</li>
+						<li oncontextmenu="edit_li(this)" id="hhwsys-pumpstg-div-2000-hhwsys-pumpstg-2006" ondblclick="remove_li(this)">Confirm the Heating Hot Water System returns to normal operation</li>
+					</ul>
+			  </div>
+			  <div class="col-xl-5 width-redux">
+			   <input type="radio" class="radio-buttons" name="hhwsys-pumpstg-2000" value="pass">
+			   <label class="passfail">Pass</label>
+			   <input type="radio" class="radio-buttons" name="hhwsys-pumpstg-2000" value="fail">
+			   <label class="passfail fail">Fail</label>
+			   <input type="radio" class="radio-buttons" name="hhwsys-pumpstg-2000" value="na">
+			   <label class="passfail na">NA</label>
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="hhwsys-pumpstg-remove-2000" name="remove">Remove</button>
+			   <button onclick="append_elem(this)" class="custom-buttons" id="hhwsys-pumpstg-to-2000" name="to">Add To</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="hhwsys-pumpstg-comment-2000" name="comment" style="display:none">Comment</button>
+			   <button onclick="heading_elem(this)" class="custom-buttons" id="hhwsys-pumpstg-before-2000" name="before">Add Heading</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="hhwsys-pumpstg-after-2000" name="after">Add Test</button>
+			  </div>
+		  </div>
+		</div>
+	</div>
+	<div class='hhwsys-rotation' style="display:show">
+		<h4 ondblclick="remove_this(this)"><span class="badge badge-secondary sequence-start">Hot Water System Pump Weekly Rotation</span></h4>
+		<h4 ondblclick="remove_this(this)"><span class="badge badge-secondary sequence-start">Integrated Boiler or Chiller System Pump Weekly Rotation</span></h4>
+		<div class="fpt-container">
+			<div class='row' id="hhwsys-rotation-div-1000">
+				<div class="col-xl-7 width-redux-7">
+					<ul id="hhwsys-rotation-div-1000-hhwsys-rotation-ul-1000">
+						<li oncontextmenu="edit_li(this)" id="hhwsys-rotation-div-1000-hhwsys-rotation-1000" ondblclick="remove_li(this)">If testing virtually, go to the section of the code with the Date and Time for the changeover to occur. Replace the Date and Time arguments with a Test Point you can use for testing</li>
+						<li oncontextmenu="edit_li(this)" id="hhwsys-rotation-div-1000-hhwsys-rotation-1001" ondblclick="remove_li(this)">If testing virtually, Command your Test Point "On"</li>
+						<li oncontextmenu="edit_li(this)" id="hhwsys-rotation-div-1000-hhwsys-rotation-1002" ondblclick="remove_li(this)">Confirm "HHWP.ROT" turns on and that "HHWP.REQ" changes to 2</li>
+						<li oncontextmenu="edit_li(this)" id="hhwsys-rotation-div-1000-hhwsys-rotation-1003" ondblclick="remove_li(this)">Command your Test Point "Off"</li>
+						<li oncontextmenu="edit_li(this)" id="hhwsys-rotation-div-1000-hhwsys-rotation-1004" ondblclick="remove_li(this)">If testing in person, go to the section of the code with the Date and Time for changeover to occur. Change the Day to today and the time to 2 minutes from now</li>
+						<li oncontextmenu="edit_li(this)" id="hhwsys-rotation-div-1000-hhwsys-rotation-1005" ondblclick="remove_li(this)">Confirm "HHWP.ROT" turns on and that "HHWP.REQ" changes to 2 after 2 minutes elapses</li>
+						<li oncontextmenu="edit_li(this)" id="hhwsys-rotation-div-1000-hhwsys-rotation-1006" ondblclick="remove_li(this)">Confirm the Lag PUMP turns "On"</li>
+						<li oncontextmenu="edit_li(this)" id="hhwsys-rotation-div-1000-hhwsys-rotation-1007" ondblclick="remove_li(this)">If testing virtually, manually override the Heating Hot Water Status ("HHWP#.STATUS") to "On" upon the Pump turning "On"</li>
+						<li oncontextmenu="edit_li(this)" id="hhwsys-rotation-div-1000-hhwsys-rotation-1008" ondblclick="remove_li(this)">Confirm "HHWP.COUNT" goes to 2</li>
+					</ul>
+			  </div>
+			  <div class="col-xl-5 width-redux">
+			   <input type="radio" class="radio-buttons" name="hhwsys-rotation-1000" value="pass">
+			   <label class="passfail">Pass</label>
+			   <input type="radio" class="radio-buttons" name="hhwsys-rotation-1000" value="fail">
+			   <label class="passfail fail">Fail</label>
+			   <input type="radio" class="radio-buttons" name="hhwsys-rotation-1000" value="na">
+			   <label class="passfail na">NA</label>
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="hhwsys-rotation-remove-1000" name="remove">Remove</button>
+			   <button onclick="append_elem(this)" class="custom-buttons" id="hhwsys-rotation-to-1000" name="to">Add To</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="hhwsys-rotation-comment-1000" name="comment" style="display:none">Comment</button>
+			   <button onclick="heading_elem(this)" class="custom-buttons" id="hhwsys-rotation-before-1000" name="before">Add Heading</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="hhwsys-rotation-after-1000" name="after">Add Test</button>
+			  </div>
+		  </div>
+		  <div class='row' id="hhwsys-rotation-div-2000">
+				<div class="col-xl-7 width-redux-7">
+					<ul id="hhwsys-rotation-div-2000-hhwsys-rotation-ul-2000">
+						<li oncontextmenu="edit_li(this)" id="hhwsys-rotation-div-2000-hhwsys-rotation-2000" ondblclick="remove_li(this)">In order to stage down Pumps, you must simulate low-demand condition by decreasing the DP and thus decreasing the pump speed...</li>
+						<li oncontextmenu="edit_li(this)" id="hhwsys-rotation-div-2000-hhwsys-rotation-2001" ondblclick="remove_li(this)">Ensure "HHW.MAIN.DP" > "HHW.MAIN.DP.SP" to allow "HHWP.STGUP.TIME" to zero out and allow "HHWP.STGDN.TIME" to count up</li>
+						<li oncontextmenu="edit_li(this)" id="hhwsys-rotation-div-2000-hhwsys-rotation-2002" ondblclick="remove_li(this)">Confirm "HHWP.STGUP.TIME" zeros out and that "HHWP.STGDN.TIME" begins to count up. A resident timer in the program "$HWPSDL" will count up at the same rate</li>
+						<li oncontextmenu="edit_li(this)" id="hhwsys-rotation-div-2000-hhwsys-rotation-2003" ondblclick="remove_li(this)">After 5 minutes elapses (as counted by "$HWPSDL") since the start of the second pump as well as the stage down conditions are met (as indicated by "HHWP.STGDN.TIME") confirm "HHWP.REQ" changes to 1 and that the Pump that was running at the beginnging of the test ("HHWP#") turns of the "Off". The Pump that came on most recently will be the new Lead Pump</li>
+						<li oncontextmenu="edit_li(this)" id="hhwsys-rotation-div-2000-hhwsys-rotation-2004" ondblclick="remove_li(this)">If testing virtually, manually override "HHWP#.STATUS" to "Off" once ("HHWP#") turns "Off"</li>
+						<li oncontextmenu="edit_li(this)" id="hhwsys-rotation-div-2000-hhwsys-rotation-2005" ondblclick="remove_li(this)">Confirm "$HWPSDL" Restarts and begins counting up again</li>
+						<li oncontextmenu="edit_li(this)" id="hhwsys-rotation-div-2000-hhwsys-rotation-2006" ondblclick="remove_li(this)">Confirm the system returns to normal operation</li>
+					</ul>
+			  </div>
+			  <div class="col-xl-5 width-redux">
+			   <input type="radio" class="radio-buttons" name="hhwsys-rotation-2000" value="pass">
+			   <label class="passfail">Pass</label>
+			   <input type="radio" class="radio-buttons" name="hhwsys-rotation-2000" value="fail">
+			   <label class="passfail fail">Fail</label>
+			   <input type="radio" class="radio-buttons" name="hhwsys-rotation-2000" value="na">
+			   <label class="passfail na">NA</label>
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="hhwsys-rotation-remove-2000" name="remove">Remove</button>
+			   <button onclick="append_elem(this)" class="custom-buttons" id="hhwsys-rotation-to-2000" name="to">Add To</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="hhwsys-rotation-comment-2000" name="comment" style="display:none">Comment</button>
+			   <button onclick="heading_elem(this)" class="custom-buttons" id="hhwsys-rotation-before-2000" name="before">Add Heading</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="hhwsys-rotation-after-2000" name="after">Add Test</button>
+			  </div>
+		  </div>
+		</div>
+	</div>
+	<div class='hhwsys-disable' style="display:show">
+		<h4 ondblclick="remove_this(this)"><span class="badge badge-secondary sequence-start">Heating Hot Water System Disable</span></h4>
+		<h4 ondblclick="remove_this(this)"><span class="badge badge-secondary sequence-start">Integrated Boiler or Chiller System Disable</span></h4>
+		<div class="fpt-container">
+			<div class='row' id="hhwsys-disable-div-1000">
+				<div class="col-xl-7 width-redux-7">
+					<ul id="hhwsys-disable-div-1000-hhwsys-disable-ul-1000">
+						<li oncontextmenu="edit_li(this)" id="hhwsys-disable-div-1000-hhwsys-disable-1000" ondblclick="remove_li(this)">Command the Heating Hot Water System Enable Point ("HHW.ENABLE") "Off"</li>
+						<li oncontextmenu="edit_li(this)" id="hhwsys-disable-div-1000-hhwsys-disable-1001" ondblclick="remove_li(this)">Confirm the Lead Boiler turns "Off" and that it's Status Point ("BLR#.STATUS") turns "Off"</li>
+						<li oncontextmenu="edit_li(this)" id="hhwsys-disable-div-1000-hhwsys-disable-1002" ondblclick="remove_li(this)">If testing virtually, Command the Lead Boiler Status Point ("BLR#.STATUS") "Off"</li>
+						<li oncontextmenu="edit_li(this)" id="hhwsys-disable-div-1000-hhwsys-disable-1003" ondblclick="remove_li(this)">Confirm the stops all requests for Heating Hot Water Pumps by confirming ("HHWP.REQ") changes to 0</li>
+						<li oncontextmenu="edit_li(this)" id="hhwsys-disable-div-1000-hhwsys-disable-1004" ondblclick="remove_li(this)">Confirm all HHW Pumps turn "Off"</li>
+						<li oncontextmenu="edit_li(this)" id="hhwsys-disable-div-1000-hhwsys-disable-1005" ondblclick="remove_li(this)">If testing virtually, command all HHW Pump Statuses ("HHWP#.STATUS") to "Off"</li>
+						<li oncontextmenu="edit_li(this)" id="hhwsys-disable-div-1000-hhwsys-disable-1006" ondblclick="remove_li(this)">Confirm all Boiler Isolation Valves Close and that their Status Points ("BLR#.HHWR.IV.OPEN") turn "Off"</li>
+					</ul>
+			  </div>
+			  <div class="col-xl-5 width-redux">
+			   <input type="radio" class="radio-buttons" name="hhwsys-disable-1000" value="pass">
+			   <label class="passfail">Pass</label>
+			   <input type="radio" class="radio-buttons" name="hhwsys-disable-1000" value="fail">
+			   <label class="passfail fail">Fail</label>
+			   <input type="radio" class="radio-buttons" name="hhwsys-disable-1000" value="na">
+			   <label class="passfail na">NA</label>
+			   <button onclick="remove_elem(this)" class="custom-buttons" id="hhwsys-disable-remove-1000" name="remove">Remove</button>
+			   <button onclick="append_elem(this)" class="custom-buttons" id="hhwsys-disable-to-1000" name="to">Add To</button>
+			   <button onclick="comment_elem(this)" class="custom-buttons comment" id="hhwsys-disable-comment-1000" name="comment" style="display:none">Comment</button>
+			   <button onclick="heading_elem(this)" class="custom-buttons" id="hhwsys-disable-before-1000" name="before">Add Heading</button>
+			   <button onclick="after_elem(this)" class="custom-buttons" id="hhwsys-disable-after-1000" name="after">Add Test</button>
+			  </div>
+		  </div>
+		</div>
+	</div>
 	<div class='airsys-occupied-sched' style="display: none">
 		<h4 ondblclick="remove_this(this)"><span class="badge badge-secondary sequence-start">Air System Occupied Mode Scheduled</span></h4>
 		<div class="fpt-container">
