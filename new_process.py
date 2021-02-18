@@ -705,6 +705,10 @@ def fpt():
     'CDWS Tower Staging':'L',
     'CDWS Weekly Rotation':'M',
     'CDWS Disable':'N',
+    'HHWS Enable':'Q',
+    'HHWS Pump Staging':'R',
+    'HHWS Weekly Rotation':'S',
+    'HHWS Disable':'T'
     }
     rendered = render_template('ftp.html',fptterminalbox = fptterminalbox,fpttra = fpttra,fptairsystems = fptairsystems, fptwatersystems = fptwatersystems)
     # pdf = pdfkit.from_string(rendered, False)

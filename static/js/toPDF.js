@@ -200,8 +200,10 @@ $(document).ready(function(){
 
 		// Water
 		display_test_independent('input[id="CHWS Enable"]',".watersys-enable")
+		display_test_independent('input[id="HHWS Enable"]',".hhwsys-enable")
 		display_test_independent('input[id="CHWS Pony Enable"]',".watersys-enable-pony")
 		display_test_independent('input[id="CHWS Pump Staging"]',".watersys-pumpstg")
+		display_test_independent('input[id="HHWS Pump Staging"]',".hhwsys-pumpstg")
 		display_test_independent('input[id="CDWS Enable"]',".condsys-enable")
 
 		// Terminal Equipment
@@ -248,5 +250,7 @@ $(document).ready(function(){
 		display_test_dependent('input[id="CDWS Tower Staging"]','input[id="CDWS Enable"]',".condsys-stg")
 		display_test_dependent('input[id="CDWS Weekly Rotation"]','input[id="CDWS Enable"]',".condsys-rotation")
 		display_test_dependent('input[id="CDWS Disable"]','input[id="CDWS Enable"]',".condsys-disable")
+		display_test_dependent('input[id="HHWS Weekly Rotation"]','input[id="HHWS Enable"]',".hhwsys-rotation")
+		display_test_dependent('input[id="HHWS Disable"]','input[id="HHWS Enable"]',".hhwsys-disable")
 	});
 });
