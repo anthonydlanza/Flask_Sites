@@ -12,6 +12,7 @@ from nltk.tokenize import word_tokenize
 from icecream import ic
 from pathlib2 import Path
 import os
+import time
 
 global considerations
 global hvac_abbreviations
@@ -81,7 +82,7 @@ class Services(object):
         file = kwargs.get('file', None)
         file_extension = kwargs.get('file_name', None)  # get file name
         file_extension = file_extension.split('.')[1]  # get file extension
-        dxr.file_name = dxr.template_name + "." + file_extension
+        dxr.file_name = dxr.template_name + "_" + str(time.time()) + "." + file_extension
         if file:
             try:
                 file = file.split(',')[1]  # remove up to comma
